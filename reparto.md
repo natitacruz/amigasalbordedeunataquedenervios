@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: reparto
 title: Reparto
 permalink: /reparto/
 ---
