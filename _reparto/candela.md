@@ -6,7 +6,7 @@ title: "La Vedette"
 actor: "Candela Sastre"
 bio: "Escritora y editora de una newsletter política feminista radical, “Serving Politics”. Vive entre Málaga, Barcelona y Lisboa."
 color: "#ff4081"
-image: "/candela.png"
+image: "{{ site.baseurl }}/candela.png"
 frase: "Una es más auténtica cuanto más se parece a lo que ha soñado de sí misma."
 footer: Algunos la admiran, otros la temen. Candela dice siempre lo que piensa y lo dice bien. Tiene la capacidad de desarmar a cualquiera con una sola frase certera.
 
