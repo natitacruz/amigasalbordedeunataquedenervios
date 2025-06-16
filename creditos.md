@@ -4,6 +4,7 @@ title: Creditos
 permalink: /creditos/
 ---
 
+
 <div class="credits-wrapper">
   <div class="credits">
     {% for personaje in site.reparto %}
