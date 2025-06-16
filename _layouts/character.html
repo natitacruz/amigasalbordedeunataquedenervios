@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.name }} — {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+
+    header {
+      background-color: {{ page.color }};
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Futura', sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 0 6px {{ page.color }};
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0.5rem 0 0;
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #222;
+      margin: 1rem auto;
+      max-width: 500px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: {{ page.color }};
+      border-bottom: 2px solid {{ page.color }};
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{ page.image }}" alt="{{ page.name }}">
+    <h1>{{ page.name }}</h1>
+    <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
+    <blockquote>“{{ page.frase }}”</blockquote>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    {{ page.epilogo }}
+  </footer>
+</body>
+</html>
