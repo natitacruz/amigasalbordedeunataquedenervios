@@ -57,7 +57,7 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      animation: scrollCredits 60s linear infinite;
+      animation: scrollCredits 20s linear infinite;
     }
 
 
@@ -76,7 +76,7 @@
     .credits-row {
       display: flex;
       justify-content: center;
-      gap: 6rem;
+      gap: 8rem;
       flex-wrap: wrap;
     }
 
@@ -124,9 +124,16 @@
       }
 
       .credits-column {
-        flex: 1;
+        flex: 1 1 45%;
       }
     }
+    @media (max-width: 767px) {
+  .credits-row {
+    flex-direction: column;
+    gap: 2rem;
+      }
+    }
+
   </style>
 </head>
 <body>
