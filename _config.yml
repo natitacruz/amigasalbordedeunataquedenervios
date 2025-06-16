@@ -1,5 +1,6 @@
 title: Amigas al Borde de un Ataque de Nervios
 theme: minima
+baseurl: "/amigasalbordedeunataquedenervios"
 collections:
   reparto:
     output: true
