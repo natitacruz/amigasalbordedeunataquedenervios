@@ -1,6 +1,6 @@
 ---
 layout: character
-permalink: /amigasalbordedeunataquedenervios/reparto/nagore/
+permalink: amigasalbordedeunataquedenervios/reparto/nagore/
 name: "Nagore Valdés"
 title: "La Fotógrafa"
 actor: "Nagore"
