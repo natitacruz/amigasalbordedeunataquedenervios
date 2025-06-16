@@ -1,3 +1,4 @@
+---
 layout: character
 permalink: amigasalbordedeunataquedenervios/reparto/alvaro/
 name: "Álvaro Campoy"

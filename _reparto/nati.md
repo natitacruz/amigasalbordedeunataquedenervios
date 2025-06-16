@@ -1,3 +1,4 @@
+---
 layout: character
 permalink: amigasalbordedeunataquedenervios/reparto/natita/
 name: "Natalia Montiel"

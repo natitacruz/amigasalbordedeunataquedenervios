@@ -1,3 +1,4 @@
+---
 layout: character
 permalink: amigasalbordedeunataquedenervios/reparto/andrea/
 name: "Andrea Cantarín"
