@@ -1,6 +1,6 @@
 ---
 layout: character
-permalink: /reparto/candela/
+permalink: amigasalbordedeunataquedenervios/reparto/candela/
 name: "Candela Valverde"
 title: "La Vedette"
 actor: "Candela Sastre"
