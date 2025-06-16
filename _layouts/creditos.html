@@ -16,7 +16,10 @@
       font-family: 'Fjalla One', sans-serif;
       overflow: hidden;
     }
-
+    .intro-title {
+          font-size: 4rem;
+          color: #ff4081;
+        }
     .credits-wrapper {
       display: flex;
       justify-content: center;
@@ -115,6 +118,12 @@
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="{{ '/assets/music/violetera.wav' | relative_url }}" type="audio/wav">
+  </audio>
+  <div class="credit-line intro-title" id="intro-title">
+    AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS
+  </div>
   <div class="credits-wrapper">
     <div class="mask">
       <div class="credits-columns">
