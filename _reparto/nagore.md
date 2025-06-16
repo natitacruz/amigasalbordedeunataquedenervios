@@ -7,7 +7,7 @@ actor: "Nagore"
 bio: "Fotógrafa de prestigio, mirada aguda y pasado enredado. Elegante, hermética y siempre alerta, guarda secretos de muchos… y uno muy propio."
 color: "#7C0A02"
 image: "/assets/portraits/nagore.png"
-frase: “No hay nada más parecido al amor que una mirada sostenida demasiado tiempo.”
+frase: "No hay nada más parecido al amor que una mirada sostenida demasiado tiempo."
 footer: Nagore no necesita hablar para incomodar: su cámara y su silencio bastan.
 
 ---
