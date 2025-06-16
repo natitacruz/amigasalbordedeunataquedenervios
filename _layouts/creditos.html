@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --scroll-duration: 30s;
+    }
     body {
       margin: 0;
       background: black;
@@ -28,7 +31,7 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      animation: scrollCredits 30s linear infinite;
+      animation: scrollCredits var(--scroll-duration) linear infinite;
     }
 
     .mask {
@@ -75,6 +78,9 @@
         gap: 2rem;
       }
     }
+    .credits-wrapper:hover .credits-columns {
+  animation-duration: 80s; /* o el valor que prefieras */
+}
 
     .credit-line {
       text-align: center;
