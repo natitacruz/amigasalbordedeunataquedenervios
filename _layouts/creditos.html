@@ -28,8 +28,36 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      animation: scrollCredits 60s linear infinite;
+      animation: scrollCredits 30s linear infinite;
     }
+
+    .mask {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .mask::before,
+    .mask::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .mask::before {
+      top: 0;
+      background: linear-gradient(to bottom, black, transparent);
+    }
+    
+    .mask::after {
+      bottom: 0;
+      background: linear-gradient(to top, black, transparent);
+    }
+
 
     @media (min-width: 768px) {
       .credits-columns {
@@ -76,6 +104,8 @@
         transform: translateY(-100%);
       }
     }
+
+    
   </style>
 </head>
 <body>
