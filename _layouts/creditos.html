@@ -73,6 +73,13 @@
       flex-direction: column;
       gap: 2rem;
     }
+    .credits-row {
+      display: flex;
+      justify-content: center;
+      gap: 6rem;
+      flex-wrap: wrap;
+    }
+
 
     .credit-line {
       text-align: center;
@@ -129,10 +136,15 @@
 
  
   <div class="credits-wrapper">
-    <div class="mask">
-      <div class="credits-columns" id="credits">
+  <div class="mask">
+    <div class="credits-columns" id="credits">
+      
+      <!-- Título en scroll -->
+      <div class="credit-line intro-title">AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS</div>
+
+      <!-- Fila con dos columnas -->
+      <div class="credits-row">
         <div class="credits-column">
-          <div class="credit-line intro-title">AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS</div>
           {% for personaje in site.reparto limit: site.reparto.size | divided_by: 2 %}
             <div class="credit-line">
               <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
@@ -152,17 +164,18 @@
               </a>
             </div>
           {% endfor %}
-          </div>
         </div>
-
-        <!-- Finales poéticos -->
-        <div class="credit-line">Un escándalo filmado en directo.</div>
-        <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
-        <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
-        <div class="credit-line">© Peliculas que se monta Natita Cruz – Todas los derechos reservados</div>
-
       </div>
+
+      <!-- Finales poéticos -->
+      <div class="credit-line">Un escándalo filmado en directo.</div>
+      <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
+      <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
+      <div class="credit-line">© Películas que se monta Natita Cruz – Todos los derechos reservados</div>
+
     </div>
   </div>
+</div>
+
 </body>
 </html>
