@@ -7,8 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
   <style>
     :root {
-      --scroll-duration: 30s;
+      --scroll-duration: 60s;
     }
+
     body {
       margin: 0;
       background: black;
@@ -16,10 +17,7 @@
       font-family: 'Fjalla One', sans-serif;
       overflow: hidden;
     }
-    .intro-title {
-          font-size: 4rem;
-          color: #ff4081;
-        }
+
     .credits-wrapper {
       display: flex;
       justify-content: center;
@@ -30,19 +28,13 @@
       box-sizing: border-box;
     }
 
-    .credits-columns {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      animation: scrollCredits var(--scroll-duration) linear infinite;
-    }
-
     .mask {
       position: relative;
       height: 100vh;
       overflow: hidden;
+      width: 100%;
     }
-    
+
     .mask::before,
     .mask::after {
       content: "";
@@ -53,37 +45,40 @@
       pointer-events: none;
       z-index: 2;
     }
-    
+
     .mask::before {
       top: 0;
       background: linear-gradient(to bottom, black, transparent);
     }
-    
+
     .mask::after {
       bottom: 0;
       background: linear-gradient(to top, black, transparent);
     }
 
-
-    @media (min-width: 768px) {
-      .credits-columns {
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        justify-content: space-around;
-        align-items: flex-start;
-      }
-
-      .credits-column {
-        flex: 1 1 45%;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
+    .credits-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      animation: scrollCredits var(--scroll-duration) linear infinite;
     }
+
     .credits-wrapper:hover .credits-columns {
-  animation-duration: 80s; /* o el valor que prefieras */
-}
+      animation-duration: 120s;
+    }
+
+    .intro-title {
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .credits-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     .credit-line {
       text-align: center;
@@ -114,20 +109,70 @@
       }
     }
 
-    
+    /* Responsive: 2 columns visually, but still scrolls as one */
+    @media (min-width: 768px) {
+      .credits-columns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .credits-columns > .credits-row {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+      }
+
+      .credits-column {
+        flex: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <audio autoplay loop>
     <source src="{{ '/assets/music/violetera.wav' | relative_url }}" type="audio/wav">
   </audio>
-  <div class="credit-line intro-title" id="intro-title">
-    AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS
-  </div>
+
   <div class="credits-wrapper">
     <div class="mask">
       <div class="credits-columns">
-        {{ content }}
+
+        <!-- Título inicial -->
+        <div class="credit-line intro-title">
+          AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS
+        </div>
+
+        <!-- Filas de créditos -->
+        <div class="credits-row">
+          <div class="credits-column">
+            {% for personaje in site.reparto limit: site.reparto.size | divided_by: 2 %}
+              <div class="credit-line">
+                <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
+                  <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
+                  <em>{{ personaje.title }}</em>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="credits-column">
+            {% for personaje in site.reparto offset: site.reparto.size | divided_by: 2 %}
+              <div class="credit-line">
+                <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
+                  <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
+                  <em>{{ personaje.title }}</em>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Finales poéticos -->
+        <div class="credit-line">Un escándalo filmado en directo.</div>
+        <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
+        <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
+        <div class="credit-line">© Peliculas que se monta Natita Cruz – Todas los derechos reservados</div>
+
       </div>
     </div>
   </div>
