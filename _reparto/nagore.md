@@ -4,11 +4,11 @@ permalink: amigasalbordedeunataquedenervios/reparto/nagore/
 name: "Nagore Valdés"
 title: "La Fotógrafa"
 actor: "Nagore"
-bio: "Fotógrafa de prestigio, mirada aguda y pasado enredado."
+bio: "Fotógrafa de prestigio, mirada aguda y pasado enredado. Elegante, hermética y siempre alerta, guarda secretos de muchos… y uno muy propio."
 color: "#7C0A02"
 image: "/assets/portraits/nagore.png"
-frase: "Una es más auténtica cuanto más se parece a lo que ha soñado de sí misma. Elegante, hermética y siempre alerta, guarda secretos de muchos… y uno muy propio."
-footer: Algunos la admiran, otros la temen. Candela dice siempre lo que piensa y lo dice bien. Tiene la capacidad de desarmar a cualquiera con una sola frase certera.
+frase: “No hay nada más parecido al amor que una mirada sostenida demasiado tiempo.”
+footer: Nagore no necesita hablar para incomodar: su cámara y su silencio bastan.
 
 ---
 ## Historia
