@@ -7,74 +7,103 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #fff0f5;
-      color: #333;
+      font-family: 'Georgia', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+      color: #222;
     }
 
     header {
       background-color: {{ page.color }};
       color: white;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
       text-transform: uppercase;
-      font-family: 'Futura', sans-serif;
-      letter-spacing: 2px;
+      font-family: 'Futura', 'Impact', sans-serif;
+      letter-spacing: 3px;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: white;
+      border-radius: 10px;
     }
 
     header img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid white;
-      box-shadow: 0 0 0 6px {{ page.color }};
+      border: 6px solid white;
+      box-shadow: 0 0 0 8px {{ page.color }};
       margin-bottom: 1rem;
     }
 
     h1 {
       margin: 0.5rem 0 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 900;
     }
 
     h2 {
       font-style: italic;
-      font-weight: normal;
-      font-size: 1.2rem;
-      margin-top: 0;
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-top: 0.2rem;
     }
 
     blockquote {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
-      color: #222;
-      margin: 1rem auto;
+      color: white;
+      margin: 1.5rem auto;
       max-width: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-left: 5px solid white;
     }
 
     main {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 750px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: {{ page.color }};
-      border-bottom: 2px solid {{ page.color }};
-      display: inline-block;
-      margin-bottom: 0.5rem;
+      border-left: 6px solid {{ page.color }};
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      color: #555;
+      font-style: italic;
+      background: #fdf0f5;
+      border-top: 2px dashed {{ page.color }};
     }
   </style>
 </head>
