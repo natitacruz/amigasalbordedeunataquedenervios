@@ -8,7 +8,7 @@ bio: "Fotógrafa de prestigio, mirada aguda y pasado enredado. Elegante, hermét
 color: "#7C0A02"
 image: "/assets/portraits/nagore.png"
 frase: "No hay nada más parecido al amor que una mirada sostenida demasiado tiempo."
-footer: Nagore no necesita hablar para incomodar: su cámara y su silencio bastan.
+footer: "Nagore no necesita hablar para incomodar: su cámara y su silencio bastan."
 
 ---
 ## Historia
