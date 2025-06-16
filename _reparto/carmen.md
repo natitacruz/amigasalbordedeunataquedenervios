@@ -2,7 +2,7 @@
 layout: character
 permalink: amigasalbordedeunataquedenervios/reparto/carmela/
 name: "Carmela del Río"
-title: "La Estilista del Alma"
+title: "La Estilista"
 actor: "Carmen"
 bio: "Estilista de renombre, editora de moda y confidente involuntaria."
 color: "#A73489"
@@ -16,4 +16,4 @@ Carmela no iba a venir, pero una nota anónima en su buzón la hizo cambiar de o
 
 ## Look
 
-Vestido ceñido buganvilla, labios rojos, gafas en la cabeza incluso de noche. Lleva un neceser con horquillas, perfume y un USB con algo muy comprometido.
+Vestido ceñido color buganvilla con escote corazón, labios rojo pasión, uñas perfectas, tacones dorados y un moño impecable. Lleva siempre un neceser con horquillas, perfume, espejo de bolsillo y un frasquito de algo que nadie sabe qué es.
