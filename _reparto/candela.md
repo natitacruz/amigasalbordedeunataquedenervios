@@ -1,5 +1,6 @@
 ---
 layout: character
+permalink: /reparto/candela/
 name: "Candela Valverde"
 title: "La Vedette"
 actor: "Candela Sastre"
