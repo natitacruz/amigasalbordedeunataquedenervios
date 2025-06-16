@@ -4,12 +4,15 @@ title: Reparto
 permalink: /reparto/
 ---
 
-<ul>
-  {% for personaje in site.reparto %}
-    <li>
-      <a href="https://natitacruz.github.io/amigasalbordedeunataquedenervios{{ personaje.url }}">{{ personaje.name }}</a><br/>
-      {{ personaje.title }} — interpretada por {{ personaje.actor }}<br/>
-      “{{ personaje.frase }}”
-    </li>
-  {% endfor %}
-</ul>
+<div class="credits-wrapper">
+  <div class="credits">
+    {% for personaje in site.reparto %}
+      <div class="credit-line">
+        <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
+          <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
+          <em>{{ personaje.title }}</em>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
