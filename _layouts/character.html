@@ -89,33 +89,32 @@ header:hover .dot {
       margin-bottom: 1rem;
     }
 footer {
-  cursor: pointer;
-  padding: 4rem 1rem;
   position: relative;
-  background-color: #fdf0f5;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-  transition: background-color 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: {{ page.color }};
+  clip-path: polygon(0 15%, 5% 0, 10% 10%, 15% 0, 20% 10%, 25% 0, 30% 10%, 35% 0, 
+                     40% 10%, 45% 0, 50% 10%, 55% 0, 60% 10%, 65% 0, 70% 10%, 
+                     75% 0, 80% 10%, 85% 0, 90% 10%, 95% 0, 100% 15%, 100% 100%, 
+                     0 100%);
+  color: black;
+  cursor: pointer;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 footer:hover {
-  background-color: {{ page.color }};
+  color: white;
 }
 
 footer svg {
-  width: 300px;
-  max-width: 80vw;
+  width: 160px;
+  max-width: 80%;
   height: auto;
-  transition: filter 0.4s ease;
-  filter: drop-shadow(0 0 5px {{ page.color }});
+  display: inline-block;
+  transition: fill 0.4s ease;
+  fill: currentColor;
 }
 
-footer:hover svg {
-  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 5px {{ page.color }});
-  color: white;
-}
 
 
 @keyframes pulseGlow {
