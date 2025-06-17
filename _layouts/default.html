@@ -21,6 +21,9 @@
     color: #222;
   }
 
+    
+    /* ################## POSTER ######################### */
+
   .poster-section {
     position: relative;
     min-height: 100vh;
@@ -112,6 +115,9 @@
     color: crimson;
     box-shadow: 0 0 10px crimson;
   }
+
+    
+    /* ################## HERO ######################### */
 .hero-content-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -153,7 +159,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Script interno */
 .script-box .script-header {
   font-weight: bold;
   font-size: 1rem;
@@ -192,7 +197,6 @@
   text-decoration: underline;
 }
 
-/* 🌐 Responsive para móviles */
 @media (max-width: 768px) {
   .hero-content-section {
     display: flex;
@@ -206,6 +210,7 @@
     margin: 0;
   }
 }
+    /* ################## CHARACTER GRID ######################### */
 
   .character-grid {
     display: grid;
@@ -243,6 +248,9 @@
 
 <body>
 
+
+  
+
 <section class="poster-section">
   <div class="blur-left"></div>
   <div class="blur-right"></div>
@@ -252,7 +260,7 @@
     Un cumpleaños. Un gazpacho. Un misterio.<br>
     Nadie dice la verdad. Todos tienen secretos.
   </p>
-  <a href="#creditos" class="cta-button">Descubre quién eres en esta historia</a>
+  <a href="{{ site.baseurl }}/creditos" class="cta-button">Descubre quién eres en esta historia</a>
 </section>
 
 <section class="hero-content-section">
