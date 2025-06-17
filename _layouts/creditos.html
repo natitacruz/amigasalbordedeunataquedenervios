@@ -149,6 +149,10 @@
   right: 20px;
 }
 
+    #play-button.muted {
+  color: red;
+}
+
     #play-button:hover,
 #back-button:hover {
   background-color: crimson;
@@ -263,11 +267,11 @@
   if (isPlaying) {
     music.pause();
     icon.classList.replace('fa-volume-up', 'fa-volume-mute');
-    playBtn.classList.remove('active');  // visually indicate muted
+    playBtn.classList.add('muted');
   } else {
     music.play();
     icon.classList.replace('fa-volume-mute', 'fa-volume-up');
-    playBtn.classList.add('active');     // visually indicate playing
+    playBtn.classList.remove('muted');
   }
   isPlaying = !isPlaying;
 });
