@@ -1,304 +1,232 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.name }} — {{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --main-color: {{ page.color }};
-    }
+<style>
+  :root {
+    --main-color: {{ page.color }};
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Fjalla One', monospace;
-      background-color: #fbeff2;
-      color: #222;
-    }
+  body {
+    margin: 0;
+    font-family: 'Fjalla One', monospace;
+    background-color: #2b0004; /* very dark crimson below image */
+    color: #222;
+  }
 
-   .poster-section {
-  position: relative;
-  padding: 4rem 2rem 40rem;
-  color: white;
-  text-align: center;
-  font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  overflow: hidden;
-  background-color: black;
-  z-index: 0;
-}
+  .poster-section {
+    position: relative;
+    padding: 4rem 2rem 40rem;
+    color: white;
+    text-align: center;
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+    overflow: hidden;
+    background-color: black;
+    z-index: 0;
+  }
 
-/* Imagen central real */
-.poster-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: auto 100%;
-  z-index: 0;
-  pointer-events: none;
-}
+  .poster-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
 
-    .poster-section .blur-left,
-.poster-section .blur-right {
-  position: absolute;
-  top: 0;
-  width: 15%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background-color: black;
-  filter: blur(30px);
-  opacity: 0.7;
-}
+  .poster-section .blur-left,
+  .poster-section .blur-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 20vw;
+    z-index: 1;
+    pointer-events: none;
+    background-color: black;
+    filter: blur(60px);
+    opacity: 0.8;
+  }
 
-.poster-section .blur-left {
-  left: 0;
-}
+  .poster-section .blur-left {
+    left: 0;
+  }
 
-.poster-section .blur-right {
-  right: 0;
-}
+  .poster-section .blur-right {
+    right: 0;
+  }
 
-/* Contenido por encima */
-.poster-section > * {
-  position: relative;
-  z-index: 2;
-}
+  .poster-section > * {
+    position: relative;
+    z-index: 2;
+  }
 
+  .poster-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
 
+  .poster-section .synopsis {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
 
-.poster-section h1 {
-  font-size: 3rem;
-  
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-}
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-family: 'Courier Prime', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-.poster-section .synopsis {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0.25rem;
-  font-family: 'Courier Prime', monospace;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+  .cta-button:hover {
+    color: crimson;
+    box-shadow: 0 0 10px crimson;
+  }
 
-.cta-button:hover {
-  color: crimson;
-  box-shadow: 0 0 10px crimson;
-}
+  .gazpacho-hero {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 30vw;
+    z-index: 10;
+    pointer-events: auto;
+    background-color: #0f0004;
+    padding: 6px;
+    border: 3px solid crimson;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
 
-/* Gazpacho floating window */
-.gazpacho-hero {
-  position: absolute;
-  top: 30%; /* bajado un poco */
-  left: 15%;
-  transform: translateY(-50%);
-  width: 30vw;
-  z-index: 10;
-  pointer-events: auto;
-  background-color: #0f0004;
-  padding: 6px;
-  border: 3px solid crimson;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
+  .gazpacho-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-.gazpacho-hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .gazpacho1,
+  .gazpacho2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    backface-visibility: hidden;
+    will-change: opacity;
+  }
 
+  .gazpacho2 {
+    z-index: 1;
+    opacity: 0;
+  }
 
-/* Wrap for controlling transition */
-.gazpacho-hero-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+  .gazpacho-hero:hover .gazpacho2 {
+    opacity: 1;
+  }
 
-.gazpacho1,
-.gazpacho2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
-  backface-visibility: hidden;
-  will-change: opacity;
-}
+  .script-box {
+    margin-top: 8rem;
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 30vw;
+    background-image: 
+      radial-gradient(#ffe6f0 1px, transparent 1px),
+      radial-gradient(#ffe6f0 1px, transparent 1px);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    background-color: #fff0f5;
+    color: #222;
+    border-left: 4px solid crimson;
+    padding: 1.5rem;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
 
-/* Initial state */
-.gazpacho2 {
-  z-index: 1;
-  opacity: 0;
-}
+  .script-box .script-header {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: crimson;
+  }
 
-/* Hover effect without flicker */
-.gazpacho-hero:hover .gazpacho2 {
-  opacity: 1;
-}
+  .script-box .production-info {
+    margin-top: 1.5rem;
+    background: #fff0f5;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px dashed crimson;
+  }
 
-    .script-box {
-   margin-top: 8rem;
-  position: absolute;
-  top: 40%;
-  right: 15%;
-  width: 30vw;
-  background-color: rgba(255, 248, 240, 0.95);
-  border-left: 4px solid crimson;
-  padding: 1.5rem;
-  font-family: 'Courier Prime', monospace;
-  font-size: 0.8rem;
-    text-align: left;
-  color: #222;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  z-index: 10;
-}
+  .script-box .production-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: crimson;
+    font-family: 'Special Elite', monospace;
+  }
 
-.script-box .script-header {
-  text-align: justify;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: crimson;
-}
+  .script-box .production-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.script-box .production-info {
-  margin-top: 1.5rem;
-  background: #fff0f5;
-  padding: 1rem;
-  border-radius: 6px;
-  border: 1px dashed crimson;
-}
+  .script-box .production-info li {
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
 
-.script-box .production-info h3 {
-  
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: crimson;
-  font-family: 'Special Elite', monospace;
-}
+  .script-box a {
+    color: crimson;
+    text-decoration: underline;
+  }
 
-.script-box .production-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 4rem auto;
+    max-width: 900px;
+    padding: 0 2rem;
+  }
 
-.script-box .production-info li {
-  margin-bottom: 0.6rem;
-  line-height: 1.4;
-}
+  .character {
+    text-align: center;
+    transition: transform 0.3s;
+  }
 
-.script-box a {
-  color: crimson;
-  text-decoration: underline;
-}
+  .character:hover {
+    transform: scale(1.1);
+  }
 
+  .character img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
-    .character-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1.5rem;
-      margin: 4rem auto;
-      max-width: 900px;
-      padding: 0 2rem;
-    }
-
-    .character {
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .character:hover {
-      transform: scale(1.1);
-    }
-
-    .character img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--main-color);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .character-name {
-      margin-top: 0.5rem;
-      font-family: 'Special Elite', monospace;
-      font-size: 0.95rem;
-    }
-  </style>
-</head>
-<body>
-<section class="poster-section">
-   <div class="blur-left"></div>
-  <div class="blur-right"></div>
-  
-  <h1>Los 25 de Natita</h1>
-  <p class="synopsis">
-    Un cumpleaños. Un gazpacho. Un misterio.<br>
-    Nadie dice la verdad. Todos tienen secretos.
-  </p>
-  <a href="{{ site.baseurl }}/creditos" class="cta-button">Descubre quién eres en esta historia</a>
-
-  <div class="gazpacho-hero">
-    <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
-    <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
-  </div>
-  <div class="script-box">
-  <div class="script-header">ESCENA 1 — INTERIOR. SALÓN DE NATITA. NOCHE</div>
-  <p>La música suena. Veinticinco miradas. Veinticinco secretos.<br>
-     Una cuchara se hunde en el gazpacho. Nadie habla. Todos sospechan.<br>
-     Entre el amor, la traición y el lorazepam… empieza el cumpleaños.
-  </p>
-
-  <div class="production-info">
-    <h3>🎬 Notas de Producción</h3>
-    <ul>
-      <li><strong>Lugar:</strong> C/ XXXX, X — Madrid</li>
-      <li><strong>Hora:</strong> XX:XX </li>
-      <li><strong>Tema:</strong> Todo en clave Almodóvar</li>
-      <li><strong>Instrucciones:</strong> Observa, pregunta, extorsiona y consigue averiguar todos los misterios</li>
-      <li><strong>Dress Code:</strong> Tienes una guía de tu personaje en los <a href="{{ site.baseurl }}/creditos">créditos</a></li>
-      <li><strong>Qué traer:</strong> XXX</li>
-      <li><strong>Premios:</strong> A la mejor interpretación, vestuario y más</li>
-    </ul>
-  </div>
-</div>
-
-</section>
-
-  <section class="character-grid">
-    {% for personaje in site.data.personajes %}
-    <div class="character">
-      <a href="{{ site.baseurl }}/creditos/{{ personaje.slug }}">
-        <img src="{{ site.baseurl }}/assets/personajes/{{ personaje.foto }}" alt="{{ personaje.nombre }}">
-        <div class="character-name">{{ personaje.nombre }}</div>
-      </a>
-    </div>
-    {% endfor %}
-  </section>
-</body>
-</html>
+  .character-name {
+    margin-top: 0.5rem;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.95rem;
+  }
+</style>
