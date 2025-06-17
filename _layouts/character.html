@@ -150,62 +150,69 @@ header:hover .dot {
   </footer>
 </body>
   <script>
-  
 const numDots = window.innerWidth < 768 ? 15 : 40;
 const dots = [];
-
 const container = document.querySelector(".dots");
+
 container.style.position = 'absolute';
 container.style.inset = 0;
 
+// Init dots
 for (let i = 0; i < numDots; i++) {
   const el = document.createElement("div");
-  const size = 2 + Math.random() * 1;
-
+  const size = 8 + Math.random() * 10;
   el.classList.add("dot");
   el.style.width = `${size}px`;
   el.style.height = `${size}px`;
+
   el.x = Math.random() * window.innerWidth;
-  el.y = Math.random() * 300; // limit to header area
-  el.vx = 0;
-  el.vy = 0;
+  el.y = Math.random() * 300;
+
+  // Wander velocity
+  el.vx = (Math.random() - 0.5) * 0.3;
+  el.vy = (Math.random() - 0.5) * 0.3;
 
   el.style.left = `${el.x}px`;
   el.style.top = `${el.y}px`;
-
   container.appendChild(el);
   dots.push(el);
 }
 
+// Update loop
 function update() {
   for (let i = 0; i < dots.length; i++) {
     let dot = dots[i];
     let fx = 0, fy = 0;
 
+    // Repulsion
     for (let j = 0; j < dots.length; j++) {
       if (i === j) continue;
       let other = dots[j];
       let dx = dot.x - other.x;
       let dy = dot.y - other.y;
-      let dist = Math.sqrt(dx*dx + dy*dy);
-      let minDist = 20;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+      let minDist = 25;
 
       if (dist < minDist && dist > 0.1) {
-        let repulse = (minDist - dist) * 0.05;
-        fx += (dx / dist) * repulse;
-        fy += (dy / dist) * repulse;
+        let strength = (minDist - dist) * 0.01;
+        fx += (dx / dist) * strength;
+        fy += (dy / dist) * strength;
       }
     }
 
-    // Apply movement & some drag
-    dot.vx = (dot.vx + fx) * 0.9;
-    dot.vy = (dot.vy + fy) * 0.9;
+    // Combine wander and repulsion
+    dot.vx += fx;
+    dot.vy += fy;
+
+    dot.vx *= 0.98;  // friction
+    dot.vy *= 0.98;
+
     dot.x += dot.vx;
     dot.y += dot.vy;
 
-    // Constrain to header area
+    // Stay inside header
     dot.x = Math.max(0, Math.min(window.innerWidth - 10, dot.x));
-    dot.y = Math.max(0, Math.min(300, dot.y)); // header height
+    dot.y = Math.max(0, Math.min(300, dot.y));
 
     dot.style.left = `${dot.x}px`;
     dot.style.top = `${dot.y}px`;
@@ -216,6 +223,5 @@ function update() {
 
 update();
 </script>
-
 
 </html>
