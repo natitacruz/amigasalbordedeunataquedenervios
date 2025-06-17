@@ -104,14 +104,27 @@
   aspect-ratio: 4 / 3;
   z-index: 10;
   pointer-events: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  border: 6px double crimson;
-  background-color: #1a0005;
-  padding: 8px;
+
+  /* Polígono trapezoidal con lados horizontales inclinados */
+  clip-path: polygon(
+    5% 0%,   /* esquina superior izquierda con inclinación */
+    95% 0%,  /* esquina superior derecha con inclinación */
+    100% 10%, 
+    100% 90%,
+    95% 100%, 
+    5% 100%, 
+    0% 90%, 
+    0% 10%
+  );
+
+  border: 3px solid crimson;
+  background-color: #0f0004;
+  padding: 6px;
   box-sizing: border-box;
-  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Wrap for controlling transition */
 .gazpacho-hero-inner {
