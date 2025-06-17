@@ -27,47 +27,48 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
-  overflow: hidden;
 }
 
-/* Distinct orbit positions */
-.orbit1 {
+/* Each orbit positioned in different areas of the screen */
+.blob-orbit {
   position: absolute;
+  width: 0;
+  height: 0;
+  transform-origin: center center;
+}
+
+.orbit1 {
   top: 30%;
   left: 20%;
-  transform-origin: center;
   animation: spin1 35s linear infinite;
 }
 
 .orbit2 {
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  transform-origin: center;
-  animation: spin2 45s linear infinite;
+  top: 55%;
+  left: 75%;
+  animation: spin2 40s linear infinite;
 }
 
 .orbit3 {
-  position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
-  transform-origin: center;
-  animation: spin3 40s linear infinite;
+  animation: spin3 45s linear infinite;
 }
 
 .blob {
   width: 30vmin;
   height: 30vmin;
   border-radius: 50%;
+  background: red;
   filter: blur(100px);
   opacity: 0.25;
-  transform: translateX(200px); /* orbit radius */
   mix-blend-mode: screen;
-  animation: pulse 5s ease-in-out infinite;
+  animation: pulse 6s ease-in-out infinite;
+  transform: translateX(200px);
 }
 
 .blob1 {
@@ -82,21 +83,23 @@
   background: #e07b8c;
 }
 
-/* Each orbit rotates independently */
+/* Circular orbits */
 @keyframes spin1 {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
 @keyframes spin2 {
-  from { transform: rotate(360deg); }
-  to   { transform: rotate(0deg); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
 }
+
 @keyframes spin3 {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
-/* Glowing pulse effect */
+/* Pulse */
 @keyframes pulse {
   0%, 100% {
     transform: translateX(200px) scale(1);
@@ -104,10 +107,9 @@
   }
   50% {
     transform: translateX(200px) scale(1.4);
-    opacity: 0.35;
+    opacity: 0.4;
   }
 }
-
     
     /* ################## POSTER ######################### */
 
