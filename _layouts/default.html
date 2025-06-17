@@ -20,12 +20,19 @@
 
    .poster-section {
   position: relative;
-  padding: 40rem 2rem;
-  background: url('{{ site.baseurl }}/assets/img/portadanati.png') no-repeat center center;
-  background-size: cover;
-  color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  padding: 4rem 2rem;
+  background-color: black;
+  color: white;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+
+  /* fondo con degradado a los lados */
+  background-image:
+    linear-gradient(to right, #000 0%, transparent 15%, transparent 85%, #000 100%),
+    url('{{ site.baseurl }}/assets/img/poster-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain; /* o 'auto 100%' si prefieres */
 }
 
 .poster-section h1 {
