@@ -1,331 +1,233 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.name }} — {{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', 'Helvetica Neue', sans-serif;
-      background: radial-gradient(#ffe6f0 1px, transparent 1px),
-                  radial-gradient(#ffe6f0 1px, transparent 1px);
-      background-position: 0 0, 10px 10px;
-      background-size: 20px 20px;
-      background-color: #fff0f5;
-      color: #222;
-    }
-header {
-  position: relative;
-  overflow: hidden;
-  background-color: {{ page.color }};
-  padding: 3rem 2rem;
-  color: white;
-  text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  transition: background-color 0.5s ease-in-out;
-}
-.dot {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  opacity: 1;
-  pointer-events: none;
-  z-index: -1;
-}
-
-header:hover .dot {
-  opacity: 0.6;
-  filter: blur(1px);  /* Efecto difuminado */
-}
-
-    header img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid white;
-  box-shadow: 0 0 20px 8px {{ page.color }};
-  margin-bottom: 1rem;
-}
-
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-
-    blockquote {
-      font-family: 'Bangers', cursive;
-      font-size: 1.6rem;
-      color: white;
-      background: rgba(255, 255, 255, 0.1);
-      margin: 1.5rem auto;
-      max-width: 500px;
-      padding: 1rem;
-      border-left: 5px solid white;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px #00000030;
-    }
-
-    main {
-  max-width: 750px;
-  margin: 3rem auto;
-  padding: 4rem 1.5rem;
-  background: white;
-  border-radius: 0; /* Quitamos esquinas redondeadas */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-  /* Clip diagonal inferior, similar al header pero invertido */
-  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-  overflow: hidden;
-  position: relative;
-}
-
-    h3 {
-      font-size: 1.6rem;
-      color: {{ page.color }};
-      border-left: 6px solid {{ page.color }};
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-footer {
-  background-color: {{ page.color }};
-  background-size: 150% auto;  /* agranda el fondo horizontalmente */
-  background-position: center -70px; /* mueve el fondo ligeramente hacia arriba */
-
-  -webkit-mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
-  mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 120% auto;;
-  mask-size: 120% auto;;
-  -webkit-mask-position: center -3vh;;
-  mask-position: center -3vh;;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-    
-footer svg {
-  width: 160px;
-  max-width: 80%;
-  height: auto;
-  display: inline-block;
-  transition: fill 0.4s ease, color 0.4s ease;
-  color: black; /* default fill color via currentColor */
-  fill: currentColor;
-  filter: drop-shadow(0 0 0 transparent);
-}
-
-footer:hover svg {
-  color: white; /* only SVG changes color on footer hover */
-  filter: drop-shadow(2px 2px 0 black);
-}
-
-        
-    @keyframes revealFromBottom {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0px);
-        opacity: 1;
-      }
-    }
-
-    body {
-      animation: revealFromBottom 0.6s ease-out;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
-    <div class="dots">
-      
-    </div>
-
-    <h1>{{ page.name }}</h1>
-    <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
-    <blockquote>“{{ page.frase }}”</blockquote>
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer onclick="location.href='{{ site.baseurl }}/'">
-  <div class="return-svg">
-    <!-- SVG pegado aquí -->
-    <?xml version="1.0" standalone="no"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-             "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-             width="800.000000pt" height="130.000000pt" viewBox="0 0 800.000000 130.000000"
-             preserveAspectRatio="xMidYMid meet">
-            
-            <g transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
-            fill="currentColor" stroke="none">
-            <path d="M1838 1184 c-141 -34 -287 -140 -346 -252 -49 -93 -66 -164 -66 -282
-            0 -217 94 -389 262 -478 60 -32 239 -85 255 -75 4 2 7 22 7 43 0 29 -5 40 -18
-            44 -11 4 -30 18 -43 32 l-24 26 0 405 0 405 43 37 c35 31 42 42 42 74 0 34 -2
-            37 -27 36 -16 0 -54 -7 -85 -15z"/>
-            <path d="M2037 1193 c-4 -3 -7 -21 -7 -39 0 -24 5 -34 20 -39 10 -3 31 -20 45
-            -36 l25 -31 0 -398 0 -398 -25 -31 c-14 -16 -35 -33 -46 -36 -16 -5 -20 -14
-            -17 -43 4 -46 18 -50 112 -27 145 35 267 115 333 218 70 110 100 302 69 441
-            -49 219 -190 359 -414 410 -80 18 -86 19 -95 9z"/>
-            <path d="M122 1164 c-29 -20 -28 -38 6 -63 15 -12 32 -25 38 -30 5 -4 36 -82
-            68 -172 33 -90 100 -279 151 -419 51 -140 98 -273 105 -295 20 -65 21 -65 150
-            -65 l118 0 41 123 c23 67 41 131 41 142 0 12 -47 159 -105 329 -58 169 -105
-            319 -105 332 0 16 9 28 29 39 41 21 50 54 21 77 -20 16 -46 18 -279 18 -216 0
-            -260 -2 -279 -16z"/>
-            <path d="M860 1167 c-41 -20 -32 -49 24 -77 77 -39 78 -50 12 -254 -31 -96
-            -56 -183 -56 -193 0 -23 29 -114 40 -127 5 -4 40 90 79 210 96 293 113 325
-            202 363 39 17 49 26 49 46 0 14 -8 29 -19 35 -29 15 -300 13 -331 -3z"/>
-            <path d="M2882 1164 c-32 -22 -24 -44 23 -68 l40 -21 3 -428 2 -428 -45 -19
-            c-32 -14 -45 -25 -45 -39 0 -37 29 -41 272 -39 l233 3 3 464 c2 351 5 468 15
-            479 6 8 27 21 45 29 42 17 45 58 6 73 -14 6 -138 10 -277 10 -215 0 -256 -2
-            -275 -16z"/>
-            <path d="M4010 1167 c-35 -18 -31 -47 10 -75 31 -20 41 -39 78 -145 24 -67 75
-            -210 114 -317 38 -107 92 -260 120 -340 28 -80 56 -151 61 -158 7 -9 41 -12
-            129 -10 l120 3 42 130 c31 94 41 137 36 155 -5 14 -54 159 -110 322 -67 195
-            -100 305 -96 320 3 13 19 31 36 40 36 20 39 50 8 72 -19 14 -62 16 -273 16
-            -181 0 -257 -4 -275 -13z"/>
-            <path d="M4740 1167 c-41 -21 -32 -49 25 -77 79 -40 79 -49 10 -260 l-58 -179
-            18 -66 c9 -36 22 -64 28 -62 12 4 39 78 101 277 26 80 58 167 74 195 27 49 92
-            104 124 105 27 0 36 50 13 67 -25 18 -299 18 -335 0z"/>
-            <path d="M5345 1164 c-29 -29 -14 -52 48 -74 l27 -10 0 -429 0 -429 -45 -21
-            c-49 -23 -60 -52 -26 -71 12 -6 112 -10 255 -10 l236 0 0 530 0 530 -239 0
-            c-208 0 -242 -2 -256 -16z"/>
-            <path d="M5920 1141 c0 -39 11 -51 48 -51 34 0 138 -58 170 -94 17 -20 43 -59
-            57 -86 22 -42 30 -50 54 -50 48 0 52 15 49 171 l-3 144 -187 3 -188 2 0 -39z"/>
-            <path d="M6686 1167 c-27 -20 -16 -48 29 -71 l40 -21 0 -425 0 -425 -40 -21
-            c-22 -11 -42 -29 -44 -39 -7 -41 19 -45 293 -45 144 0 271 3 284 6 15 4 22 14
-            22 30 0 19 -10 29 -45 45 l-45 21 0 463 c0 255 -3 470 -6 479 -5 14 -36 16
-            -238 16 -176 0 -237 -3 -250 -13z"/>
-            <path d="M7260 1142 c0 -34 5 -42 37 -63 56 -36 63 -57 63 -202 0 -148 -10
-            -178 -65 -198 -32 -12 -35 -17 -35 -51 0 -34 4 -39 34 -52 52 -22 60 -46 66
-            -197 5 -127 8 -139 33 -178 62 -94 200 -132 331 -93 115 35 202 114 176 161
-            -20 38 -44 43 -84 16 -44 -30 -43 -31 -49 95 -4 107 -19 145 -69 183 -35 26
-            -153 67 -195 67 -39 0 -18 16 39 28 69 16 150 63 183 106 47 62 51 173 10 259
-            -46 98 -203 156 -422 157 l-53 0 0 -38z"/>
-            <path d="M6052 857 c-6 -6 -14 -25 -18 -41 -8 -34 -74 -106 -97 -106 -13 0
-            -17 -10 -17 -44 0 -41 3 -45 38 -63 27 -15 44 -35 64 -74 14 -30 32 -60 38
-            -66 16 -18 67 -16 74 3 10 27 7 364 -4 385 -12 22 -62 26 -78 6z"/>
-            <path d="M3728 480 c-9 -6 -26 -35 -38 -66 -42 -113 -105 -178 -198 -205 -41
-            -12 -43 -14 -40 -48 l3 -36 178 -3 177 -2 0 165 c0 152 -2 167 -20 185 -22 22
-            -37 24 -62 10z"/>
-            <path d="M6235 433 c-9 -10 -33 -44 -53 -76 -42 -64 -117 -123 -169 -133 -18
-            -3 -36 -10 -39 -15 -3 -5 -16 -9 -30 -9 -23 0 -25 -3 -22 -37 l3 -38 193 -3
-            192 -2 0 149 c0 123 -3 152 -16 165 -20 21 -40 20 -59 -1z"/>
-            </g>
-            </svg>
-
-    </svg>
-  </div>
-</footer>
-
-</body>
-  <script>
-const numDots = window.innerWidth < 768 ? 15 : 40;
-const dots = [];
-const container = document.querySelector(".dots");
-
-container.style.position = 'absolute';
-container.style.inset = 0;
-
-// Mouse state
-let mouseX = -1000;
-let mouseY = -1000;
-
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-    
-// Init dots
-for (let i = 0; i < numDots; i++) {
-  const el = document.createElement("div");
-  const size = 15 + Math.random() * 5;
-  el.classList.add("dot");
-  el.style.width = `${size}px`;
-  el.style.height = `${size}px`;
-
-
-  el.x = Math.random() * window.innerWidth;
-  el.y = Math.random() * 300;
-
-  // Wander velocity
-  el.vx = (Math.random() - 0.5) * 0.7;
-  el.vy = (Math.random() - 0.5) * 0.7;
-
-  el.style.left = `${el.x}px`;
-  el.style.top = `${el.y}px`;
-  container.appendChild(el);
-  dots.push(el);
-}
-
-// Update loop
-function update() {
-  for (let i = 0; i < dots.length; i++) {
-    const dot = dots[i];
-    let fx = 0, fy = 0;
-
-    // Dot repulsion
-    for (let j = 0; j < dots.length; j++) {
-      if (i === j) continue;
-      let other = dots[j];
-      let dx = dot.x - other.x;
-      let dy = dot.y - other.y;
-      let dist = Math.sqrt(dx * dx + dy * dy);
-      let minDist = 25;
-
-      if (dist < minDist && dist > 0.1) {
-        let strength = (minDist - dist) * 0.01;
-        fx += (dx / dist) * strength;
-        fy += (dy / dist) * strength;
-      }
-    }
-
-    // Mouse repulsion
-    let dxm = dot.x - mouseX;
-    let dym = dot.y - mouseY;
-    let mouseDist = Math.sqrt(dxm * dxm + dym * dym);
-    let repelRadius = 100;
-
-    if (mouseDist < repelRadius) {
-      let strength = (repelRadius - mouseDist) * 0.03;
-      fx += (dxm / mouseDist) * strength;
-      fy += (dym / mouseDist) * strength;
-    }
-
-    // Apply combined force and wander
-    dot.vx += fx;
-    dot.vy += fy;
-
-    dot.vx *= 0.98;
-    dot.vy *= 0.98;
-
-    dot.x += dot.vx;
-    dot.y += dot.vy;
-
-    // Constrain to "header area"
-    dot.x = Math.max(0, Math.min(window.innerWidth - 10, dot.x));
-    dot.y = Math.max(0, Math.min(300, dot.y));
-
-    dot.style.left = `${dot.x}px`;
-    dot.style.top = `${dot.y}px`;
+<style>
+  :root {
+    --main-color: {{ page.color }};
   }
 
-  requestAnimationFrame(update);
-}
+  body {
+    margin: 0;
+    font-family: 'Fjalla One', monospace;
+    background-color: #2b0004;
+    color: #222;
+  }
 
-update();
-</script>
+  .poster-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 4rem 2rem 40rem;
+    color: white;
+    text-align: center;
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+    overflow: hidden;
+    background-color: #2b0004;
+    z-index: 0;
+  }
 
-</html>
+  .poster-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .poster-section .blur-left,
+  .poster-section .blur-right {
+    position: fixed;
+    top: -50vh;
+    bottom: -50vh;
+    width: 20vw;
+    z-index: 1;
+    pointer-events: none;
+    background-color: #2b0004;
+    filter: blur(60px);
+    opacity: 0.8;
+  }
+
+  .poster-section .blur-left {
+    left: 0;
+  }
+
+  .poster-section .blur-right {
+    right: 0;
+  }
+
+  .poster-section > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .poster-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .poster-section .synopsis {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-family: 'Courier Prime', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    color: crimson;
+    box-shadow: 0 0 10px crimson;
+  }
+
+  .gazpacho-hero {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 30vw;
+    z-index: 10;
+    pointer-events: auto;
+    background-color: #0f0004;
+    padding: 6px;
+    border: 3px solid crimson;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .gazpacho-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gazpacho1,
+  .gazpacho2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    backface-visibility: hidden;
+    will-change: opacity;
+  }
+
+  .gazpacho2 {
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .gazpacho-hero:hover .gazpacho2 {
+    opacity: 1;
+  }
+
+  .script-box {
+    margin-top: 8rem;
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 30vw;
+    background-image: 
+      radial-gradient(#ffe6f0 1px, transparent 1px),
+      radial-gradient(#ffe6f0 1px, transparent 1px);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    background-color: #fff0f5;
+    color: #222;
+    border-left: 4px solid crimson;
+    padding: 1.5rem;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+
+  .script-box .script-header {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: crimson;
+  }
+
+  .script-box .production-info {
+    margin-top: 1.5rem;
+    background: #fff0f5;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px dashed crimson;
+  }
+
+  .script-box .production-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: crimson;
+    font-family: 'Special Elite', monospace;
+  }
+
+  .script-box .production-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .script-box .production-info li {
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+
+  .script-box a {
+    color: crimson;
+    text-decoration: underline;
+  }
+
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 4rem auto;
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+
+  .character {
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .character:hover {
+    transform: scale(1.1);
+  }
+
+  .character img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .character-name {
+    margin-top: 0.5rem;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.95rem;
+  }
+</style>
