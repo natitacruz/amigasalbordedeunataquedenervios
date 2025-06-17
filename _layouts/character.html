@@ -51,14 +51,36 @@ header .dots span {
 }
 
 /* Al hacer hover, cada luna se mueve desde el centro hacia su destino */
-header:hover .dots span:nth-child(1)  { transform: translate(-40vw, -30vh); }
-header:hover .dots span:nth-child(2)  { transform: translate(0vw,   -35vh); }
-header:hover .dots span:nth-child(3)  { transform: translate(40vw,  -30vh); }
-header:hover .dots span:nth-child(4)  { transform: translate(-30vw, 0); }
-header:hover .dots span:nth-child(5)  { transform: translate(30vw,  0); }
-header:hover .dots span:nth-child(6)  { transform: translate(-40vw, 30vh); }
-header:hover .dots span:nth-child(7)  { transform: translate(0vw,   35vh); }
-header:hover .dots span:nth-child(8)  { transform: translate(40vw,  30vh); }
+header:hover .dot-1  { transform: translate(-12vw, -10vh); }
+header:hover .dot-2  { transform: translate(-4vw, -10vh); }
+header:hover .dot-3  { transform: translate(4vw, -10vh); }
+header:hover .dot-4  { transform: translate(12vw, -10vh); }
+
+header:hover .dot-5  { transform: translate(-8vw, -6vh); }
+header:hover .dot-6  { transform: translate(0vw, -6vh); }
+header:hover .dot-7  { transform: translate(8vw, -6vh); }
+header:hover .dot-8  { transform: translate(16vw, -6vh); }
+
+header:hover .dot-9  { transform: translate(-12vw, -2vh); }
+header:hover .dot-10 { transform: translate(-4vw, -2vh); }
+header:hover .dot-11 { transform: translate(4vw, -2vh); }
+header:hover .dot-12 { transform: translate(12vw, -2vh); }
+
+header:hover .dot-13 { transform: translate(-8vw, 2vh); }
+header:hover .dot-14 { transform: translate(0vw, 2vh); }
+header:hover .dot-15 { transform: translate(8vw, 2vh); }
+header:hover .dot-16 { transform: translate(16vw, 2vh); }
+
+header:hover .dot-17 { transform: translate(-12vw, 6vh); }
+header:hover .dot-18 { transform: translate(-4vw, 6vh); }
+header:hover .dot-19 { transform: translate(4vw, 6vh); }
+header:hover .dot-20 { transform: translate(12vw, 6vh); }
+
+header:hover .dot-21 { transform: translate(-8vw, 10vh); }
+header:hover .dot-22 { transform: translate(0vw, 10vh); }
+header:hover .dot-23 { transform: translate(8vw, 10vh); }
+header:hover .dot-24 { transform: translate(16vw, 10vh); }
+
 
 header * {
   position: relative;
@@ -149,9 +171,10 @@ header * {
   <header>
     <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
     <div class="dots">
-    <span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span>
-  </div>
+      {% for i in (1..24) %}
+        <span class="dot dot-{{ i }}"></span>
+      {% endfor %}
+    </div>
 
     <h1>{{ page.name }}</h1>
     <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
