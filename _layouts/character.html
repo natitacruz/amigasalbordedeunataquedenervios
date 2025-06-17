@@ -159,42 +159,71 @@ header:hover .dot {
   </footer>
 </body>
   <script>
-  const numDots = 40;
-  const dotsContainer = document.querySelector(".dots");
+  
+const numDots = window.innerWidth < 768 ? 15 : 40;
+const dots = [];
 
-  for (let i = 0; i < numDots; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
+const container = document.querySelector(".dots");
+container.style.position = 'absolute';
+container.style.inset = 0;
 
-    // Size: 0.5em to 1.2em
-    const size = 3 + Math.random() * 2;
-    dot.style.width = `${size}em`;
-    dot.style.height = `${size}em`;
+for (let i = 0; i < numDots; i++) {
+  const el = document.createElement("div");
+  const size = 8 + Math.random() * 10;
 
-    // Initial position: inside header bounds
-    dot.style.left = `${Math.random() * 90}%`;
-    dot.style.top = `${Math.random() * 90}%`;
+  el.classList.add("dot");
+  el.style.width = `${size}px`;
+  el.style.height = `${size}px`;
+  el.x = Math.random() * window.innerWidth;
+  el.y = Math.random() * 300; // limit to header area
+  el.vx = 0;
+  el.vy = 0;
 
-    dotsContainer.appendChild(dot);
+  el.style.left = `${el.x}px`;
+  el.style.top = `${el.y}px`;
 
-    // Small, elegant wandering
-    const offsetX = (Math.random() - 0.5) * 2;  // -1rem to +1rem
-    const offsetY = (Math.random() - 0.5) * 2;
+  container.appendChild(el);
+  dots.push(el);
+}
 
-    dot.animate(
-      [
-        { transform: 'translate(0, 0)' },
-        { transform: `translate(${offsetX}rem, ${offsetY}rem)` }
-      ],
-      {
-        duration: 6000 + Math.random() * 4000, // slow and varied
-        direction: 'alternate',
-        fill: 'both',
-        iterations: Infinity,
-        easing: 'ease-in-out'
+function update() {
+  for (let i = 0; i < dots.length; i++) {
+    let dot = dots[i];
+    let fx = 0, fy = 0;
+
+    for (let j = 0; j < dots.length; j++) {
+      if (i === j) continue;
+      let other = dots[j];
+      let dx = dot.x - other.x;
+      let dy = dot.y - other.y;
+      let dist = Math.sqrt(dx*dx + dy*dy);
+      let minDist = 20;
+
+      if (dist < minDist && dist > 0.1) {
+        let repulse = (minDist - dist) * 0.05;
+        fx += (dx / dist) * repulse;
+        fy += (dy / dist) * repulse;
       }
-    );
+    }
+
+    // Apply movement & some drag
+    dot.vx = (dot.vx + fx) * 0.9;
+    dot.vy = (dot.vy + fy) * 0.9;
+    dot.x += dot.vx;
+    dot.y += dot.vy;
+
+    // Constrain to header area
+    dot.x = Math.max(0, Math.min(window.innerWidth - 10, dot.x));
+    dot.y = Math.max(0, Math.min(300, dot.y)); // header height
+
+    dot.style.left = `${dot.x}px`;
+    dot.style.top = `${dot.y}px`;
   }
+
+  requestAnimationFrame(update);
+}
+
+update();
 </script>
 
 
