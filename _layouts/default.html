@@ -23,7 +23,7 @@
 
 
     /* Container that covers entire page, behind everything */
-.floating-blobs {
+    .floating-blobs {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,42 +33,42 @@
   z-index: 0;
 }
 
-/* Each orbit positioned in different areas of the screen */
 .blob-orbit {
   position: absolute;
   width: 0;
   height: 0;
-  transform-origin: center center;
+  transform-origin: center;
 }
 
+/* Position each orbit's center */
 .orbit1 {
   top: 30%;
-  left: 20%;
-  animation: spin1 35s linear infinite;
+  left: 25%;
+  animation: rotateOrbit1 30s linear infinite;
 }
 
 .orbit2 {
-  top: 55%;
-  left: 75%;
-  animation: spin2 40s linear infinite;
+  top: 60%;
+  left: 70%;
+  animation: rotateOrbit2 35s linear infinite;
 }
 
 .orbit3 {
   top: 80%;
-  left: 50%;
-  animation: spin3 45s linear infinite;
+  left: 40%;
+  animation: rotateOrbit3 40s linear infinite;
 }
 
+/* Blob styles */
 .blob {
   width: 30vmin;
   height: 30vmin;
   border-radius: 50%;
-  background: red;
   filter: blur(100px);
   opacity: 0.25;
   mix-blend-mode: screen;
   animation: pulse 6s ease-in-out infinite;
-  transform: translateX(200px);
+  transform: translateX(150px); /* orbit radius */
 }
 
 .blob1 {
@@ -83,33 +83,34 @@
   background: #e07b8c;
 }
 
-/* Circular orbits */
-@keyframes spin1 {
+/* Orbit animations */
+@keyframes rotateOrbit1 {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes spin2 {
+@keyframes rotateOrbit2 {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(-360deg); }
+  to { transform: rotate(-360deg); }
 }
 
-@keyframes spin3 {
+@keyframes rotateOrbit3 {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Pulse */
+/* Pulse (unchanged) */
 @keyframes pulse {
   0%, 100% {
-    transform: translateX(200px) scale(1);
+    transform: translateX(150px) scale(1);
     opacity: 0.25;
   }
   50% {
-    transform: translateX(200px) scale(1.4);
+    transform: translateX(150px) scale(1.4);
     opacity: 0.4;
   }
 }
+
     
     /* ################## POSTER ######################### */
 
