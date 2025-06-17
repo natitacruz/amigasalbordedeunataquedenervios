@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.name }} — {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: {{ page.color }};
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Courier Prime', monospace;
+      background-color: #fbeff2;
+      color: #222;
+    }
+
+    .poster-section {
+      background: url('{{ site.baseurl }}/assets/poster.jpg') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      font-family: 'Special Elite', monospace;
+    }
+
+    .poster-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .poster-section p {
+      font-size: 1.2rem;
+      margin: 1rem auto 2rem;
+      max-width: 600px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .poster-section .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: white;
+      color: var(--main-color);
+      border: 2px solid white;
+      font-family: 'Special Elite', monospace;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    .poster-section .cta-button:hover {
+      background-color: var(--main-color);
+      color: white;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--main-color);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer svg {
+      width: 160px;
+      max-width: 80%;
+      height: auto;
+      display: inline-block;
+      transition: fill 0.4s ease, color 0.4s ease, filter 0.4s ease;
+      color: black;
+      fill: currentColor;
+    }
+
+    footer:hover svg {
+      color: white;
+      filter: drop-shadow(4px 6px 0 black);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <section class="poster-section">
+    <h1>Los 25 de Patita</h1>
+    <p>
+      Un cumpleaños. Un gazpacho. Un misterio.<br>
+      Alguien lo ha envenenado con lorazepam.<br>
+      Nadie dice la verdad. Todos tienen secretos.
+    </p>
+    <a href="{{ site.baseurl }}/creditos" class="cta-button">Descubre quién eres en esta historia</a>
+  </section>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer onclick="location.href='{{ site.baseurl }}/'">
+    <div class="return-svg">
+      {% include volver-logo.svg %}
+    </div>
+  </footer>
+</body>
+</html>
