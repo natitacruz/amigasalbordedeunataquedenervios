@@ -55,11 +55,11 @@
 
     .credits-columns {
       animation: scrollCredits 20s linear infinite;
-      display: flex;
-      flex-direction: column;
-      align-items: center;      
-      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
 
 
 
@@ -81,9 +81,12 @@
     }
     
     .credits-column {
-      flex: 0 0 50%;       
-      max-width: 50%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
+
 
 
 
@@ -175,9 +178,9 @@
         <div class="credit-line intro-title">AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS</div>
 
         <div class="credits-row">
-          <div class="credits-column">
+          <div class="credits-column credit-link">
             {% for personaje in site.reparto limit: site.reparto.size | divided_by: 2 %}
-              <div class="credit-line credit-link">
+              <div class="credit-line">
                 <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
                   <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
                   <em>{{ personaje.title }}</em>
@@ -186,7 +189,7 @@
             {% endfor %}
           </div>
 
-          <div class="credits-column">
+          <div class="credits-column credit-link">
             {% for personaje in site.reparto offset: site.reparto.size | divided_by: 2 %}
               <div class="credit-line credit-link">
                 <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
@@ -198,11 +201,16 @@
           </div>
         </div>
 
-        <!-- 🪦 Créditos finales -->
-        <div class="credit-line">Un escándalo filmado en directo.</div>
-        <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
-        <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
-        <div class="credit-line">© Películas que se monta Natita Cruz – Todos los derechos reservados</div>
+        <div class="credits-row">
+          <div class="credits-column">
+            <div class="credit-line">Un escándalo filmado en directo.</div>
+            <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
+          </div>
+          <div class="credits-column">
+            <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
+            <div class="credit-line">© Películas que se monta Natita Cruz – Todos los derechos reservados</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
