@@ -98,12 +98,34 @@
       text-shadow: 0 0 10px #ff4081;
     }
 
+    #play-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      background: transparent;
+      border: 2px solid #ff4081;
+      color: #ff4081;
+      padding: 0.5rem 1rem;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    
+    #play-button:hover {
+      background: #ff4081;
+      color: black;
+      box-shadow: 0 0 10px #ff4081;
+    }
+
     @keyframes scrollCredits {
       0% {
         transform: translateY(60%);
       }
       100% {
-        transform: translateY(-60%);
+        transform: translateY(-80%);
       }
     }
 
