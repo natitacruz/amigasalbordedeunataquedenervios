@@ -17,69 +17,63 @@
       color: #222;
     }
 header {
-  background-color: {{ page.color }};
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Futura', 'Impact', sans-serif;
-  letter-spacing: 3px;
-  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.5s ease-in-out;
-}
+    position: relative;
+    overflow: hidden;
+    background-color: {{ page.color }};
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    transition: background-color 0.5s ease-in-out;
+  }
 
-header .dots {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  z-index: 0;
-}
+  .dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: transform 0.8s ease-out, opacity 0.6s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
 
-header .dots span {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%); /* Centra en el punto de origen */
-  transition: transform 0.8s ease-in-out;
-}
+  header:hover .dot {
+    opacity: 1;
+  }
 
-/* Al hacer hover, cada luna se mueve desde el centro hacia su destino */
-header:hover .dot-1  { transform: translate(-28vw, -20vh); }
-header:hover .dot-2  { transform: translate(-9vw, -20vh); }
-header:hover .dot-3  { transform: translate(9vw, -20vh); }
-header:hover .dot-4  { transform: translate(28vw, -20vh); }
+  /* Grid-like target positions on hover */
+  header:hover .dot-1  { transform: translate(-40vw, -10vh); }
+  header:hover .dot-2  { transform: translate(-25vw, -10vh); }
+  header:hover .dot-3  { transform: translate(-10vw, -10vh); }
+  header:hover .dot-4  { transform: translate(5vw, -10vh); }
+  header:hover .dot-5  { transform: translate(20vw, -10vh); }
+  header:hover .dot-6  { transform: translate(35vw, -10vh); }
 
-header:hover .dot-5  { transform: translate(-24vw, -12vh); }
-header:hover .dot-6  { transform: translate(-5vw, -12vh); }
-header:hover .dot-7  { transform: translate(5vw, -12vh); }
-header:hover .dot-8  { transform: translate(24vw, -12vh); }
+  header:hover .dot-7  { transform: translate(-33vw, -5vh); }
+  header:hover .dot-8  { transform: translate(-18vw, -5vh); }
+  header:hover .dot-9  { transform: translate(-3vw, -5vh); }
+  header:hover .dot-10 { transform: translate(12vw, -5vh); }
+  header:hover .dot-11 { transform: translate(27vw, -5vh); }
+  header:hover .dot-12 { transform: translate(42vw, -5vh); }
 
-header:hover .dot-9  { transform: translate(-28vw, -4vh); }
-header:hover .dot-10 { transform: translate(-9vw, -4vh); }
-header:hover .dot-11 { transform: translate(9vw, -4vh); }
-header:hover .dot-12 { transform: translate(28vw, -4vh); }
+  header:hover .dot-13 { transform: translate(-40vw, 0vh); }
+  header:hover .dot-14 { transform: translate(-25vw, 0vh); }
+  header:hover .dot-15 { transform: translate(-10vw, 0vh); }
+  header:hover .dot-16 { transform: translate(5vw, 0vh); }
+  header:hover .dot-17 { transform: translate(20vw, 0vh); }
+  header:hover .dot-18 { transform: translate(35vw, 0vh); }
 
-header:hover .dot-13 { transform: translate(-24vw, 4vh); }
-header:hover .dot-14 { transform: translate(-5vw, 4vh); }
-header:hover .dot-15 { transform: translate(5vw, 4vh); }
-header:hover .dot-16 { transform: translate(24vw, 4vh); }
-
-header:hover .dot-17 { transform: translate(-28vw, 12vh); }
-header:hover .dot-18 { transform: translate(-9vw, 12vh); }
-header:hover .dot-19 { transform: translate(9vw, 12vh); }
-header:hover .dot-20 { transform: translate(28vw, 12vh); }
-
-header:hover .dot-21 { transform: translate(-24vw, 20vh); }
-header:hover .dot-22 { transform: translate(-5vw, 20vh); }
-header:hover .dot-23 { transform: translate(5vw, 20vh); }
-header:hover .dot-24 { transform: translate(24vw, 20vh); }
+  header:hover .dot-19 { transform: translate(-33vw, 5vh); }
+  header:hover .dot-20 { transform: translate(-18vw, 5vh); }
+  header:hover .dot-21 { transform: translate(-3vw, 5vh); }
+  header:hover .dot-22 { transform: translate(12vw, 5vh); }
+  header:hover .dot-23 { transform: translate(27vw, 5vh); }
+  header:hover .dot-24 { transform: translate(42vw, 5vh); }
 
 
 
