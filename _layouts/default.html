@@ -20,7 +20,7 @@
 
    .poster-section {
   position: relative;
-  padding: 4rem 2rem;
+  padding-bottom: 20rem;
   color: white;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
@@ -97,32 +97,23 @@
 /* Gazpacho floating window */
 .gazpacho-hero {
   position: absolute;
-  top: 55%;
+  top: 60%; /* bajado un poco */
   left: 5%;
   transform: translateY(-50%);
   width: 320px;
-  aspect-ratio: 4 / 3;
   z-index: 10;
   pointer-events: auto;
-
-  /* Polígono trapezoidal con lados horizontales inclinados */
-  clip-path: polygon(
-    5% 0%,   /* esquina superior izquierda con inclinación */
-    95% 0%,  /* esquina superior derecha con inclinación */
-    100% 10%, 
-    100% 90%,
-    95% 100%, 
-    5% 100%, 
-    0% 90%, 
-    0% 10%
-  );
-
-  border: 3px solid crimson;
   background-color: #0f0004;
   padding: 6px;
+  border: 3px solid crimson;
   box-sizing: border-box;
-  overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.gazpacho-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
