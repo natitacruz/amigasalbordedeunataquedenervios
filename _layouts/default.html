@@ -34,49 +34,36 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
-  max-width: 800px;
   height: 100%;
   background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-position: center top;
+  background-size: auto 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+    .poster-section .blur-left,
+.poster-section .blur-right {
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
   z-index: 1;
   pointer-events: none;
+  background-color: black;
+  filter: blur(30px);
+  opacity: 0.7;
 }
 
-/* Capa izquierda difusa */
-.poster-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
+.poster-section .blur-left {
   left: 0;
-  width: 25%;
-  height: 100%;
-  background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
-  background-position: left top;
-  background-size: cover;
-  filter: blur(20px) brightness(0.7);
-  z-index: 0;
-  pointer-events: none;
 }
 
-/* Capa derecha difusa */
-.poster-section .right-blur {
-  content: "";
-  position: absolute;
-  top: 0;
+.poster-section .blur-right {
   right: 0;
-  width: 25%;
-  height: 100%;
-  background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
-  background-position: right top;
-  background-size: cover;
-  filter: blur(20px) brightness(0.7);
-  z-index: 0;
-  pointer-events: none;
 }
 
 /* Contenido por encima */
@@ -264,8 +251,8 @@
 </head>
 <body>
 <section class="poster-section">
-  
-  <div class="right-blur"></div>
+   <div class="blur-left"></div>
+  <div class="blur-right"></div>
   
   <h1>Los 25 de Natita</h1>
   <p class="synopsis">
