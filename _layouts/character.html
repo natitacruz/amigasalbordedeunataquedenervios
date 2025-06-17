@@ -49,58 +49,58 @@ header .dot-5  { left: 50vw; }
 header .dot-6  { left: 60vw; }
 header .dot-7  { left: 70vw; }
 header .dot-8  { left: 80vw; }
+header .dot-9  { left: 90vw; }
+    
+header .dot-9  { left: 5vw; }
+header .dot-10  { left: 15vw; }
+header .dot-11  { left: 25vw; }
+header .dot-12  { left: 35vw; }
+header .dot-13  { left: 45vw; }
+header .dot-14 { left: 55vw; }
+header .dot-15 { left: 65vw; }
+header .dot-16 { left: 75vw; }
+header .dot-17 { left: 85vw; }
+header .dot-18 { left: 95vw; }
 
-header .dot-9  { left: 15vw; }
-header .dot-10 { left: 25vw; }
-header .dot-11 { left: 35vw; }
-header .dot-12 { left: 45vw; }
-header .dot-13 { left: 55vw; }
-header .dot-14 { left: 65vw; }
-header .dot-15 { left: 75vw; }
+header .dot-19  { left: 10vw; }
+header .dot-20  { left: 20vw; }
+header .dot-21  { left: 30vw; }
+header .dot-22  { left: 40vw; }
+header .dot-23  { left: 50vw; }
+header .dot-24  { left: 60vw; }
+header .dot-25  { left: 70vw; }
+header .dot-26  { left: 80vw; }
+header .dot-27  { left: 90vw; }
+    
+header .dot-28  { left: 5vw; }
+header .dot-29  { left: 15vw; }
+header .dot-30  { left: 25vw; }
+header .dot-31  { left: 35vw; }
+header .dot-32  { left: 45vw; }
+header .dot-33 { left: 55vw; }
+header .dot-34 { left: 65vw; }
+header .dot-35 { left: 75vw; }
+header .dot-36 { left: 85vw; }
+header .dot-37 { left: 95vw; }
 
-header .dot-16 { left: 20vw; }
-header .dot-17 { left: 30vw; }
-header .dot-18 { left: 40vw; }
-header .dot-19 { left: 50vw; }
-header .dot-20 { left: 60vw; }
-header .dot-21 { left: 70vw; }
-
-header .dot-22 { left: 25vw; }
-header .dot-23 { left: 35vw; }
-header .dot-24 { left: 45vw; }
-
+header .dot-38  { left: 10vw; }
+header .dot-39  { left: 20vw; }
+header .dot-40  { left: 30vw; }
+header .dot-41  { left: 40vw; }
+header .dot-42  { left: 50vw; }
+header .dot-43  { left: 60vw; }
+header .dot-44  { left: 70vw; }
+header .dot-45  { left: 80vw; }
+header .dot-46  { left: 90vw; }
 /* Hover: suben al header en distintas filas */
 
 
-header:hover .dot-1  { transform: translate(0vw, -42vh); }
-header:hover .dot-2  { transform: translate(0vw,  -42vh); }
-header:hover .dot-3  { transform: translate(0vw,   -42vh); }
-header:hover .dot-4  { transform: translate(0vw,  -42vh); }
+header:hover .row-1  { transform: translate(0vw, -42vh); }
 
-header:hover .dot-5  { transform: translate(0vw,  -34vh); }
-header:hover .dot-6  { transform: translate(0vw,   -34vh); }
-header:hover .dot-7  { transform: translate(0vw,   -34vh); }
-header:hover .dot-8  { transform: translate(0vw,  -34vh); }
-
-header:hover .dot-9  { transform: translate(-0vw, -26vh); }
-header:hover .dot-10 { transform: translate(0vw,  -26vh); }
-header:hover .dot-11 { transform: translate(0vw,   -26vh); }
-header:hover .dot-12 { transform: translate(0vw,  -26vh); }
-
-header:hover .dot-13 { transform: translate(0vw,  -18vh); }
-header:hover .dot-14 { transform: translate(0vw,   -18vh); }
-header:hover .dot-15 { transform: translate(0vw,   -18vh); }
-header:hover .dot-16 { transform: translate(0vw,  -18vh); }
-
-header:hover .dot-17 { transform: translate(0vw, -10vh); }
-header:hover .dot-18 { transform: translate(0vw,  -10vh); }
-header:hover .dot-19 { transform: translate(0vw,   -10vh); }
-header:hover .dot-20 { transform: translate(0vw,  -10vh); }
-
-header:hover .dot-21 { transform: translate(0vw,  -2vh); }
-header:hover .dot-22 { transform: translate(0vw,   -2vh); }
-header:hover .dot-23 { transform: translate(0vw,   -2vh); }
-header:hover .dot-24 { transform: translate(0vw,  -2vh); }
+header:hover .row-2  { transform: translate(0vw,  -34vh); }
+header:hover .row-3  { transform: translate(-0vw, -26vh); }
+header:hover .row-4 { transform: translate(0vw,  -18vh); }
+header:hover .row-5 { transform: translate(0vw, -10vh); }
 
     header img {
       width: 200px;
@@ -187,8 +187,24 @@ header:hover .dot-24 { transform: translate(0vw,  -2vh); }
   <header>
     <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
     <div class="dots">
-      {% for i in (1..24) %}
-        <span class="dot dot-{{ i }}"></span>
+      {% for i in (1..9) %}
+        <span class="dot dot-{{ i }} row-1"></span>
+      {% endfor %}
+
+      {% for i in (10..18) %}
+        <span class="dot dot-{{ i }} row-2"></span>
+      {% endfor %}
+
+      {% for i in (19..27) %}
+        <span class="dot dot-{{ i }} row-3"></span>
+      {% endfor %}
+
+      {% for i in (28..37) %}
+        <span class="dot dot-{{ i }} row-4"></span>
+      {% endfor %}
+
+      {% for i in (38..46) %}
+        <span class="dot dot-{{ i }} row-5"></span>
       {% endfor %}
     </div>
 
