@@ -150,19 +150,21 @@
     height: auto;
     display: block;
   }
+.gazpacho-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* para forzar altura proporcional si quieres cuadrado */
+}
 
-  .gazpacho1,
-  .gazpacho2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
-    backface-visibility: hidden;
-    will-change: opacity;
-  }
+.gazpacho1,
+.gazpacho2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   .gazpacho2 {
     z-index: 1;
@@ -277,8 +279,10 @@
 
 <section class="hero-content-section">
   <div class="gazpacho-hero">
-    <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
-    <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
+    <div class="gazpacho-wrapper">
+      <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
+      <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
+    </div>
   </div>
   <div class="script-box">
     <div class="script-header">ESCENA 1 — INTERIOR. SALÓN DE NATITA. NOCHE</div>
