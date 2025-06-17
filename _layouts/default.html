@@ -21,18 +21,46 @@
    .poster-section {
   position: relative;
   padding: 4rem 2rem;
-  background-color: black;
   color: white;
   text-align: center;
-  font-family: 'Special Elite', 'Courier New', Courier, monospace; /* estilo máquina de escribir */
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  overflow: hidden;
+  z-index: 1;
+}
 
-  /* fondo con degradado a los lados */
-  background-image:
-    linear-gradient(to right, #000 0%, transparent 15%, transparent 85%, #000 100%),
-    url('{{ site.baseurl }}/assets/img/portadanati.png');
+/* Imagen centrada fija */
+.poster-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1600px; /* o el ancho de tu imagen */
+  height: 100%;
+  background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain; /* o 'auto 100%' si prefieres */
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Bordes oscuros difuminados */
+.poster-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #000 0%, transparent 20%, transparent 80%, #000 100%);
+  backdrop-filter: blur(10px); /* efecto desenfoque */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenido encima */
+.poster-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .poster-section h1 {
