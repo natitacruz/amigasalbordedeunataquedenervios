@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <style>
   :root {
     --main-color: {{ page.color }};
@@ -33,7 +35,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 100%;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
   }
 
@@ -241,3 +243,60 @@
     font-size: 0.95rem;
   }
 </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los 25 de Natita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <!-- Pega aquí tu <style> -->
+</head>
+<body>
+
+<section class="poster-section">
+  <div class="blur-left"></div>
+  <div class="blur-right"></div>
+
+  <h1>Los 25 de Natita</h1>
+  <p class="synopsis">
+    Un cumpleaños. Un gazpacho. Un misterio.<br>
+    Nadie dice la verdad. Todos tienen secretos.
+  </p>
+  <a href="#creditos" class="cta-button">Descubre quién eres en esta historia</a>
+</section>
+
+<section class="hero-content-section">
+  <div class="gazpacho-hero">
+    <img src="/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
+    <img src="/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
+  </div>
+  <div class="script-box">
+    <div class="script-header">ESCENA 1 — INTERIOR. SALÓN DE NATITA. NOCHE</div>
+    <p>La música suena. Veinticinco miradas. Veinticinco secretos.<br>
+    Una cuchara se hunde en el gazpacho. Nadie habla. Todos sospechan.<br>
+    Entre el amor, la traición y el lorazepam… empieza el cumpleaños.</p>
+
+    <div class="production-info">
+      <h3>🎬 Notas de Producción</h3>
+      <ul>
+        <li><strong>Lugar:</strong> Calle X, Madrid</li>
+        <li><strong>Hora:</strong> 22:00</li>
+        <li><strong>Tema:</strong> Todo en clave Almodóvar</li>
+        <li><strong>Instrucciones:</strong> Observa, pregunta, extorsiona y consigue averiguar los misterios</li>
+        <li><strong>Dress Code:</strong> Mira la guía de tu personaje en los <a href="#creditos">créditos</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="character-grid" id="creditos">
+  <div class="character">
+    <img src="/assets/personajes/persona1.jpg" alt="Nombre del personaje">
+    <div class="character-name">Nombre del personaje</div>
+  </div>
+  <!-- Repite según personajes -->
+</section>
+
+</body>
+</html>
