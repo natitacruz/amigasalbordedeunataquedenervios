@@ -108,7 +108,7 @@
   }
 
   .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     color: crimson;
     box-shadow: 0 0 10px crimson;
   }
@@ -300,11 +300,12 @@
 </section>
 
 <section class="character-grid" id="creditos">
-  <div class="character">
-    <img src="/assets/personajes/persona1.jpg" alt="Nombre del personaje">
-    <div class="character-name">Nombre del personaje</div>
-  </div>
-  <!-- Repite según personajes -->
+  {% for personaje in site.personajes %}
+    <div class="character">
+      <img src="{{ personaje.image }}" alt="{{ personaje.name }}">
+      <div class="character-name">{{ personaje.name }}</div>
+    </div>
+  {% endfor %}
 </section>
 
 </body>
