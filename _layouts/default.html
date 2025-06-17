@@ -18,7 +18,7 @@
     }
 
     .poster-section {
-      background: url('{{ site.baseurl }}/assets/poster.jpg') center/cover no-repeat;
+      background: url('{{ site.baseurl }}/assets/portadanati.png') center/cover no-repeat;
       padding: 6rem 2rem;
       text-align: center;
       color: white;
@@ -59,43 +59,78 @@
       color: white;
     }
 
-    main {
-      max-width: 800px;
-      margin: 4rem auto;
-      padding: 2rem;
-      background: white;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: var(--main-color);
-      color: white;
+    .gazpacho-hero {
       position: relative;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 800px;
       overflow: hidden;
     }
 
-    footer svg {
-      width: 160px;
-      max-width: 80%;
-      height: auto;
-      display: inline-block;
-      transition: fill 0.4s ease, color 0.4s ease, filter 0.4s ease;
-      color: black;
-      fill: currentColor;
+    .gazpacho-hero img {
+      width: 100%;
+      transition: opacity 0.5s ease;
     }
 
-    footer:hover svg {
-      color: white;
-      filter: drop-shadow(4px 6px 0 black);
-      cursor: pointer;
+    .gazpacho-hero img.gazpacho2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .gazpacho-hero:hover img.gazpacho1 {
+      opacity: 0;
+    }
+
+    .gazpacho-hero:hover img.gazpacho2 {
+      opacity: 1;
+    }
+
+    .gazpacho-caption {
+      font-family: 'Special Elite', monospace;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      padding: 0 2rem;
+    }
+
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      margin: 4rem auto;
+      max-width: 900px;
+      padding: 0 2rem;
+    }
+
+    .character {
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .character:hover {
+      transform: scale(1.1);
+    }
+
+    .character img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .character-name {
+      margin-top: 0.5rem;
+      font-family: 'Special Elite', monospace;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
   <section class="poster-section">
-    <h1>Los 25 de Patita</h1>
+    <h1>Los 25 de Natita</h1>
     <p>
       Un cumpleaños. Un gazpacho. Un misterio.<br>
       Alguien lo ha envenenado con lorazepam.<br>
@@ -104,14 +139,21 @@
     <a href="{{ site.baseurl }}/creditos" class="cta-button">Descubre quién eres en esta historia</a>
   </section>
 
-  <main>
-    {{ content }}
-  </main>
+  <section class="gazpacho-hero">
+    <img src="{{ site.baseurl }}/assets/gazpacho1.png" alt="Gazpacho normal" class="gazpacho1">
+    <img src="{{ site.baseurl }}/assets/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
+    <p class="gazpacho-caption">Pasa el ratón si te atreves... Las instrucciones están en el gazpacho.</p>
+  </section>
 
-  <footer onclick="location.href='{{ site.baseurl }}/'">
-    <div class="return-svg">
-      {% include volver-logo.svg %}
+  <section class="character-grid">
+    {% for personaje in site.data.personajes %}
+    <div class="character">
+      <a href="{{ site.baseurl }}/creditos/{{ personaje.slug }}">
+        <img src="{{ site.baseurl }}/assets/personajes/{{ personaje.foto }}" alt="{{ personaje.nombre }}">
+        <div class="character-name">{{ personaje.nombre }}</div>
+      </a>
     </div>
-  </footer>
+    {% endfor %}
+  </section>
 </body>
 </html>
