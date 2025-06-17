@@ -5,6 +5,8 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
 
     body {
@@ -172,7 +174,10 @@
   <audio id="bg-music" loop>
     <source src="{{ '/assets/music/violetera.wav' | relative_url }}" type="audio/wav">
   </audio>
-  <button id="music-controls">▶️ Música</button>
+  <button id="music-controls">
+    <i id="music-icon" class="fas fa-volume-up"></i>
+  </button>
+
 
   <!-- 🎬 Créditos -->
   <div class="credits-wrapper">
@@ -213,24 +218,38 @@
 
   <!-- 🎛 JavaScript -->
   <script>
-    const music = document.getElementById("bg-music");
-    const playBtn = document.getElementById("music-controls");
+  const music = document.getElementById("bg-music");
+  const playBtn = document.getElementById("music-controls");
+  const icon = document.getElementById("music-icon");
 
-    // Intenta autoplay (funciona en desktop)
-    document.addEventListener("DOMContentLoaded", () => {
-      const playPromise = music.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Si no se puede, se muestra el botón
+  let isPlaying = false;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const playPromise = music.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          isPlaying = true;
+          icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+        })
+        .catch(() => {
           playBtn.style.display = 'block';
         });
-      }
-    });
+    }
+  });
 
-    playBtn.addEventListener("click", () => {
+  playBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      music.pause();
+      icon.classList.replace('fa-volume-mute', 'fa-volume-up');
+    } else {
       music.play();
-      playBtn.style.display = 'none';
-    });
-  </script>
+      icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+
 </body>
 </html>
