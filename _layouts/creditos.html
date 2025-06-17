@@ -120,49 +120,33 @@
       margin-top: 2rem;
     }
 
-   .button-top {
+  #play-button,
+#back-button {
   position: fixed;
   top: 20px;
-  z-index: 999;
-  background: transparent;
   padding: 0.5rem;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  border-radius: 50%;
+  font-size: 1.5rem;
   color: white;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: none;
+  box-shadow: none;
 }
 
-/* 🎵 Play Button */
-#play-button {
+/* Positioning */
+#back-button {
   left: 20px;
 }
 
-#play-button.muted {
-  color: red;
-}
-
-#play-button:hover {
-  background: crimson;
-  color: transparent;
-  box-shadow: 0 0 10px crimson;
-}
-
-/* 🔙 Back Button */
-#back-button {
+#play-button {
   right: 20px;
 }
-
-#back-button:hover {
-  background: crimson;
-  color: transparent;
-  box-shadow: 0 0 10px crimson;
-}
-
 
     @keyframes scrollCredits {
       0% {
