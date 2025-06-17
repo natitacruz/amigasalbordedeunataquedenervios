@@ -297,12 +297,18 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: black;
   color: white;
   padding: 0.5rem;
   font-family: 'Special Elite', monospace;
   font-size: 0.95rem;
   z-index: 4;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.character:hover .character-name {
+  opacity: 1;
 }
 
 </style>
