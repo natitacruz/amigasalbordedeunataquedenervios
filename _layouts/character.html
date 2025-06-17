@@ -107,21 +107,14 @@ footer svg {
   max-width: 80%;
   height: auto;
   display: inline-block;
-  transition: fill 0.4s ease;
+  transition: fill 0.4s ease, color 0.4s ease;
+  color: black; /* default fill color via currentColor */
   fill: currentColor;
 }
 
-
-
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow: 0 0 8px {{ page.color }};
-  }
-  50% {
-    text-shadow: 0 0 18px white, 0 0 8px {{ page.color }};
-  }
+footer:hover svg {
+  color: white; /* only SVG changes color on footer hover */
 }
-
 
         
     @keyframes revealFromBottom {
@@ -167,7 +160,7 @@ footer svg {
              preserveAspectRatio="xMidYMid meet">
             
             <g transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
-            fill="#000000" stroke="none">
+            fill="currentColor" stroke="none">
             <path d="M1838 1184 c-141 -34 -287 -140 -346 -252 -49 -93 -66 -164 -66 -282
             0 -217 94 -389 262 -478 60 -32 239 -85 255 -75 4 2 7 22 7 43 0 29 -5 40 -18
             44 -11 4 -30 18 -43 32 l-24 26 0 405 0 405 43 37 c35 31 42 42 42 74 0 34 -2
