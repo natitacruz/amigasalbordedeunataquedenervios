@@ -129,7 +129,11 @@
 }
 
 /* GAZPACHO */
-
+.gazpacho-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 ratio — puedes usar 100% si lo prefieres cuadrado */
+}
 .gazpacho-hero {
   align-self: start;
   background-color: #0f0004;
@@ -139,6 +143,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
+  max-width: 450px;
+  width: 100%;
 }
 
 .gazpacho-hero img {
@@ -152,8 +158,8 @@
   position: relative;
 }
 
-.gazpacho-hero .gazpacho1,
-.gazpacho-hero .gazpacho2 {
+.gazpacho1,
+.gazpacho2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -162,8 +168,8 @@
   object-fit: cover;
   transition: opacity 0.5s ease-in-out;
   backface-visibility: hidden;
+  display: block;
 }
-
 .gazpacho-hero .gazpacho2 {
   opacity: 0;
   z-index: 2;
