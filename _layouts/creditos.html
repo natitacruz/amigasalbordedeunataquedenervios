@@ -179,7 +179,7 @@
         {% assign half = site.reparto.size | divided_by: 2 | floor %}
         <div class="credits-row">
           <div class="credits-column credit-link">
-            {% for personaje in site.reparto limit: half %}
+            {% for personaje in site.reparto offset: half %}
               <div class="credit-line">
                 <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
                   <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
@@ -202,14 +202,10 @@
         </div>
 
         <div class="credits-row">
-          <div class="credits-column">
             <div class="credit-line">Un escándalo filmado en directo.</div>
             <div class="credit-line">Basado en hechos que aún no han sucedido.</div>
-          </div>
-          <div class="credits-column">
             <div class="credit-line">Ningún gazpacho fue dañado intencionalmente.</div>
             <div class="credit-line">© Películas que se monta Natita Cruz – Todos los derechos reservados</div>
-          </div>
         </div>
       </div>
     </div>
