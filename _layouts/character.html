@@ -90,25 +90,68 @@ header:hover .dot {
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 1rem;
-      color: #555;
-      font-style: italic;
-      background: #fdf0f5;
-      border-top: 2px dashed {{ page.color }};
-    }
+  cursor: pointer;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fdf0f5;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+  border-top: none;
+}
 
-    footer a {
-      color: {{ page.color }};
-      font-weight: bold;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
+.return-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  color: {{ page.color }};
+  font-family: 'Bangers', cursive;
+  z-index: 2;
+  position: relative;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+.return-button .icon {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px {{ page.color }};
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.return-button .label {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: {{ page.color }};
+  z-index: 1;
+  transition: bottom 0.4s ease;
+}
+
+footer:hover::before {
+  bottom: 0;
+}
+
+footer:hover .return-button {
+  color: white;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px {{ page.color }};
+  }
+  50% {
+    text-shadow: 0 0 18px white, 0 0 8px {{ page.color }};
+  }
+}
 
 
         
@@ -144,10 +187,13 @@ header:hover .dot {
     {{ content }}
   </main>
 
-  <footer>
-    {{ page.footer }}
-    <a href="{{ site.baseurl }}/">← Volver a créditos</a>
-  </footer>
+  <footer onclick="location.href='{{ site.baseurl }}/'">
+  <div class="return-button">
+    <span class="icon">←</span>
+    <span class="label">Volver</span>
+  </div>
+</footer>
+
 </body>
   <script>
 const numDots = window.innerWidth < 768 ? 15 : 40;
