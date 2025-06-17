@@ -26,25 +26,28 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   transition: background-color 0.5s ease-in-out;
 }
-
 .dot {
   position: absolute;
   width: 20px;
   height: 20px;
   background: white;
   border-radius: 50%;
-  opacity: 1;
-  transform: translate(0, 0);
-  animation: wander 5s ease-in-out infinite alternate;
-  animation-delay: calc(var(--i) * 0.3s);
-  transition: opacity 0.4s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
   pointer-events: none;
+  z-index: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-    header:hover .dot {
-  opacity: 0.5;
+.dot.large {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+header:hover .dot {
+  opacity: 0.6;
+}
 /* Example placement */
 .dot-1 { top: 20%; left: 10%; --i: 1; }
 .dot-2 { top: 30%; left: 25%; --i: 2; }
@@ -119,11 +122,12 @@ header {
     * Wandering animation */
     @keyframes wander {
       0%   { transform: translate(0px, 0px); }
-      25%  { transform: translate(2px, -3px); }
-      50%  { transform: translate(-3px, 2px); }
+      25%  { transform: translate(3px, -2px); }
+      50%  { transform: translate(-2px, 3px); }
       75%  { transform: translate(2px, 2px); }
-      100% { transform: translate(-2px, -2px); }
+      100% { transform: translate(-3px, -1px); }
     }
+
         
     @keyframes revealFromBottom {
       from {
@@ -145,25 +149,7 @@ header {
   <header>
     <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
     <div class="dots">
-      {% for i in (1..10) %}
-        <span class="dot dot-{{ i }} row-1"></span>
-      {% endfor %}
-
-      {% for i in (11..20) %}
-        <span class="dot dot-{{ i }} row-2"></span>
-      {% endfor %}
-
-      {% for i in (21..30) %}
-        <span class="dot dot-{{ i }} row-3"></span>
-      {% endfor %}
-
-      {% for i in (31..40) %}
-        <span class="dot dot-{{ i }} row-4"></span>
-      {% endfor %}
-
-      {% for i in (41..50) %}
-        <span class="dot dot-{{ i }} row-5"></span>
-      {% endfor %}
+      
     </div>
 
     <h1>{{ page.name }}</h1>
@@ -180,4 +166,30 @@ header {
     <a href="{{ site.baseurl }}/">← Volver a créditos</a>
   </footer>
 </body>
+  <script>
+  const NUM_DOTS = 40;
+  const dotsContainer = document.querySelector('.dots');
+
+  for (let i = 0; i < NUM_DOTS; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (Math.random() < 0.25) dot.classList.add('large');  // 25% large dots
+
+    // Random position within header (0–100%)
+    dot.style.top = `${Math.random() * 90 + 5}%`;
+    dot.style.left = `${Math.random() * 90 + 5}%`;
+
+    dotsContainer.appendChild(dot);
+
+    // Wandering effect
+    function wander() {
+      const x = (Math.random() - 0.5) * 10; // ±5px
+      const y = (Math.random() - 0.5) * 10;
+      dot.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    setInterval(wander, 1500 + Math.random() * 1000);
+  }
+</script>
+
 </html>
