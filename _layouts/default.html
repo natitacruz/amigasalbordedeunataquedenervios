@@ -6,18 +6,19 @@
   body {
     margin: 0;
     font-family: 'Fjalla One', monospace;
-    background-color: #2b0004; /* very dark crimson below image */
+    background-color: #2b0004;
     color: #222;
   }
 
   .poster-section {
     position: relative;
-    padding: 4rem 2rem 40rem;
+    min-height: 100vh;
+    padding: 4rem 2rem 6rem;
     color: white;
     text-align: center;
     font-family: 'Special Elite', 'Courier New', Courier, monospace;
     overflow: hidden;
-    background-color: black;
+    background-color: #2b0004;
     z-index: 0;
   }
 
@@ -32,21 +33,22 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 100%;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
   }
 
   .poster-section .blur-left,
   .poster-section .blur-right {
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: -50vh;
+    bottom: -50vh;
     width: 20vw;
     z-index: 1;
     pointer-events: none;
-    background-color: black;
+    background-color: #2b0004;
     filter: blur(60px);
     opacity: 0.8;
+    animation: flickerBlur 3s infinite alternate ease-in-out;
   }
 
   .poster-section .blur-left {
@@ -55,6 +57,11 @@
 
   .poster-section .blur-right {
     right: 0;
+  }
+
+  @keyframes flickerBlur {
+    0% { opacity: 0.6; filter: blur(40px); }
+    100% { opacity: 0.85; filter: blur(70px); }
   }
 
   .poster-section > * {
@@ -94,14 +101,24 @@
     box-shadow: 0 0 10px crimson;
   }
 
+  /* Nueva sección hero-content */
+  .hero-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #2b0004;
+    padding: 4rem 2rem;
+  }
+
+  .gazpacho-hero,
+  .script-box {
+    flex: 1 1 300px;
+    max-width: 450px;
+  }
+
   .gazpacho-hero {
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 30vw;
-    z-index: 10;
-    pointer-events: auto;
     background-color: #0f0004;
     padding: 6px;
     border: 3px solid crimson;
@@ -138,11 +155,6 @@
   }
 
   .script-box {
-    margin-top: 8rem;
-    position: absolute;
-    top: 40%;
-    right: 15%;
-    width: 30vw;
     background-image: 
       radial-gradient(#ffe6f0 1px, transparent 1px),
       radial-gradient(#ffe6f0 1px, transparent 1px);
@@ -156,7 +168,6 @@
     font-size: 0.8rem;
     text-align: justify;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 10;
   }
 
   .script-box .script-header {
