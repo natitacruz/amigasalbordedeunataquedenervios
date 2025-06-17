@@ -101,6 +101,58 @@
   font-family: 'Courier Prime', monospace;
   pointer-events: auto;
 }
+    .script-box {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 300px;
+  background-color: rgba(255, 248, 240, 0.95);
+  border-left: 4px solid crimson;
+  padding: 1.5rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.95rem;
+  color: #222;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.script-box .script-header {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: crimson;
+}
+
+.script-box .production-info {
+  margin-top: 1.5rem;
+  background: #fff0f5;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px dashed crimson;
+}
+
+.script-box .production-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: crimson;
+  font-family: 'Special Elite', monospace;
+}
+
+.script-box .production-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.script-box .production-info li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.script-box a {
+  color: crimson;
+  text-decoration: underline;
+}
 
 
     .character-grid {
@@ -142,7 +194,6 @@
   <h1>Los 25 de Natita</h1>
   <p class="synopsis">
     Un cumpleaños. Un gazpacho. Un misterio.<br>
-    Alguien lo ha envenenado con lorazepam.<br>
     Nadie dice la verdad. Todos tienen secretos.
   </p>
   <a href="{{ site.baseurl }}/creditos" class="cta-button">Descubre quién eres en esta historia</a>
@@ -150,8 +201,29 @@
   <div class="gazpacho-hero">
     <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
     <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
-    <p class="gazpacho-caption">Pasa el ratón si te atreves...<br>Las instrucciones están en el gazpacho.</p>
   </div>
+  <div class="script-box">
+  <div class="script-header">ESCENA 1 — INTERIOR. SALÓN DE NATITA. NOCHE</div>
+  <p>La música suena. Veinticinco miradas. Veinticinco secretos.<br>
+     Una cuchara se hunde en el gazpacho. Nadie habla. Todos sospechan.<br>
+     Entre el amor, la traición y el lorazepam… empieza el cumpleaños.
+  </p>
+
+  <div class="production-info">
+    <h3>🎬 Notas de Producción</h3>
+    <ul>
+      <li><strong>📍 Lugar:</strong> C/ de la Ficción, 25 — Madrid</li>
+      <li><strong>🕒 Hora:</strong> 20:30 (puntualidad dramática requerida)</li>
+      <li><strong>🎭 Vestuario:</strong> Exagera tu personaje. Vive el drama.</li>
+      <li><strong>🧾 Personaje:</strong> Elige el tuyo en los <a href="{{ site.baseurl }}/creditos">créditos</a></li>
+      <li><strong>🧠 Juego:</strong> Observa, pregunta, traiciona, sobrevive</li>
+      <li><strong>🎁 Presente:</strong> Uno real (y uno simbólico para Natita)</li>
+      <li><strong>🏆 Premios:</strong> A la mejor interpretación, vestuario y drama</li>
+      <li><strong>🌈 Tema:</strong> Todo en clave Almodóvar</li>
+    </ul>
+  </div>
+</div>
+
 </section>
 
   <section class="character-grid">
