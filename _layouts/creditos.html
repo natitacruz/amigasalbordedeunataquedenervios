@@ -120,48 +120,49 @@
       margin-top: 2rem;
     }
 
-    #play-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 999;
-      background: transparent;
-      border: 2px solid #ff4081;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-family: 'Fjalla One', sans-serif;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    }
-    
-    #play-button:hover {
-      background: crimson;
-      color: black;
-      box-shadow: 0 0 10px #ff4081;
-    }
-    #back-button {
-      background: transparent;
-      border: 2px solid #ff4081;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-family: 'Fjalla One', sans-serif;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 8px;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    }
-    
-    #back-button:hover {
-      background: crimson;
-      color: black;
-      box-shadow: 0 0 10px crimson;
-    }
+    .button-top {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* 🎵 Play Button (initially muted = red) */
+#play-button {
+  left: 20px;
+  border: 2px solid red;
+  color: red;
+}
+
+#play-button.active {
+  border-color: white;
+  color: white;
+}
+
+#play-button:hover {
+  background: crimson;
+  color: black;
+  box-shadow: 0 0 10px crimson;
+}
+
+/* 🔙 Back Button */
+#back-button {
+  right: 20px;
+  border: 2px solid crimson;
+  color: white;
+}
+
+#back-button:hover {
+  background: crimson;
+  color: black;
+  box-shadow: 0 0 10px crimson;
+}
 
     @keyframes scrollCredits {
       0% {
