@@ -126,7 +126,6 @@
   top: 20px;
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: white;
   background: transparent;
   border: 1.5px solid white;
   border-radius: 50%;
@@ -143,14 +142,16 @@
 /* Positioning */
 #back-button {
   left: 20px;
+  color: white;
 }
 
 #play-button {
   right: 20px;
+  color: red;
 }
 
-    #play-button.muted {
-  color: red;
+    #play-button.active {
+  color: white;
 }
 
     #play-button:hover,
@@ -265,11 +266,11 @@
   if (isPlaying) {
     music.pause();
     icon.classList.replace('fa-volume-up', 'fa-volume-mute');
-    playBtn.classList.add('muted');
+    playBtn.classList.remove('active');
   } else {
     music.play();
     icon.classList.replace('fa-volume-mute', 'fa-volume-up');
-    playBtn.classList.remove('muted');
+    playBtn.classList.add('active');
   }
   isPlaying = !isPlaying;
 });
