@@ -9,7 +9,7 @@
 
     body {
       margin: 0;
-      background: red;
+      background: black;
       color: white;
       font-family: 'Fjalla One', sans-serif;
       overflow: hidden;
@@ -96,7 +96,7 @@
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    .credit-link:hover span {
+    .credit-link:hover {
       transform: scale(1.1);
       color: #ff4081;
     }
@@ -176,10 +176,10 @@
     <div class="mask">
       <div class="credits-columns" id="credits">
         <div class="credit-line intro-title">AMIGAS AL BORDE DE UN ATAQUE DE NERVIOS</div>
-
+        {% assign half = site.reparto.size | divided_by: 2 | floor %}
         <div class="credits-row">
           <div class="credits-column credit-link">
-            {% for personaje in site.reparto limit: site.reparto.size | divided_by: 2 %}
+            {% for personaje in site.reparto limit: half %}
               <div class="credit-line">
                 <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
                   <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
@@ -190,7 +190,7 @@
           </div>
 
           <div class="credits-column credit-link">
-            {% for personaje in site.reparto offset: site.reparto.size | divided_by: 2 %}
+            {% for personaje in site.reparto limit: half %}
               <div class="credit-line credit-link">
                 <a class="personaje-link" href="{{ site.baseurl }}{{ personaje.url }}">
                   <strong>{{ personaje.actor }}</strong> como <span>{{ personaje.name }}</span><br/>
