@@ -31,7 +31,6 @@ header {
   background: white;
   border-radius: 50%;
   opacity: 1;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   pointer-events: none;
   z-index: -1;
 }
@@ -111,14 +110,6 @@ header:hover .dot {
       text-decoration: underline;
     }
 
-    * Wandering animation */
-    @keyframes wander {
-      0%   { transform: translate(0px, 0px); }
-      25%  { transform: translate(3px, -2px); }
-      50%  { transform: translate(-2px, 3px); }
-      75%  { transform: translate(2px, 2px); }
-      100% { transform: translate(-3px, -1px); }
-    }
 
         
     @keyframes revealFromBottom {
@@ -169,7 +160,7 @@ container.style.inset = 0;
 
 for (let i = 0; i < numDots; i++) {
   const el = document.createElement("div");
-  const size = 8 + Math.random() * 10;
+  const size = 2 + Math.random() * 1;
 
   el.classList.add("dot");
   el.style.width = `${size}px`;
