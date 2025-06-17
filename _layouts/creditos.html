@@ -236,37 +236,43 @@
   <!-- 🎛 JavaScript -->
   <script>
   const music = document.getElementById("bg-music");
-const playBtn = document.getElementById("music-controls");
-const icon = document.getElementById("music-icon");
-
-let isPlaying = false;
-
-document.addEventListener("DOMContentLoaded", () => {
+  const playBtn = document.getElementById("music-controls");
+  const icon = document.getElementById("music-icon");
+  
+  let isPlaying = false;
+  
+  window.onload = () => {
+  music.muted = true;
   const playPromise = music.play();
+
   if (playPromise !== undefined) {
     playPromise
       .then(() => {
-        isPlaying = true;
-        icon.classList.replace('fa-volume-mute', 'fa-volume-up');  // Ya está sonando → mostrar mute
+        setTimeout(() => {
+          music.muted = false;
+          isPlaying = true;
+          icon.classList.replace('fa-volume-mute', 'fa-volume-up');
+        }, 500);
       })
       .catch(() => {
         playBtn.style.display = 'block';
       });
   }
-});
+};
 
-playBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    music.pause();
-    icon.classList.replace('fa-volume-up', 'fa-volume-mute');  // Pausado → mostrar volumen
-  } else {
-    music.play();
-    icon.classList.replace('fa-volume-mute', 'fa-volume-up');  // Sonando → mostrar mute
-  }
-  isPlaying = !isPlaying;
-});
-
-</script>
+  
+  playBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      music.pause();
+      icon.classList.replace('fa-volume-up', 'fa-volume-mute');  // Pausado → mostrar volumen
+    } else {
+      music.play();
+      icon.classList.replace('fa-volume-mute', 'fa-volume-up');  // Sonando → mostrar mute
+    }
+    isPlaying = !isPlaying;
+  });
+  
+  </script>
 
 
 </body>
