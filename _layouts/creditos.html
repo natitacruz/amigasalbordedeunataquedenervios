@@ -164,32 +164,10 @@
         gap: 2rem;
       }
 
-      #music-controls {
-        display: block;
-        position: fixed;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-      }
+      
     }
 
-    #music-controls {
-      background: transparent;
-      border: none;
-      color: #ff4081;
-      font-size: 2rem;
-      cursor: pointer;
-      position: fixed;
-      bottom: 1rem;
-      left: 1rem;
-      z-index: 999;
-    }
-    
-    #music-controls:hover {
-      color: white;
-    }
-
+   
   </style>
 </head>
 <body>
@@ -197,7 +175,10 @@
   <audio id="bg-music" loop>
     <source src="{{ '/assets/music/violetera.wav' | relative_url }}" type="audio/wav">
   </audio>
-  <button id="music-controls">
+
+
+  
+  <button id="play-button">
     <i id="music-icon" class="fas fa-volume-mute"></i>
   </button>
   <button id="back-button" onclick="window.location.href='{{ site.baseurl }}/index.html'">
