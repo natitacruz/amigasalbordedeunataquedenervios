@@ -9,11 +9,14 @@
     body {
       margin: 0;
       font-family: 'Georgia', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+      background: radial-gradient(#ffe6f0 1px, transparent 1px),
+                  radial-gradient(#ffe6f0 1px, transparent 1px);
+      background-position: 0 0, 10px 10px;
+      background-size: 20px 20px;
+      background-color: #fff0f5;
       color: #222;
-      transition: background 1s ease;
     }
-    
+
     header {
       background-color: {{ page.color }};
       color: white;
@@ -23,14 +26,9 @@
       font-family: 'Futura', 'Impact', sans-serif;
       letter-spacing: 3px;
       box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-      position: relative;
-      transition: background-color 0.5s ease-in-out;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
-    
-    header:hover {
-      background-color: #000; /* efecto teatral */
-    }
-    
+
     header img {
       width: 200px;
       height: 200px;
@@ -39,56 +37,42 @@
       border: 6px solid white;
       box-shadow: 0 0 0 8px {{ page.color }};
       margin-bottom: 1rem;
-      transition: transform 0.4s ease, box-shadow 0.3s ease-in-out;
     }
-    
-    header img:hover {
-      transform: scale(1.05) rotate(-2deg);
-      box-shadow: 0 0 20px 6px white;
+
+    h1 {
+      margin-bottom: 0.5rem;
     }
-    
-    h1, h2, blockquote {
-      transition: transform 0.3s ease-in-out, color 0.3s ease;
+
+    blockquote {
+      font-family: 'Bangers', cursive;
+      font-size: 1.6rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 1.5rem auto;
+      max-width: 500px;
+      padding: 1rem;
+      border-left: 5px solid white;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px #00000030;
     }
-    
-    h1:hover {
-      transform: scale(1.05);
-      color: #ffe600;
-    }
-    
-    blockquote:hover {
-      transform: scale(1.02);
-      color: #fff0f0;
-    }
-    
+
     main {
       max-width: 750px;
       margin: 3rem auto;
-      padding: 0 1.5rem;
+      padding: 1.5rem;
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease;
     }
-    
-    main:hover {
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    
+
     h3 {
       font-size: 1.6rem;
       color: {{ page.color }};
       border-left: 6px solid {{ page.color }};
       padding-left: 1rem;
       margin-bottom: 1rem;
-      transition: color 0.3s ease, border-color 0.3s ease;
     }
-    
-    h3:hover {
-      color: black;
-      border-color: black;
-    }
-    
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -97,45 +81,33 @@
       font-style: italic;
       background: #fdf0f5;
       border-top: 2px dashed {{ page.color }};
-      transition: background 0.4s ease;
-    }
-    
-    footer:hover {
-      background: #fcd9e8;
     }
 
-    /* Animación de entrada */
+    footer a {
+      color: {{ page.color }};
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @keyframes revealFromBottom {
-      0% {
+      from {
         transform: translateY(30px);
         opacity: 0;
       }
-      100% {
+      to {
         transform: translateY(0px);
         opacity: 1;
       }
     }
-    
-    body {
-      animation: revealFromBottom 1s ease-out;
-    }
-    
-    /* Fuente Bangers para el blockquote */
-    blockquote {
-      font-family: 'Bangers', cursive;
-      font-size: 1.6rem;
-      font-style: normal;
-      color: white;
-      background: rgba(255, 255, 255, 0.1);
-      margin: 1.5rem auto;
-      max-width: 500px;
-      padding: 1rem;
-      border-left: 5px solid white;
-      transition: transform 0.3s ease-in-out, color 0.3s ease;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px #00000030;
-    }
 
+    body {
+      animation: revealFromBottom 0.6s ease-out;
+    }
   </style>
 </head>
 <body>
@@ -152,6 +124,7 @@
 
   <footer>
     {{ page.footer }}
+    <a href="{{ site.baseurl }}/">← Volver a créditos</a>
   </footer>
 </body>
 </html>
