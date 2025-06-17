@@ -20,15 +20,16 @@
 
    .poster-section {
   position: relative;
-  padding-bottom: 60rem;
+  padding: 4rem 2rem 40rem; /* space below for elements like gazpacho + script */
   color: white;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
   overflow: hidden;
-  z-index: 1;
+  background-color: black; /* fallback */
+  z-index: 0;
 }
 
-/* Imagen centrada fija */
+/* ::before – background image centered */
 .poster-section::before {
   content: "";
   position: absolute;
@@ -36,7 +37,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 800px; /* o el ancho de tu imagen */
+  max-width: 800px; /* real image width */
   height: 100%;
   background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
   background-repeat: no-repeat;
@@ -46,7 +47,7 @@
   pointer-events: none;
 }
 
-/* Bordes oscuros difuminados */
+/* ::after – side gradients */
 .poster-section::after {
   content: "";
   position: absolute;
@@ -54,19 +55,22 @@
   background: linear-gradient(
     to right,
     #0F0D04 0%,
-    #165c47 15%,
-    transparent 25%,
-    transparent 75%,
-    #c37701 85%,
+    #165c47 25%,              /* up to where image starts */
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,     /* where image ends */
+    #c37701 75%,
     #AC6401 100%
   );
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* Contenido encima */
+/* All children above background + gradients */
 .poster-section > * {
   position: relative;
   z-index: 2;
 }
+
 
 .poster-section h1 {
   font-size: 3rem;
@@ -144,7 +148,7 @@
 
 /* Initial state */
 .gazpacho2 {
-  z-index: 10;
+  z-index: 1;
   opacity: 0;
 }
 
