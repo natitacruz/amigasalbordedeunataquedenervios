@@ -104,7 +104,7 @@
 
     .personaje-link:hover {
       transform: scale(1.1);
-      color: #ff4081;
+      color: crimson;
       display: inline-block;
     }
     
@@ -137,6 +137,27 @@
     }
     
     #play-button:hover {
+      background: #ff4081;
+      color: black;
+      box-shadow: 0 0 10px #ff4081;
+    }
+    #back-button {
+      background: transparent;
+      border: 2px solid #ff4081;
+      color: #ff4081;
+      padding: 0.5rem 1rem;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 8px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    
+    #back-button:hover {
       background: #ff4081;
       color: black;
       box-shadow: 0 0 10px #ff4081;
@@ -193,6 +214,9 @@
   </audio>
   <button id="music-controls">
     <i id="music-icon" class="fas fa-volume-mute"></i>
+  </button>
+  <button id="back-button" onclick="window.location.href='{{ site.baseurl }}/index.html'">
+    <i class="fas fa-arrow-left"></i>
   </button>
 
 
