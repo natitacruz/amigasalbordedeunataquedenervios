@@ -17,70 +17,87 @@
       color: #222;
     }
 header {
-    position: relative;
-    overflow: hidden;
-    background-color: {{ page.color }};
-    padding: 3rem 2rem;
-    color: white;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .dot {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    transition: transform 0.8s ease-out, opacity 0.6s ease;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  header:hover .dot {
-    opacity: 1;
-  }
-
-  /* Grid-like target positions on hover */
-  header:hover .dot-1  { transform: translate(-40vw, -10vh); }
-  header:hover .dot-2  { transform: translate(-25vw, -10vh); }
-  header:hover .dot-3  { transform: translate(-10vw, -10vh); }
-  header:hover .dot-4  { transform: translate(5vw, -10vh); }
-  header:hover .dot-5  { transform: translate(20vw, -10vh); }
-  header:hover .dot-6  { transform: translate(35vw, -10vh); }
-
-  header:hover .dot-7  { transform: translate(-33vw, -5vh); }
-  header:hover .dot-8  { transform: translate(-18vw, -5vh); }
-  header:hover .dot-9  { transform: translate(-3vw, -5vh); }
-  header:hover .dot-10 { transform: translate(12vw, -5vh); }
-  header:hover .dot-11 { transform: translate(27vw, -5vh); }
-  header:hover .dot-12 { transform: translate(42vw, -5vh); }
-
-  header:hover .dot-13 { transform: translate(-40vw, 0vh); }
-  header:hover .dot-14 { transform: translate(-25vw, 0vh); }
-  header:hover .dot-15 { transform: translate(-10vw, 0vh); }
-  header:hover .dot-16 { transform: translate(5vw, 0vh); }
-  header:hover .dot-17 { transform: translate(20vw, 0vh); }
-  header:hover .dot-18 { transform: translate(35vw, 0vh); }
-
-  header:hover .dot-19 { transform: translate(-33vw, 5vh); }
-  header:hover .dot-20 { transform: translate(-18vw, 5vh); }
-  header:hover .dot-21 { transform: translate(-3vw, 5vh); }
-  header:hover .dot-22 { transform: translate(12vw, 5vh); }
-  header:hover .dot-23 { transform: translate(27vw, 5vh); }
-  header:hover .dot-24 { transform: translate(42vw, 5vh); }
-
-
-
-header * {
   position: relative;
-  z-index: 1;
+  overflow: hidden;
+  background-color: {{ page.color }};
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  transition: background-color 0.5s ease-in-out;
 }
+
+.dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  top: 100%;              /* debajo del header */
+  transform: translateY(0);
+  transition: transform 0.8s ease-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ejemplo con 24 puntos */
+header .dot-1  { left: 10vw; }
+header .dot-2  { left: 20vw; }
+header .dot-3  { left: 30vw; }
+header .dot-4  { left: 40vw; }
+header .dot-5  { left: 50vw; }
+header .dot-6  { left: 60vw; }
+header .dot-7  { left: 70vw; }
+header .dot-8  { left: 80vw; }
+
+header .dot-9  { left: 15vw; }
+header .dot-10 { left: 25vw; }
+header .dot-11 { left: 35vw; }
+header .dot-12 { left: 45vw; }
+header .dot-13 { left: 55vw; }
+header .dot-14 { left: 65vw; }
+header .dot-15 { left: 75vw; }
+
+header .dot-16 { left: 20vw; }
+header .dot-17 { left: 30vw; }
+header .dot-18 { left: 40vw; }
+header .dot-19 { left: 50vw; }
+header .dot-20 { left: 60vw; }
+header .dot-21 { left: 70vw; }
+
+header .dot-22 { left: 25vw; }
+header .dot-23 { left: 35vw; }
+header .dot-24 { left: 45vw; }
+
+/* Hover: suben al header en distintas filas */
+header:hover .dot-1  { transform: translateY(-160%); }
+header:hover .dot-2  { transform: translateY(-160%); }
+header:hover .dot-3  { transform: translateY(-160%); }
+header:hover .dot-4  { transform: translateY(-160%); }
+header:hover .dot-5  { transform: translateY(-160%); }
+header:hover .dot-6  { transform: translateY(-160%); }
+header:hover .dot-7  { transform: translateY(-160%); }
+header:hover .dot-8  { transform: translateY(-160%); }
+
+header:hover .dot-9  { transform: translateY(-120%); }
+header:hover .dot-10 { transform: translateY(-120%); }
+header:hover .dot-11 { transform: translateY(-120%); }
+header:hover .dot-12 { transform: translateY(-120%); }
+header:hover .dot-13 { transform: translateY(-120%); }
+header:hover .dot-14 { transform: translateY(-120%); }
+header:hover .dot-15 { transform: translateY(-120%); }
+
+header:hover .dot-16 { transform: translateY(-80%); }
+header:hover .dot-17 { transform: translateY(-80%); }
+header:hover .dot-18 { transform: translateY(-80%); }
+header:hover .dot-19 { transform: translateY(-80%); }
+header:hover .dot-20 { transform: translateY(-80%); }
+header:hover .dot-21 { transform: translateY(-80%); }
+
+header:hover .dot-22 { transform: translateY(-40%); }
+header:hover .dot-23 { transform: translateY(-40%); }
+header:hover .dot-24 { transform: translateY(-40%); }
+
     header img {
       width: 200px;
       height: 200px;
