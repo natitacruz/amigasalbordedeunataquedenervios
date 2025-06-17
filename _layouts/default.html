@@ -23,92 +23,38 @@
 
 
     /* Container that covers entire page, behind everything */
-    .floating-blobs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.blob-orbit {
+  .blob-orbit {
   position: absolute;
   width: 0;
   height: 0;
   transform-origin: center;
 }
 
-/* Position each orbit's center */
-.orbit1 {
-  top: 30%;
-  left: 25%;
-  animation: rotateOrbit1 30s linear infinite;
-}
+.orbit1 { top: 25%; left: 30%; animation: rotateOrbit1 30s linear infinite; }
+.orbit2 { top: 65%; left: 70%; animation: rotateOrbit2 35s linear infinite; }
+.orbit3 { top: 80%; left: 40%; animation: rotateOrbit3 40s linear infinite; }
 
-.orbit2 {
-  top: 60%;
-  left: 70%;
-  animation: rotateOrbit2 35s linear infinite;
-}
-
-.orbit3 {
-  top: 80%;
-  left: 40%;
-  animation: rotateOrbit3 40s linear infinite;
-}
-
-/* Blob styles */
 .blob {
   width: 30vmin;
   height: 30vmin;
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.25;
   mix-blend-mode: screen;
+  transform: translateX(150px);
   animation: pulse 6s ease-in-out infinite;
-  transform: translateX(150px); /* orbit radius */
 }
 
-.blob1 {
-  background: #c37701;
-}
+.blob1 { background: #c37701; }
+.blob2 { background: #ac6401; }
+.blob3 { background: #e07b8c; }
 
-.blob2 {
-  background: #ac6401;
-}
+@keyframes rotateOrbit1 { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes rotateOrbit2 { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
+@keyframes rotateOrbit3 { from { transform: rotate(0); } to { transform: rotate(360deg); } }
 
-.blob3 {
-  background: #e07b8c;
-}
-
-/* Orbit animations */
-@keyframes rotateOrbit1 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rotateOrbit2 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
-@keyframes rotateOrbit3 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Pulse (unchanged) */
 @keyframes pulse {
-  0%, 100% {
-    transform: translateX(150px) scale(1);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translateX(150px) scale(1.4);
-    opacity: 0.4;
-  }
+  0%, 100% { transform: translateX(150px) scale(1); opacity: 0.25; }
+  50%      { transform: translateX(150px) scale(1.4); opacity: 0.4; }
 }
 
     
