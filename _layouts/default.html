@@ -112,9 +112,7 @@
     color: crimson;
     box-shadow: 0 0 10px crimson;
   }
-
-  /* Nueva sección hero-content */
-  .hero-content-section {
+.hero-content-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: start;
@@ -123,107 +121,91 @@
   padding: 4rem 2rem;
 }
 
+.gazpacho-hero {
+  align-self: start; /* Arriba en pantallas grandes */
+  background-color: #0f0004;
+  padding: 6px;
+  border: 3px solid crimson;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.gazpacho-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.script-box {
+  align-self: end; /* Más abajo que el gazpacho */
+  background-image: 
+    radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px),
+    radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px);
+  background-position: 0 0, 10px 10px;
+  background-size: 22px 22px;
+  background-color: #fff0f5;
+  color: #222;
+  border-left: 4px solid crimson;
+  padding: 1.5rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  text-align: justify;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Script interno */
+.script-box .script-header {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: crimson;
+}
+
+.script-box .production-info {
+  margin-top: 1.5rem;
+  background: #fff0f5;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px dashed crimson;
+}
+
+.script-box .production-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: crimson;
+  font-family: 'Special Elite', monospace;
+}
+
+.script-box .production-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.script-box .production-info li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.script-box a {
+  color: crimson;
+  text-decoration: underline;
+}
+
+/* 🌐 Responsive para móviles */
+@media (max-width: 768px) {
+  .hero-content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .gazpacho-hero,
   .script-box {
-    position: relative;
-    margin-top: 20rem; 
-    max-width: 450px;
-  }
-
-  .gazpacho-hero {
-    background-color: #0f0004;
-    padding: 6px;
-    border: 3px solid crimson;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  }
-
-  .gazpacho-hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-.gazpacho-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* para forzar altura proporcional si quieres cuadrado */
-}
-
-.gazpacho1,
-.gazpacho2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
- transition: opacity 0.5s ease-in-out;
-  backface-visibility: hidden;
-  will-change: opacity;
-}
-
-  .gazpacho2 {
-    z-index: 1;
-    opacity: 0;
-  }
-
-  .gazpacho-hero:hover .gazpacho2 {
-    opacity: 1;
-  }
-
-  .script-box {
-   background-image: 
-      radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px),
-      radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px);
-    background-position: 0 0, 10px 10px;
-    background-size: 22px 22px;
-    background-color: #fff0f5;
-    color: #222;
-    border-left: 4px solid crimson;
-    padding: 1.5rem;
-    font-family: 'Courier Prime', monospace;
-    font-size: 0.8rem;
-    text-align: justify;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-
-  .script-box .script-header {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: crimson;
-  }
-
-  .script-box .production-info {
-    margin-top: 1.5rem;
-    background: #fff0f5;
-    padding: 1rem;
-    border-radius: 6px;
-    border: 1px dashed crimson;
-  }
-
-  .script-box .production-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: crimson;
-    font-family: 'Special Elite', monospace;
-  }
-
-  .script-box .production-info ul {
-    list-style: none;
-    padding: 0;
+    align-self: center !important;
     margin: 0;
   }
-
-  .script-box .production-info li {
-    margin-bottom: 0.6rem;
-    line-height: 1.4;
-  }
-
-  .script-box a {
-    color: crimson;
-    text-decoration: underline;
-  }
+}
 
   .character-grid {
     display: grid;
