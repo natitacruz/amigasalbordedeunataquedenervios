@@ -29,55 +29,58 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0; /* behind all content but above background color */
+  z-index: 0;
   pointer-events: none;
   overflow: hidden;
 }
 
-/* Shared blob style */
-.blob {
+/* Blob wrapper: controls orbit */
+.blob-orbit {
   position: absolute;
-  width: 40vmin;
-  height: 40vmin;
+  top: 50%;
+  left: 50%;
+  animation: orbit 12s linear infinite;
+  transform-origin: center center;
+}
+
+/* The actual glowing blob */
+.blob {
+  width: 30vmin;
+  height: 30vmin;
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.3;
-  animation: floatBlob 40s ease-in-out infinite alternate;
+  opacity: 0.2;
   mix-blend-mode: screen;
 }
 
-/* Individual blob settings */
-.blob1 {
-  background: #c37701;
-  top: 10%;
-  left: 20%;
-  animation-delay: 0s;
+/* Colors */
+.blob1 { background-color: #c37701; }
+.blob2 { background-color: #ac6401; }
+.blob3 { background-color: #e07b8c; }
+
+/* Different orbit paths */
+.blob-orbit:nth-child(1) {
+  animation-duration: 16s;
+  transform: rotate(0deg);
+}
+.blob-orbit:nth-child(2) {
+  animation-duration: 12s;
+  transform: rotate(120deg);
+}
+.blob-orbit:nth-child(3) {
+  animation-duration: 20s;
+  transform: rotate(240deg);
 }
 
-.blob2 {
-  background: #ac6459;
-  top: 50%;
-  left: 70%;
-  animation-delay: 5s;
+/* Circular path */
+@keyframes orbit {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.blob3 {
-  background: #e07b8c;
-  top: 30%;
-  left: 45%;
-  animation-delay: 10s;
-}
-
-/* Movement animation */
-@keyframes floatBlob {
-  0% {
-    transform: scale(1) translate(0, 0);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(1.3) translate(30px, -20px);
-    opacity: 0.5;
-  }
+/* Position blob on orbit radius */
+.blob {
+  transform: translateX(150px); /* radius of orbit */
 }
     
     /* ################## POSTER ######################### */
