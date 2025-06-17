@@ -157,6 +157,15 @@ const container = document.querySelector(".dots");
 container.style.position = 'absolute';
 container.style.inset = 0;
 
+// Mouse state
+let mouseX = -1000;
+let mouseY = -1000;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+    
 // Init dots
 for (let i = 0; i < numDots; i++) {
   const el = document.createElement("div");
@@ -169,8 +178,8 @@ for (let i = 0; i < numDots; i++) {
   el.y = Math.random() * 300;
 
   // Wander velocity
-  el.vx = (Math.random() - 0.5) * 0.3;
-  el.vy = (Math.random() - 0.5) * 0.3;
+  el.vx = (Math.random() - 0.5) * 0.7;
+  el.vy = (Math.random() - 0.5) * 0.7;
 
   el.style.left = `${el.x}px`;
   el.style.top = `${el.y}px`;
@@ -181,10 +190,10 @@ for (let i = 0; i < numDots; i++) {
 // Update loop
 function update() {
   for (let i = 0; i < dots.length; i++) {
-    let dot = dots[i];
+    const dot = dots[i];
     let fx = 0, fy = 0;
 
-    // Repulsion
+    // Dot repulsion
     for (let j = 0; j < dots.length; j++) {
       if (i === j) continue;
       let other = dots[j];
@@ -200,17 +209,29 @@ function update() {
       }
     }
 
-    // Combine wander and repulsion
+    // Mouse repulsion
+    let dxm = dot.x - mouseX;
+    let dym = dot.y - mouseY;
+    let mouseDist = Math.sqrt(dxm * dxm + dym * dym);
+    let repelRadius = 100;
+
+    if (mouseDist < repelRadius) {
+      let strength = (repelRadius - mouseDist) * 0.03;
+      fx += (dxm / mouseDist) * strength;
+      fy += (dym / mouseDist) * strength;
+    }
+
+    // Apply combined force and wander
     dot.vx += fx;
     dot.vy += fy;
 
-    dot.vx *= 0.98;  // friction
+    dot.vx *= 0.98;
     dot.vy *= 0.98;
 
     dot.x += dot.vx;
     dot.y += dot.vy;
 
-    // Stay inside header
+    // Constrain to "header area"
     dot.x = Math.max(0, Math.min(window.innerWidth - 10, dot.x));
     dot.y = Math.max(0, Math.min(300, dot.y));
 
