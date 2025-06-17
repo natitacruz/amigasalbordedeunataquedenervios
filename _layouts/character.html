@@ -28,16 +28,14 @@ header {
 }
 .dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
   background: white;
   border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 0.6;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   pointer-events: none;
   z-index: 0;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
+
 
 .dot.large {
   width: 30px;
@@ -167,29 +165,43 @@ header:hover .dot {
   </footer>
 </body>
   <script>
-  const NUM_DOTS = 40;
-  const dotsContainer = document.querySelector('.dots');
+  const numDots = 40;
+  const dotsContainer = document.querySelector(".dots");
 
-  for (let i = 0; i < NUM_DOTS; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (Math.random() < 0.25) dot.classList.add('large');  // 25% large dots
+  for (let i = 0; i < numDots; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
 
-    // Random position within header (0–100%)
-    dot.style.top = `${Math.random() * 90 + 5}%`;
-    dot.style.left = `${Math.random() * 90 + 5}%`;
+    // Size: 0.5em to 1.2em
+    const size = 0.5 + Math.random() * 0.7;
+    dot.style.width = `${size}em`;
+    dot.style.height = `${size}em`;
+
+    // Initial position: inside header bounds
+    dot.style.left = `${Math.random() * 90}%`;
+    dot.style.top = `${Math.random() * 90}%`;
 
     dotsContainer.appendChild(dot);
 
-    // Wandering effect
-    function wander() {
-      const x = (Math.random() - 0.5) * 10; // ±5px
-      const y = (Math.random() - 0.5) * 10;
-      dot.style.transform = `translate(${x}px, ${y}px)`;
-    }
+    // Small, elegant wandering
+    const offsetX = (Math.random() - 0.5) * 2;  // -1rem to +1rem
+    const offsetY = (Math.random() - 0.5) * 2;
 
-    setInterval(wander, 1500 + Math.random() * 1000);
+    dot.animate(
+      [
+        { transform: 'translate(0, 0)' },
+        { transform: `translate(${offsetX}rem, ${offsetY}rem)` }
+      ],
+      {
+        duration: 6000 + Math.random() * 4000, // slow and varied
+        direction: 'alternate',
+        fill: 'both',
+        iterations: Infinity,
+        easing: 'ease-in-out'
+      }
+    );
   }
 </script>
+
 
 </html>
