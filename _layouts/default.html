@@ -116,7 +116,6 @@
     box-shadow: 0 0 10px crimson;
   }
 
-    
     /* ################## HERO ######################### */
 .hero-content-section {
   display: grid;
@@ -125,15 +124,21 @@
   gap: 2rem;
   background-color: #2b0004;
   padding: 4rem 2rem;
+  position: relative;
+  z-index: 3; /* Por encima del blur */
 }
 
+/* GAZPACHO */
+
 .gazpacho-hero {
-  align-self: start; /* Arriba en pantallas grandes */
+  align-self: start;
   background-color: #0f0004;
   padding: 6px;
   border: 3px solid crimson;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
 }
 
 .gazpacho-hero img {
@@ -142,8 +147,41 @@
   display: block;
 }
 
+/* Transición con doble imagen */
+.gazpacho-hero {
+  position: relative;
+}
+
+.gazpacho-hero .gazpacho1,
+.gazpacho-hero .gazpacho2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.gazpacho-hero .gazpacho2 {
+  opacity: 0;
+  z-index: 2;
+}
+
+.gazpacho-hero:hover .gazpacho2 {
+  opacity: 1;
+}
+
+.gazpacho-hero .gazpacho1 {
+  z-index: 1;
+}
+
+/* SCRIPT */
+
 .script-box {
-  align-self: end; /* Más abajo que el gazpacho */
+  align-self: end; /* para que quede más abajo */
+  margin-top: 3rem; /* desalineación */
   background-image: 
     radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px),
     radial-gradient(rgba(139, 0, 50, 0.1) 2px, transparent 1px);
@@ -157,6 +195,8 @@
   font-size: 0.8rem;
   text-align: justify;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  position: relative;
 }
 
 .script-box .script-header {
@@ -197,6 +237,7 @@
   text-decoration: underline;
 }
 
+/* RESPONSIVE para móviles */
 @media (max-width: 768px) {
   .hero-content-section {
     display: flex;
@@ -207,9 +248,14 @@
   .gazpacho-hero,
   .script-box {
     align-self: center !important;
-    margin: 0;
+    margin-top: 0 !important;
+    width: 100%;
+    max-width: 450px;
   }
 }
+
+
+        /* ################## CHARACTER GRID ######################### */
    .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ajusta si quieres más grandes */
