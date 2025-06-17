@@ -29,80 +29,27 @@ header {
 
 .dot {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: white;
   border-radius: 50%;
-  top: 100%;              /* debajo del header */
-  transform: translateY(0);
-  transition: transform 0.8s ease-out;
-  z-index: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  animation: wander 5s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i) * 0.3s);
+  transition: opacity 0.4s ease;
   pointer-events: none;
 }
 
-/* Ejemplo con 24 puntos */
-header .dot-1  { left: 10vw; }
-header .dot-2  { left: 20vw; }
-header .dot-3  { left: 30vw; }
-header .dot-4  { left: 40vw; }
-header .dot-5  { left: 50vw; }
-header .dot-6  { left: 60vw; }
-header .dot-7  { left: 70vw; }
-header .dot-8  { left: 80vw; }
-header .dot-9  { left: 90vw; }
-header .dot-10  { left: 100vw; }
-    
-header .dot-11  { left: 5vw; }
-header .dot-12  { left: 15vw; }
-header .dot-13  { left: 25vw; }
-header .dot-14  { left: 35vw; }
-header .dot-15  { left: 45vw; }
-header .dot-16 { left: 55vw; }
-header .dot-17 { left: 65vw; }
-header .dot-18 { left: 75vw; }
-header .dot-19 { left: 85vw; }
-header .dot-20 { left: 95vw; }
+    header:hover .dot {
+  opacity: 0.5;
+}
 
-header .dot-21  { left: 10vw; }
-header .dot-22  { left: 20vw; }
-header .dot-23  { left: 30vw; }
-header .dot-24  { left: 40vw; }
-header .dot-25  { left: 50vw; }
-header .dot-26  { left: 60vw; }
-header .dot-27  { left: 70vw; }
-header .dot-28  { left: 80vw; }
-header .dot-29  { left: 90vw; }
-header .dot-30  { left: 100vw; }
-    
-header .dot-31  { left: 5vw; }
-header .dot-32  { left: 15vw; }
-header .dot-33  { left: 25vw; }
-header .dot-34  { left: 35vw; }
-header .dot-35  { left: 45vw; }
-header .dot-36 { left: 55vw; }
-header .dot-37 { left: 65vw; }
-header .dot-38 { left: 75vw; }
-header .dot-39 { left: 85vw; }
-header .dot-40 { left: 95vw; }
-
-header .dot-41  { left: 10vw; }
-header .dot-42  { left: 20vw; }
-header .dot-43  { left: 30vw; }
-header .dot-44  { left: 40vw; }
-header .dot-45  { left: 50vw; }
-header .dot-46  { left: 60vw; }
-header .dot-47  { left: 70vw; }
-header .dot-48  { left: 80vw; }
-header .dot-49  { left: 90vw; }
-header .dot-50  { left: 100vw; }
-/* Hover: suben al header en distintas filas */
-
-
-header:hover .row-1  { transform: translate(0vw, -50vh); }
-header:hover .row-2  { transform: translate(0vw,  -40vh); }
-header:hover .row-3  { transform: translate(-0vw, -30vh); }
-header:hover .row-4 { transform: translate(0vw,  -20vh); }
-header:hover .row-5 { transform: translate(0vw, -10vh); }
+/* Example placement */
+.dot-1 { top: 20%; left: 10%; --i: 1; }
+.dot-2 { top: 30%; left: 25%; --i: 2; }
+.dot-3 { top: 40%; left: 60%; --i: 3; }
+.dot-4 { top: 50%; left: 80%; --i: 4; }
 
     header img {
       width: 200px;
@@ -169,6 +116,15 @@ header:hover .row-5 { transform: translate(0vw, -10vh); }
       text-decoration: underline;
     }
 
+    * Wandering animation */
+    @keyframes wander {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(2px, -3px); }
+      50%  { transform: translate(-3px, 2px); }
+      75%  { transform: translate(2px, 2px); }
+      100% { transform: translate(-2px, -2px); }
+    }
+        
     @keyframes revealFromBottom {
       from {
         transform: translateY(30px);
