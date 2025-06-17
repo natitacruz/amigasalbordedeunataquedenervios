@@ -35,13 +35,6 @@ header {
   z-index: -1;
 }
 
-.pill {
-  width: 3px;
-  height: 12px;
-  background-color: #f0f0f0;
-  border-radius: 2px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.15);
-}
 header:hover .dot {
   opacity: 0.6;
   filter: blur(1px);  /* Efecto difuminado */
@@ -181,12 +174,6 @@ for (let i = 0; i < numDots; i++) {
   el.style.width = `${size}px`;
   el.style.height = `${size}px`;
 
-  
-  const pill = document.createElement("div");
-  pill.className = "pill";
-
-  dot.appendChild(pill);
-  document.body.appendChild(dot);
 
   el.x = Math.random() * window.innerWidth;
   el.y = Math.random() * 300;
