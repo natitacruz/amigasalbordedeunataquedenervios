@@ -35,7 +35,14 @@ header {
   z-index: -1;
 }
 
-
+.dot::before {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background-color: #f5f5f5; /* off-white */
+  border-radius: 1px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
 header:hover .dot {
   opacity: 0.6;
   filter: blur(1px);  /* Efecto difuminado */
