@@ -1,5 +1,5 @@
 title: Amigas al Borde de un Ataque de Nervios
-theme: minima
+remote_theme: dieghernan/chulapa
 baseurl: "/amigasalbordedeunataquedenervios"
 collections:
   reparto:
