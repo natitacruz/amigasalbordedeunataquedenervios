@@ -226,28 +226,17 @@ body.image-loaded .poster-section::before {
 }
 
 /* GAZPACHO */
-.gazpacho-hero {
-  background-color: #0f0004;
-  padding: 6px;
-  border: 3px solid crimson;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Courier Prime', monospace;
-}
-
-.gazpacho-image-container {
+.gazpacho-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* Mantiene el contenedor cuadrado */
+  max-width: 450px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
-.gazpacho-image-container img {
-  position: absolute; /* ✅ clave: posicionamiento absoluto */
+.gazpacho-wrapper img {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -265,14 +254,30 @@ body.image-loaded .poster-section::before {
   opacity: 0;
 }
 
-.gazpacho-image-container:hover .gazpacho2 {
+.gazpacho-wrapper:hover .gazpacho2,
+.gazpacho-wrapper.touched .gazpacho2 {
   opacity: 1;
 }
 
+.gazpacho-hero {
+  background-color: #0f0004;
+  padding: 6px;
+  border: 3px solid crimson;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .gazpacho-caption {
-  margin-top: 0.5rem;
+  text-align: center;
   font-size: 0.9rem;
   color: white;
+  font-family: 'Courier Prime', monospace;
+  margin-top: 0.5rem;
 }
 
 /* SCRIPT */
