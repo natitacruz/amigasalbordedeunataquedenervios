@@ -226,16 +226,25 @@ body.image-loaded .poster-section::before {
 }
 
 /* GAZPACHO */
+.gazpacho-hero {
+  display: inline-block; /* ajusta al contenido interno (la imagen) */
+  background-color: #0f0004;
+  padding: 6px;
+  border: 3px solid crimson;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  text-align: center;
+}
+
 .gazpacho-wrapper {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  margin: 0 auto;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
 }
 
-.gazpacho-wrapper img {
+.gazpacho1,
+.gazpacho2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -243,47 +252,33 @@ body.image-loaded .poster-section::before {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s ease-in-out;
+  backface-visibility: hidden;
+  display: block;
+}
+
+.gazpacho2 {
+  opacity: 0;
+  z-index: 2;
+}
+
+.gazpacho-hero:hover .gazpacho2 {
+  opacity: 1;
 }
 
 .gazpacho1 {
   z-index: 1;
 }
 
-.gazpacho2 {
-  z-index: 2;
-  opacity: 0;
-}
-
-.gazpacho-wrapper:hover .gazpacho2,
-.gazpacho-wrapper.touched .gazpacho2 {
-  opacity: 1;
-}
-
-.gazpacho-hero {
-  background-color: #0f0004;
-  padding: 6px;
-  border: 3px solid crimson;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .gazpacho-caption {
-  text-align: center;
   font-size: 0.9rem;
   color: white;
   font-family: 'Courier Prime', monospace;
   margin-top: 0.5rem;
-  max-width: 100%;        /* no más ancho que su contenedor */
-  overflow-wrap: break-word; /* si hay una palabra larga */
-  word-break: break-word;
+  padding: 0 4px;
   box-sizing: border-box;
-  padding: 0 6px;         /* igual que el padding del contenedor */
+  word-break: break-word;
 }
+
 
 
 /* SCRIPT */
