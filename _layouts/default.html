@@ -232,24 +232,21 @@ body.image-loaded .poster-section::before {
   border: 3px solid crimson;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  font-family: 'Courier Prime', monospace;
 }
 
-.gazpacho-wrapper {
+.gazpacho-image-container {
   position: relative;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
-.gazpacho1,
-.gazpacho2 {
+.gazpacho-image-container img {
   position: absolute;
   top: 0;
   left: 0;
@@ -257,36 +254,25 @@ body.image-loaded .poster-section::before {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s ease-in-out;
-  backface-visibility: hidden;
-  display: block;
 }
 
-.gazpacho-hero .gazpacho2 {
-  opacity: 0;
-  z-index: 2;
-}
-
-.gazpacho-hero:hover .gazpacho2 {
-  opacity: 1;
-}
-
-.gazpacho-hero .gazpacho1 {
+.gazpacho1 {
   z-index: 1;
 }
 
-.gazpacho-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
+.gazpacho2 {
+  z-index: 2;
+  opacity: 0;
+}
+
+.gazpacho-image-container:hover .gazpacho2 {
+  opacity: 1;
 }
 
 .gazpacho-caption {
-  text-align: center;
+  margin-top: 0.5rem;
   font-size: 0.9rem;
   color: white;
-  font-family: 'Courier Prime', monospace;
-  margin-top: 0.5rem;
 }
 
 
@@ -487,7 +473,7 @@ body.image-loaded .poster-section::before {
 Suena un vinilo antiguo. Conversaciones cruzadas, miradas contenidas. Natita ríe, alza su copa, y toma una cucharada del gazpacho. Apenas unos segundos después, se tambalea y cae al suelo. Se hace el silencio entre los asistentes. De fondo sigue sonando "Piensa en mi".</p>
 
 <p>INSTRUCCIONES DEL JUEGO
-Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesino. A lo largo de la noche encontraréis pistas en papelitos de colores según el personaje al que se refieran: deberás ocultar los tuyos y encontrar los de los demás. Puedes intercambiar, engañar, extorsionar o lo que haga falta. Tu objetivo es descubrir los secretos ajenos… y que nadie descubra el tuyo.</p>
+Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesino. A lo largo de la noche encontraréis pistas en papelitos de colores: deberás ocultar los tuyos y encontrar los de los demás. Tu objetivo es descubrir los secretos ajenos… y que nadie descubra el tuyo.</p>
 
     <div class="production-info">
       <h3>🎬 Notas de Producción</h3>
