@@ -242,12 +242,12 @@ body.image-loaded .poster-section::before {
 .gazpacho-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* Mantiene el contenedor cuadrado */
   overflow: hidden;
 }
 
 .gazpacho-image-container img {
-  position: absolute;
+  position: absolute; /* ✅ clave: posicionamiento absoluto */
   top: 0;
   left: 0;
   width: 100%;
@@ -274,7 +274,6 @@ body.image-loaded .poster-section::before {
   font-size: 0.9rem;
   color: white;
 }
-
 
 /* SCRIPT */
 
