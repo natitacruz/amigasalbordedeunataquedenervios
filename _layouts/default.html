@@ -226,10 +226,6 @@ body.image-loaded .poster-section::before {
 }
 
 /* GAZPACHO */
-.gazpacho-wrapper {
-  position: relative;
-  width: 100%;
-}
 .gazpacho-hero {
   background-color: #0f0004;
   padding: 6px;
@@ -241,25 +237,15 @@ body.image-loaded .poster-section::before {
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
-  
-  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.gazpacho-hero img {
+.gazpacho-wrapper {
+  position: relative;
   width: 100%;
   height: auto;
-  display: block;
-}
-
-/* Transición con doble imagen */
-
-  .gazpacho-hero {
-max-width: 450px;
-width: 100%;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-align-items: center;
 }
 
 .gazpacho1,
@@ -274,6 +260,7 @@ align-items: center;
   backface-visibility: hidden;
   display: block;
 }
+
 .gazpacho-hero .gazpacho2 {
   opacity: 0;
   z-index: 2;
@@ -286,14 +273,22 @@ align-items: center;
 .gazpacho-hero .gazpacho1 {
   z-index: 1;
 }
-    
-  .gazpacho-caption {
+
+.gazpacho-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.gazpacho-caption {
   text-align: center;
   font-size: 0.9rem;
   color: white;
   font-family: 'Courier Prime', monospace;
   margin-top: 0.5rem;
 }
+
 
 /* SCRIPT */
 
