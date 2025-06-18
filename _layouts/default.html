@@ -278,7 +278,13 @@ body.image-loaded .poster-section::before {
   color: white;
   font-family: 'Courier Prime', monospace;
   margin-top: 0.5rem;
+  max-width: 100%;        /* no más ancho que su contenedor */
+  overflow-wrap: break-word; /* si hay una palabra larga */
+  word-break: break-word;
+  box-sizing: border-box;
+  padding: 0 6px;         /* igual que el padding del contenedor */
 }
+
 
 /* SCRIPT */
 
