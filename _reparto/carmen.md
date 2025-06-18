@@ -1,12 +1,12 @@
 ---
 layout: character
-permalink: amigasalbordedeunataquedenervios/reparto/carmela/
+permalink: amigasalbordedeunataquedenervios/reparto/carmen/
 name: "Carmela del Río"
 title: "La Estilista"
 actor: "Carmen"
 bio: "Estilista de renombre, editora de moda y confidente involuntaria."
 color: "#A73489"
-image: "/assets/portraits/carmela.png"
+image: "/assets/portraits/carmen.png"
 frase: "Nada dice más de ti que tu forma de entrar en una habitación… o de salir huyendo."
 footer: Carmela conoce las sombras del mundo del glamour. Y sabe que los secretos mejor guardados no están en los armarios, sino en las bocas de quien menos te esperas.
 ---
