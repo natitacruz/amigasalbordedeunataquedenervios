@@ -1,23 +1,20 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/juanma/
-name: "Don Juanmarqués de las Letras"
-title: "El Cronista Casi Invisible"
+name: "Juanma"
+title: "El Observador"
 actor: "Juanma"
-bio: "Culto, elegante y silenciosamente letal con su pluma. Siempre está escribiendo... aunque no siempre con tinta."
+bio: "Curioso, culto y siempre atento a los detalles. Juanma observa el mundo con una mezcla de asombro y análisis, buscando historias en cada rincón. Su amistad con Clara es profunda: comparten confidencias, libros y una complicidad intelectual que pocos comprenden."
 color: "#1E88E5"
 image: "/assets/portraits/juanma.png"
-frase: "El cronista que siempre está escuchando, aunque nunca sepas para qué."
-footer: "Don Juanmarqués no necesita protagonismo. Pero esta noche, alguien le ha escrito para decirle: el protagonista... podrías ser tú."
+frase: "La curiosidad es mi brújula, y Clara, mi mejor compañera de viaje."
+footer: "Juanma nunca busca el protagonismo, pero su mirada curiosa y su vínculo con Clara lo convierten en el confidente ideal para descubrir los secretos de la noche."
 ---
 
 ## Historia
 
-Don Juanmarqués es el autor oculto de una columna de opinión viral titulada “La decadencia exquisita”, donde retrata los secretos de la alta sociedad disfrazados bajo seudónimos.  
-Nadie sabe que es él, pero muchos de los invitados se sienten sospechosamente reflejados en sus historias.  
-Vino a la fiesta porque recibió un mensaje anónimo con una frase escrita en su estilo exacto:  
-“¿Y si esta vez el cronista fuera el protagonista?”
+Juanma es conocido entre sus amigos por su insaciable curiosidad y su amor por el conocimiento. Siempre está leyendo algo nuevo o investigando temas insólitos. Su relación con Clara es especial: juntos han resuelto enigmas, compartido largas charlas nocturnas y se entienden con solo una mirada. Esta noche, Clara le ha pedido que la acompañe porque confía en su intuición y en su capacidad para ver lo que otros pasan por alto.
 
 ## Look
 
-Traje vintage azul petróleo con pañuelo de seda en el bolsillo, gafas redondas y un cuaderno Moleskine siempre en la mano. Habla bajito pero intenso. Tiene el aura de un escritor de los 70 con un toque irónico.
+Lleva un traje sencillo pero elegante, gafas redondas y siempre un libro o una libreta en la mano. Habla con calma y pasión por igual, y su presencia transmite la serenidad de quien observa antes de juzgar. Su estilo recuerda a los intelectuales de otra época, pero con una calidez moderna.
