@@ -239,44 +239,53 @@
   const music = document.getElementById("bg-music");
   const playBtn = document.getElementById("play-button");
   const icon = document.getElementById("music-icon");
-  
-  let isPlaying = false;
-  
-  window.onload = () => {
-  music.muted = true;
-  const playPromise = music.play();
 
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        setTimeout(() => {
-          music.muted = false;
+  let isPlaying = false;
+
+  window.onload = () => {
+    const playPromise = music.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // ✅ Se permite autoplay
           isPlaying = true;
           icon.classList.replace('fa-volume-mute', 'fa-volume-up');
-        }, 500);
-      })
-      .catch(() => {
-        playBtn.style.display = 'block';
-      });
-  }
-};
+          playBtn.classList.add('active');
+          playBtn.style.color = 'white';
+        })
+        .catch(() => {
+          // ❌ No se permite autoplay
+          isPlaying = false;
+          icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+          playBtn.classList.remove('active');
+          playBtn.style.color = 'red';
+        });
+    }
+  };
 
-  
- playBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    music.pause();
-    icon.classList.replace('fa-volume-up', 'fa-volume-mute');
-    playBtn.classList.remove('active');
-  } else {
-    music.play();
-    icon.classList.replace('fa-volume-mute', 'fa-volume-up');
-    playBtn.classList.add('active');
-  }
-  isPlaying = !isPlaying;
-});
+  playBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      music.pause();
+      icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+      playBtn.classList.remove('active');
+      playBtn.style.color = 'red';
+      isPlaying = false;
+    } else {
+      music.play()
+        .then(() => {
+          icon.classList.replace('fa-volume-mute', 'fa-volume-up');
+          playBtn.classList.add('active');
+          playBtn.style.color = 'white';
+          isPlaying = true;
+        })
+        .catch((err) => {
+          console.warn("Playback failed again:", err);
+        });
+    }
+  });
+</script>
 
-  
-  </script>
 
 
 </body>
