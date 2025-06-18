@@ -227,14 +227,17 @@ body.image-loaded .poster-section::before {
 
 /* GAZPACHO */
 .gazpacho-hero {
-  display: inline-block; /* ajusta al contenido interno (la imagen) */
-  background-color: #0f0004;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  max-width: 450px; /* Ajusta este valor como quieras */
+  margin: 0 auto;
+  background-color: transparent;
   padding: 6px;
   border: 3px solid crimson;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  margin: 0 auto;
-  text-align: center;
 }
 
 .gazpacho-wrapper {
@@ -470,7 +473,7 @@ body.image-loaded .poster-section::before {
         <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
         <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
       </div>
-      <div class="gazpacho-caption">Tomate, pepino, pimiento, cebolla, una puntita de ajo... aceite, sal, vinagre, pan duro y agua</div>
+      <div class="gazpacho-caption">Tomate... pepino... pimiento... cebolla, una puntita de ajo, aceite, sal, vinagre, pan duro y agua</div>
     </div>
   <div class="script-box">
     <div class="script-header">ESCENA 1 — INTERIOR. SALÓN DE NATITA. NOCHE</div>
@@ -486,7 +489,6 @@ Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesin
         <li><strong>Lugar:</strong> Calle X, Madrid</li>
         <li><strong>Hora:</strong> 22:00</li>
         <li><strong>Tema:</strong> Todo en clave Almodóvar</li>
-        <li><strong>Instrucciones:</strong> Observa, pregunta, extorsiona y consigue averiguar los misterios</li>
         <li><strong>Dress Code:</strong> Mira la guía de tu personaje en los <a href="#creditos">créditos</a></li>
       </ul>
     </div>
