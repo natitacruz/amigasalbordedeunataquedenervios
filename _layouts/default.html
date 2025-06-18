@@ -347,20 +347,29 @@ body.image-loaded .poster-section::before {
     flex-direction: column;
     align-items: center;
   }
-
-  .gazpacho-hero,
+.gazpacho-hero,
   .script-box {
     align-self: center !important;
     margin-top: 0 !important;
     width: 100%;
     max-width: 450px;
-   
-     flex-shrink: 0;
-    flex-grow: 1;
     box-sizing: border-box;
   }
+
   .gazpacho-hero {
-   aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .gazpacho-hero .gazpacho2 {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .gazpacho-hero.touched .gazpacho2 {
+    opacity: 1;
   }
 }
 
