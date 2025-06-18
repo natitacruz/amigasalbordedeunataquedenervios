@@ -4,4 +4,6 @@ baseurl: "/amigasalbordedeunataquedenervios"
 collections:
   reparto:
     output: true
-
+include:
+  - assets/favicon.ico
+  - assets/favicon.png
