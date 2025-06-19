@@ -517,7 +517,7 @@ Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesin
 <section class="character-grid" id="creditos">
   {% for personaje in site.reparto %}
     <a href="{{ site.baseurl }}{{ personaje.url }}" class="character">
-      <img src="{{ site.baseurl }}{{ personaje.image }}" loading="lazy" alt="{{ personaje.name }}">
+      <img src="{{ site.baseurl }}{{ personaje.image }}" loading="lazy" alt="{{ personaje.name }}" data-placeholder="{{ site.baseurl }}/assets/img/placeholder.png">
       <div class="character-name">{{ personaje.name }}</div>
     </a>
   {% endfor %}
