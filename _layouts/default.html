@@ -392,43 +392,34 @@ body.image-loaded .poster-section::before {
 .character {
   position: relative;
   aspect-ratio: 3/4;
-  overflow: hidden;
-}
-
-/* Blurred placeholder background */
-.character::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: 
-    linear-gradient(rgba(0,0,0,0.2), /* Semi-transparent overlay */
-    url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
-  filter: blur(10px);
-  z-index: 1; /* Behind content */
-  opacity: 0.8; /* Slightly transparent */
+    transparent /* Fallback color */
+    url('{{ site.baseurl }}/assets/img/placeholder.png') 
+    center/cover 
+    no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
-/* Actual character image */
 .character img {
-  position: relative; /* Needs positioning */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 2; /* Above placeholder */
+  filter: blur(10px);
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: 
+    filter 0.6s ease-out,
+    opacity 0.6s ease-out;
 }
 
 .character img.loaded {
+  filter: blur(0);
   opacity: 1;
 }
 
-
 .character-name {
-  position: relativve;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -436,7 +427,7 @@ body.image-loaded .poster-section::before {
   padding: 0.5rem;
   font-family: 'Special Elite', monospace;
   font-size: 0.7rem;
-  z-index: 3;
+  z-index: 2;
   opacity: 0.4;
   transition: opacity 0.1s ease-in-out;
   text-align: center;
@@ -462,7 +453,6 @@ body.image-loaded .poster-section::before {
   
   characters.forEach(char => {
     const img = char.querySelector('img');
-    char.style.backgroundImage = `url('${char.dataset.placeholder}')`;
     
     if (img.complete) {
       img.classList.add('loaded'); // If cached
