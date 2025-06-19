@@ -462,6 +462,7 @@ body.image-loaded .poster-section::before {
   
   characters.forEach(char => {
     const img = char.querySelector('img');
+    char.style.backgroundImage = `url('${char.dataset.placeholder}')`;
     
     if (img.complete) {
       img.classList.add('loaded'); // If cached
