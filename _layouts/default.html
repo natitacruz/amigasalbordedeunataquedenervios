@@ -392,9 +392,14 @@ body.image-loaded .poster-section::before {
 .character {
   position: relative;
   aspect-ratio: 3/4;
-  background: transparent url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
+  background: 
+    #f0f0f0 /* Fallback color */
+    url('{{ site.baseurl }}/assets/img/placeholder.png') 
+    center/cover 
+    no-repeat;
   overflow: hidden;
   isolation: isolate;
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
 .character img {
