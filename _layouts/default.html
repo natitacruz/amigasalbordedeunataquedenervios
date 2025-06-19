@@ -397,7 +397,6 @@ body.image-loaded .poster-section::before {
     url('{{ site.baseurl }}/assets/img/placeholder.png') 
     center/cover 
     no-repeat;
-  filter: blur(8px);
   overflow: hidden;
   isolation: isolate;
   transition: transform 0.3s ease, z-index 0.3s ease;
@@ -412,6 +411,8 @@ body.image-loaded .poster-section::before {
   transition: 
     filter 0.6s ease-out,
     opacity 0.6s ease-out;
+  
+  filter: blur(8px);
 }
 
 .character img.loaded {
