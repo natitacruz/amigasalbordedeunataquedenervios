@@ -409,8 +409,8 @@ body.image-loaded .poster-section::before {
     url('{{ site.baseurl }}/assets/img/placeholder.png') 
     center/cover 
     no-repeat;
-  filter: blur(8px);
-  z-index: 1;
+  filter: blur(6px);
+  z-index: 0;
 }
 
 .character img {
@@ -422,7 +422,8 @@ body.image-loaded .poster-section::before {
   transition: 
   filter 0.6s ease-out,
   opacity 0.6s ease-out;
-  z-index: 2;
+  z-index: 1;
+  position:relative;
 }
 
 .character img.loaded {
