@@ -392,37 +392,43 @@ body.image-loaded .poster-section::before {
 .character {
   position: relative;
   aspect-ratio: 3/4;
-  background: 
-    transparent /* Fallback color */
-    url('{{ site.baseurl }}/assets/img/placeholder.png') 
-    center/cover 
-    no-repeat;
   overflow: hidden;
-  isolation: isolate;
-  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
+/* Blurred placeholder background */
+.character::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(0,0,0,0.2), /* Semi-transparent overlay */
+    url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
+  filter: blur(10px);
+  z-index: 1; /* Behind content */
+  opacity: 0.8; /* Slightly transparent */
+}
+
+/* Actual character image */
 .character img {
+  position: relative; /* Needs positioning */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(10px);
+  z-index: 2; /* Above placeholder */
   opacity: 0;
-  transition: 
-    filter 0.6s ease-out,
-    opacity 0.6s ease-out;
-  
-  filter: blur(8px);
+  transition: opacity 0.6s ease;
 }
 
 .character img.loaded {
-  filter: blur(0);
   opacity: 1;
-  filter: none;
 }
 
+
 .character-name {
-  position: absolute;
+  position: relativve;
   bottom: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -430,7 +436,7 @@ body.image-loaded .poster-section::before {
   padding: 0.5rem;
   font-family: 'Special Elite', monospace;
   font-size: 0.7rem;
-  z-index: 2;
+  z-index: 3;
   opacity: 0.4;
   transition: opacity 0.1s ease-in-out;
   text-align: center;
