@@ -12,6 +12,9 @@
   <link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
   <link rel="icon" href="{{ site.baseurl }}/assets/favicon.png" type="image/png" sizes="32x32">
 
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/portadanati.png" as="image" fetchpriority="high">
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/placeholder.png" as="image" fetchpriority="high">
+>
   <!-- Pega aquí tu <style> -->
 </head>
   <style>
@@ -376,6 +379,7 @@ body.image-loaded .poster-section::before {
 
 
         /* ################## CHARACTER GRID ######################### */
+    
  .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -386,33 +390,27 @@ body.image-loaded .poster-section::before {
   z-index: 2;
   position: relative;
 }
-
 .character {
   position: relative;
+  aspect-ratio: 3/4;
+  background: #f0f0f0 url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-  transition: transform 0.3s;
-  z-index: 1; /* baseline */
-  isolation: isolate; /* <-- esto evita que los hijos de uno se mezclen con los de otro */
-}
-
-.character:hover {
-  transform: scale(1.5);
-  z-index: 10; /* se eleva por encima del resto */
 }
 
 .character img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  display: block;
+  filter: blur(10px);
+  opacity: 0;
+  transition: 
+    filter 0.6s ease-out,
+    opacity 0.6s ease-out;
+}
+
+.character img.loaded {
+  filter: blur(0);
+  opacity: 1;
 }
 
 .character-name {
@@ -440,6 +438,23 @@ body.image-loaded .poster-section::before {
   window.addEventListener('load', () => {
     document.body.classList.add('image-loaded');
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const characters = document.querySelectorAll('.character');
+  
+  characters.forEach(char => {
+    const img = char.querySelector('img');
+    char.style.backgroundImage = `url('${char.dataset.placeholder}')`;
+    
+    if (img.complete) {
+      img.classList.add('loaded'); // If cached
+    } else {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded'); // Fade in final image
+      });
+    }
+  });
+});
 </script>
 <body>
 
@@ -493,7 +508,7 @@ Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesin
 <section class="character-grid" id="creditos">
   {% for personaje in site.reparto %}
     <a href="{{ site.baseurl }}{{ personaje.url }}" class="character">
-      <img src="{{ site.baseurl }}{{ personaje.image }}" alt="{{ personaje.name }}">
+      <img src="{{ site.baseurl }}{{ personaje.image }}" loading="lazy" alt="{{ personaje.name }}">
       <div class="character-name">{{ personaje.name }}</div>
     </a>
   {% endfor %}
