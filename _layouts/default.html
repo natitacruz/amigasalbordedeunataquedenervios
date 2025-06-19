@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -139,6 +138,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('{{ site.baseurl }}/assets/img/portadanati.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto 100%;
@@ -148,22 +148,6 @@
   transition: opacity 1.5s ease-in-out;
 }
 
-    .poster-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
-body.image-loaded .poster-image {
-  opacity: 1;
-}
-    
 body.image-loaded .poster-section::before {
   opacity: 1;
 }
@@ -409,7 +393,7 @@ body.image-loaded .poster-section::before {
   position: relative;
   aspect-ratio: 3/4;
   background: transparent;
-  background-image: url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
+  background-image url('{{ site.baseurl }}/assets/img/placeholder.png') center/cover;
   overflow: hidden;
 }
 
@@ -482,7 +466,6 @@ body.image-loaded .poster-section::before {
 
 
 <section class="poster-section">
-  <img src="{{ site.baseurl }}/assets/img/portadanati.png" class="poster-image" fetchpriority="high" alt="Poster">
   <div class="blur-left"></div>
   <div class="blur-right"></div>
 
@@ -497,8 +480,8 @@ body.image-loaded .poster-section::before {
 <section class="hero-content-section">
     <div class="gazpacho-hero">
       <div class="gazpacho-wrapper">
-        <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" loading="lazy" class="gazpacho1">
-        <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" loading="lazy" class="gazpacho2">
+        <img src="{{ site.baseurl }}/assets/img/gazpacho.png" alt="Gazpacho normal" class="gazpacho1">
+        <img src="{{ site.baseurl }}/assets/img/gazpacho2.png" alt="Gazpacho con lorazepam" class="gazpacho2">
       </div>
       <div class="gazpacho-caption">Tomate... pepino... pimiento... cebolla, una puntita de ajo, aceite, sal, vinagre, pan duro y agua.</div>
     </div>
