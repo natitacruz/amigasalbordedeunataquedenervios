@@ -393,7 +393,7 @@ body.image-loaded .poster-section::before {
   position: relative;
   aspect-ratio: 3/4;
   background: 
-    #f0f0f0 /* Fallback color */
+    transparent /* Fallback color */
     url('{{ site.baseurl }}/assets/img/placeholder.png') 
     center/cover 
     no-repeat;
@@ -422,7 +422,7 @@ body.image-loaded .poster-section::before {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* más sutil que negro puro */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 0.5rem;
   font-family: 'Special Elite', monospace;
