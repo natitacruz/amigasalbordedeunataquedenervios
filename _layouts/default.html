@@ -428,10 +428,14 @@ body.image-loaded .poster-section::before {
   text-align: center;
 }
 
+.character:hover {
+  transform: scale(1.5);
+  z-index: 10; /* Must be higher than other elements */
+}
+
 .character:hover .character-name {
   opacity: 1;
 }
-
 
 </style>
 <script>
