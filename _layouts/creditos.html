@@ -168,6 +168,16 @@
       }
     }
 
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    
+    .blinking {
+      animation: blink 1s infinite;
+    }
+
+
     /* Responsive */
     @media (max-width: 767px) {
       .credits-row {
@@ -253,6 +263,7 @@
           icon.classList.replace('fa-volume-mute', 'fa-volume-up');
           playBtn.classList.add('active');
           playBtn.style.color = 'white';
+          playBtn.classList.remove('blinking');
         })
         .catch(() => {
           // ❌ No se permite autoplay
@@ -260,6 +271,7 @@
           icon.classList.replace('fa-volume-up', 'fa-volume-mute');
           playBtn.classList.remove('active');
           playBtn.style.color = 'red';
+          playBtn.classList.add('blinking');
         });
     }
   };
@@ -271,6 +283,7 @@
       playBtn.classList.remove('active');
       playBtn.style.color = 'red';
       isPlaying = false;
+      playBtn.classList.remove('blinking');
     } else {
       music.play()
         .then(() => {
@@ -278,6 +291,7 @@
           playBtn.classList.add('active');
           playBtn.style.color = 'white';
           isPlaying = true;
+          playBtn.classList.remove('blinking');
         })
         .catch((err) => {
           console.warn("Playback failed again:", err);
