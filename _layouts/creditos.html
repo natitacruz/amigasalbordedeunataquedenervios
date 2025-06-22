@@ -258,6 +258,7 @@
 
   window.onload = () => {
     const playPromise = music.play();
+    playBtn.classList.add('blinking');
 
     if (playPromise !== undefined) {
       playPromise
