@@ -1,17 +1,17 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/ceskary/
-name: ""
-title: ""
-actor: ""
-bio: ""
-color: "#424242"
-image: "/assets/portraits/ceskary.png"
-frase: ""
+name: Ceskary Parisienne
+title: 
+actor: Ceskary
+image: /assets/portraits/ceskary.png
+frase: Pásame el lipstick, querida
+color: "#761212"
 ---
 
 ## Historia
 
+Ceskary es fotografa y vive en Paris
 
 ## Look
 

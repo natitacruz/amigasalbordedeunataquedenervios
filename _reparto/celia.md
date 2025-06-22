@@ -1,22 +1,18 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/celia/
-name: "Celia Montiel"
-title: "La Enfermera de Cine"
-actor: "Celia"
-bio: "Dramática, coqueta y con un botiquín lleno de aspirinas... y ambiciones actorales."
-color: "#F44336"
-image: "/assets/portraits/celia.png"
-frase: "La que podría salvarte la vida… o dramatizar tu muerte para ganar un Goya."
-footer: "Celia mezcla primeros auxilios con primeros planos. Y a veces, lo segundo le importa más."
+name: Celia Relámpago
+title: La Moderna
+actor: Celia Ruiz
+image: /assets/portraits/celia.png
+frase: En mi situación me interesa más trabajar que ser moderna.
+color: "#EDCC4F"
 ---
 
 ## Historia
 
-Celia Montiel es una enfermera apasionada por el cine: su sueño es dejar las curas para dedicarse a actuar en dramas y thrillers.  
-Suele exagerarlo todo “por si acaso hay alguna cámara escondida grabando su gran momento”.  
-En esta fiesta fue testigo de un accidente menor que podría no haber sido tan accidental…
+Enfermera de día, actriz frustrada de noche. Tiene un alter ego que sólo sale los miércoles y responde al nombre de Bibiana. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos.
+
 
 ## Look
 
-Vestido años 50, estampado de cerezas, delantal blanco atado con lazo y zapatos rojos. Siempre lleva consigo un pequeño botiquín vintage. Coqueta, de sonrisa dulce pero mirada de quien lo ha visto todo.

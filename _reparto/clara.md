@@ -1,19 +1,17 @@
 ---
 layout: character
-permalink: amigasalbordedeunataquedenervios/reparto/clarisa/
-name: "Clarisa de la Cruz"
-title: "La Herborista Iluminada"
-actor: "Clara"
-bio: "Amante de lo natural, lo místico y lo que nunca se dice en voz alta."
-color: "#5B8C5A"
-image: "/assets/portraits/clara.png"
-frase: "Las plantas no mienten. Las personas sí. Clarisa siempre lo supo. Por eso guarda sus pócimas… y sus sospechas."
-footer: Algunos creen que está en su mundo, pero Clarisa ve más allá de las apariencias. Y esta vez, algo en el aire no huele a romero.
+permalink: /amigasalbordedeunataquedenervios/reparto/clara/
+name: Claridad Maura 
+title: 
+actor: Clara Hernández 
+image: /assets/portraits/clara.png
+frase: Perdularia, que eres una perdularia, que lo pierdes todo.
+color: "#761212"
 ---
+
 ## Historia
 
-Clarisa llega a la fiesta con una bolsa de infusiones y secretos. Dice que quiere “limpiar las energías” del grupo, pero en realidad, le interesa una conversación que escuchó entre Carmela y Álvaro. Lleva tiempo intentando que alguien le crea.
+Clara es la directora de la orquesta emocional, moviendo los hilos en la sombra: organizó la lista de invitados, redactó el guion de la fiesta y ofreció ayuda a todos, pero siempre a cambio de un secreto. Hay quienes susurran que la última conversación de Natita fue, precisamente, con ella. Su diario podría ser la clave de todo —si alguien se atreve a leerlo. Esta noche, nadie está seguro de si Clara actúa por amor, por venganza… o por algo que aún nadie ha imaginado.
 
 ## Look
 
-Vestido bohemio de gasa con estampados botánicos, sandalias planas, pelo suelto con flores secas, y siempre una bolsita de tila y valeriana. La intuición hecha persona.
