@@ -6,6 +6,10 @@ CSV_PATH = "cumplenatita - Personajes.csv"  # Nombre exacto del fichero CSV
 OUTPUT_DIR = Path("_reparto")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
+# Eliminar todos los archivos .md existentes antes de regenerar
+for md_file in OUTPUT_DIR.glob("*.md"):
+    md_file.unlink()
+
 # Campos esperados en el CSV y su orden en el front-matter
 yaml_fields = [
     ("layout", lambda row, slug: "character"),
@@ -37,7 +41,7 @@ def process_csv(csv_path: str):
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Ignorar filas vacías o separadores sin 'name'
-            if not row.get("name"):
+            if not row.get("file"):
                 continue
 
             slug = row.get("file")
