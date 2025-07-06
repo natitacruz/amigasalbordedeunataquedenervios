@@ -1,10 +1,10 @@
 ---
 layout: character
-permalink: /amigasalbordedeunataquedenervios/reparto/rafa /
+permalink: /amigasalbordedeunataquedenervios/reparto/rafal/
 name: Rafal Tisú 
 title: El Activista
 actor: Rafal
-image: /assets/portraits/rafa .png
+image: /assets/portraits/rafal.png
 frase: Me vais a tocar el fandango, tú y tu tía
 color: "#EDCC4F"
 ---
