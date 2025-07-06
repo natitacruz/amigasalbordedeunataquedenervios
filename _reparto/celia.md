@@ -11,8 +11,7 @@ color: "#EDCC4F"
 
 ## Historia
 
-Enfermera de día, actriz frustrada de noche. Tiene un alter ego que sólo sale los miércoles y responde al nombre de Bibiana. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos.
-
+Enfermera de día, actriz frustrada de noche. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos. Como si hubiera vivido varias vidas, siempre te aporta una nueva perspectiva, está en mil sitios a la vez y su energía nunca se agota. Las noches le inspiran planes tan modernos como misteriosos. Le gusta decir a sus amigos que Natita le recuerda a uno de sus personajes favoritos, aunque en ella “la realidad siempre supera la ficción”.
 
 ## Look
 

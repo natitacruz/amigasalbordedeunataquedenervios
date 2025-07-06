@@ -11,7 +11,7 @@ color: "#BA2362"
 
 ## Historia
 
-Esther ha hecho una fortuna en el casino y viaja a Benidorm todos los veranos
+De Benidorm al barrio, Esther nunca rechaza una apuesta ni el desafío de un enigma inesperado. Sabe usar cartas y miradas con la misma destreza, y le encanta encontrar la jugada inesperada mientras otros se distraen con las reglas del juego. De vez en cuando saca a relucir una “jugada inolvidable” que vivió con Natita, y nunca aclara si fue una victoria… o un desastre.
 
 ## Look
 

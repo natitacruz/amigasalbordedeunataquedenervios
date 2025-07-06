@@ -11,7 +11,7 @@ color: "#EDCC4F"
 
 ## Historia
 
-Guille V trabaja con Natita en el mundo de la musica
+Magnético y efervescente, Guille no teme profundizar en los lados más oscuros del show. Siempre parece estar montando el próximo gran evento y encuentra creatividad hasta en cartas ajenas... En tono de broma, suele reprocharle a Natita ser la única capaz de superarle en carisma.
 
 ## Look
 

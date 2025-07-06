@@ -11,7 +11,7 @@ color: "#BA5923"
 
 ## Historia
 
-Carlota es la hermana de Natita, es enfermera y fue la primera en enterarse de que le habian echado lorazepam
+La experiencia le ha enseñado a Carlota a estar alerta. Siempre atenta a lo que se cuece en casa y en el hospital, rara vez le pasa algo por alto. Es la primera en detectar problemas… y en encontrar soluciones rápidas para los que quiere. Cuando sonríe, más vale no preguntarle toda la verdad. Siempre que le preguntan por la relación con su hermana Natita, sonríe con complicidad y dice que a veces le vale con mirarla cuando todo se complica.
 
 ## Look
 

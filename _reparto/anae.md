@@ -11,7 +11,7 @@ color: "#6C9DA0"
 
 ## Historia
 
-Ana ha perdido la cabeza en un fervor religioso poco después de conocer unos testigos de Jehova en un bar de Malasaña. Pero ella va por libre.
+Ana ha perdido la cabeza en un fervor religioso poco después de conocer unos testigos de Jehova en un bar de Malasaña. Pero ella va por libre. Devota a su manera y con un fervor singular. Responde a todo con una lógica propia y siempre tiene una frase sabia (o confusa) para el momento oportuno. 
 
 ## Look
 

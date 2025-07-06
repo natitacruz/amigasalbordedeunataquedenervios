@@ -1,9 +1,9 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/henar/
-name: 
-title: 
-actor: 
+name: Henar Pico
+title: La Desaparecida 
+actor: Henar Vico
 image: /assets/portraits/henar.png
 frase: Lo que me preocupa es que esta ciudad no me reconozca a mí.
 color: "#EDCC4F"
@@ -11,7 +11,7 @@ color: "#EDCC4F"
 
 ## Historia
 
-Henar iba a venir a la fiesta pero esta sorprendentemente desaparecida
+Henar iba a venir a la fiesta pero está sorprendentemente desaparecida. Brillante, inquieta y con tendencia al drama, Henar nunca deja indiferente a nadie. Su misteriosa ausencia en la fiesta ha multiplicado los rumores y conjeturas. Muchos se acuerdan de la última discusión (o reconciliación) que tuvo con Natita antes de desaparecer misteriosamente.
 
 ## Look
 
