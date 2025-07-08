@@ -27,31 +27,29 @@ header {
   transition: background-color 0.5s ease-in-out;
 }
     .nav-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: white;
-      text-decoration: none;
-      background: rgba(0,0,0,0.2);
-      padding: 0.5rem;
-      border-radius: 50%;
-      transition: transform 0.2s, background 0.3s;
-      z-index: 10;
-    }
-    
-    .nav-arrow:hover {
-      transform: translateY(-50%) scale(1.2);
-      background: rgba(255,255,255,0.3);
-    }
-    
-    .nav-arrow.prev {
-      left: 1rem;
-    }
-    
-    .nav-arrow.next {
-      right: 1rem;
-    }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  z-index: 10;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+  color: #ffeb3b; /* or crimson or any color you like on hover */
+}
+
+.nav-arrow.prev {
+  left: 1rem;
+}
+
+.nav-arrow.next {
+  right: 1rem;
+}
 
 .dot {
   position: absolute;
