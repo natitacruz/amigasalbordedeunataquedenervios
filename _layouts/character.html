@@ -203,14 +203,14 @@ footer:hover svg {
     {% endif %}
     
     <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
-    <a class="nav-arrow prev" href="{{ site.baseurl }}{{ prev_item.url }}" title="Personaje anterior">
-      <i class="fas fa-chevron-left"></i>
-    </a>
-    <a class="nav-arrow next" href="{{ site.baseurl }}{{ next_item.url }}" title="Siguiente personaje">
-      <i class="fas fa-chevron-right"></i>
-    </a>
+    
     <div class="dots">
-
+    <a class="nav-arrow prev" href="{{ site.baseurl }}{{ prev_item.url }}" title="Personaje anterior">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="nav-arrow next" href="{{ site.baseurl }}{{ next_item.url }}" title="Siguiente personaje">
+          <i class="fas fa-chevron-right"></i>
+        </a>
     </div>
 
     <h1>{{ page.name }}</h1>
