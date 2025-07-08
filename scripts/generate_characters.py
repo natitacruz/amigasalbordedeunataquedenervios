@@ -49,7 +49,7 @@ def process_csv(csv_path: str):
 
             frontmatter = generate_frontmatter(row)
             body = (
-                "\n## Historia\n\n" + (row.get("bio", "")) + "\n\n## Look\n\n"
+                row.get("bio", "")
             )
 
             with md_path.open("w", encoding="utf-8") as f:

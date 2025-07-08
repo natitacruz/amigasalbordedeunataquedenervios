@@ -8,10 +8,4 @@ image: /assets/portraits/candela.png
 frase: ¡Aplaudid un poquito, coño!
 color: "#BA2362"
 ---
-
-## Historia
-
-Candela irradia luz y sabe lo que es quedarse fuera de foco. Sin embargo, cuando la vida le da la espalda, se las ingenia para volver a protagonizar la escena. A veces, su mejor interpretación llega cuando nadie la mira, y si una puerta se cierra (o la cabina de DJ), no deja de buscar una ventana para asomarse a la fiesta. No pierde oportunidad de contar anécdotas compartidas con Natita, aunque casi nadie recuerda que haya habido tantas ocasiones reales para ello.
-
-## Look
-
+Candela irradia luz y sabe lo que es quedarse fuera de foco. Sin embargo, cuando la vida le da la espalda, se las ingenia para volver a protagonizar la escena. A veces, su mejor interpretación llega cuando nadie la mira, y si una puerta se cierra (o la cabina de DJ), no deja de buscar una ventana para asomarse a la fiesta. 

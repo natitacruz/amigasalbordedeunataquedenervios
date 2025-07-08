@@ -8,10 +8,4 @@ image: /assets/portraits/nala.png
 frase: Guau
 color: "#6C9DA0"
 ---
-
-## Historia
-
-Nala es literalmente un perro, ella no ha podido ser... probablemente. Comentan que siempre acaba junto a Natita cuando algún objeto importante desaparece, aunque nadie sabe muy bien por qué.
-
-## Look
-
+Nala es literalmente un perro, ella no ha podido ser... probablemente. Es una glotona y acaba con su comida y la de los demás en un segundo.

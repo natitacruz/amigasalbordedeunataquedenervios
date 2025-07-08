@@ -8,10 +8,4 @@ image: /assets/portraits/carlosb.png
 frase: Me lo estaba figurando, me lo estaba figurando. (Imaginé)
 color: "#BA5923"
 ---
-
-## Historia
-
-Siempre de buen humor, Carlos nunca falta a una fiesta ni a una confidencia. Conoce los entresijos de su grupo mejor que nadie y, si bien le encanta divertirse, también tiene facilidad para estar en el sitio justo cuando nada parece suceder. Cuando la conversación va de fiestas, asegura que Natita le debe al menos una noche mítica, aunque nunca especifica el porqué.
-
-## Look
-
+Siempre de buen humor, Carlos nunca falta a una fiesta ni a una confidencia. Conoce los entresijos de su grupo mejor que nadie y, si bien le encanta divertirse, también tiene facilidad para estar en el sitio justo cuando nada parece suceder. En la fiesta de anoche Carlos no se separó de Natita ni un segundo, quién sabe si sospechaba algo.
