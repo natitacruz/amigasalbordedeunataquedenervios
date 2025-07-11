@@ -26,6 +26,31 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   transition: background-color 0.5s ease-in-out;
 }
+    .nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  z-index: 10;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+  color: #ffeb3b; /* or crimson or any color you like on hover */
+}
+
+.nav-arrow.prev {
+  left: 1rem;
+}
+
+.nav-arrow.next {
+  right: 1rem;
+}
+
 .dot {
   position: absolute;
   background: white;
@@ -154,11 +179,40 @@ footer:hover svg {
 </head>
 <body>
   <header>
+    {% assign current_index = nil %}
+    {% for item in site.reparto %}
+      {% if item.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+    
+    {% assign total = site.reparto | size %}
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign next_index = current_index | plus: 1 %}
+    
+    {% assign prev_item = site.reparto[prev_index] %}
+    {% assign next_item = site.reparto[next_index] %}
+    {% if prev_index < 0 %}
+      {% assign prev_index = total | minus: 1 %}
+      {% assign prev_item = site.reparto[prev_index] %}
+    {% endif %}
+    
+    {% if next_index >= total %}
+      {% assign next_index = 0 %}
+      {% assign next_item = site.reparto[next_index] %}
+    {% endif %}
+    
     <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
+    
     <div class="dots">
-
     </div>
-
+    
+    <a class="nav-arrow prev" href="{{ site.baseurl }}{{ prev_item.url }}" title="Personaje anterior">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="nav-arrow next" href="{{ site.baseurl }}{{ next_item.url }}" title="Siguiente personaje">
+          <i class="fas fa-chevron-right"></i>
+        </a>
     <h1>{{ page.name }}</h1>
     <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
     <blockquote>“{{ page.frase }}”</blockquote>
