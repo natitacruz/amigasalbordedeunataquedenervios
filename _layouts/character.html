@@ -213,17 +213,11 @@
         {{ page.bio | markdownify }}
       </div>
     </div>
-    {% if page.secreto %}
-      <div class="char-section" tabindex="0">
-        <h1>Secreto</h1>
-        <div class="char-content">
-          {% assign paragraphs = page.secreto | split: '\n\n' %}
-          {% for para in paragraphs %}
-            <p><span class="highlight">{{ para | markdownify | strip_newlines }}</span></p>
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
+    {% assign paragraphs = page.secreto | split: '\n\n' %}
+    {% for para in paragraphs %}
+      <p><span class="highlight">{{ para }}</span></p>
+    {% endfor %}
+
   </main>
 
   <footer onclick="location.href='{{ site.baseurl }}/'">
