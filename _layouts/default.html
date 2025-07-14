@@ -375,7 +375,7 @@ body.image-loaded .poster-section::before {
   color: crimson;
   text-decoration: underline;
 }
-.yellow-banner {
+.end-box {
   grid-column: 1 / -1;
   grid-row: 3;
   background-image: 
@@ -395,6 +395,38 @@ body.image-loaded .poster-section::before {
   position: relative;
   z-index: 3;
   margin: 0 auto;
+  white-space: pre-line;
+}
+.end-box .script-header {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: crimson;
+}
+
+.end-box .production-info {
+  background: #fff0f5;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px dashed crimson;
+}
+
+.end-box .production-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: crimson;
+  font-family: 'Special Elite', monospace;
+}
+
+.end-box .production-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.end-box .production-info li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
 }
 /* RESPONSIVE para móviles */
 @media (max-width: 768px) {
@@ -599,7 +631,7 @@ body.image-loaded .poster-section::before {
       </ul>
     </div>
   </div>
-  <div class="yellow-banner">
+  <div class="end-box">
     <div class="script-header">ESCENA FINAL</div>
     <p>ESCENA 1 – EXTERIOR. TERRAZA DE NATITA. NOCHE
       La fiesta de cumpleaños de Natita Cruz en Madrid ha reunido a un elenco de personajes tan variopinto como sus secretos. La anfitriona, carismática y caótica, ha conseguido que todos los dramas, alianzas y traiciones de su círculo converjan en una noche donde nada es lo que parece.
