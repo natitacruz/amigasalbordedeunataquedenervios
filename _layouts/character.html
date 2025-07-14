@@ -112,9 +112,9 @@
       color: #222;
     }
     .secreto-section {
-      background: #000;
-      color: #000;
-      border: 2px solid #000;
+      background: none;
+      color: inherit;
+      border: none;
       border-radius: 8px;
       padding: 1.2rem 1.5rem;
       margin: 2.5rem 0;
@@ -133,14 +133,19 @@
       transition: color 0.3s;
     }
     .secreto-section .secreto-content {
-      color: #000;
+      background: #000;
+      color: #fff;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
       filter: blur(0.15em);
-      transition: color 0.3s, filter 0.3s;
+      transition: color 0.3s, background 0.3s, filter 0.3s;
+      border: 2px solid #000;
+      box-sizing: border-box;
     }
     .secreto-section.revealed {
-      background: #fff;
-      color: #222;
-      border: 2px solid #222;
+      background: none;
+      color: inherit;
+      border: none;
       user-select: text;
     }
     .secreto-section.revealed h1 {
@@ -148,7 +153,9 @@
       text-shadow: none;
     }
     .secreto-section.revealed .secreto-content {
+      background: #fff;
       color: #222;
+      border: 2px solid #222;
       filter: none;
     }
     .footer-return {
