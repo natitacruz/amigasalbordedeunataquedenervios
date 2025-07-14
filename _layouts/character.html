@@ -265,7 +265,16 @@ footer:hover svg {
   </header>
 
   <main>
-    {{ content | replace: "# SECRETO", '<div class="secreto-section" tabindex="0"><div class="secreto-title">SECRETO</div><div class="secreto-content">' | replace: "\n\n", '</div></div>\n\n' }}
+    {% assign secreto_index = content | split: '# SECRETO' %}
+    {{ secreto_index[0] | markdownify }}
+    {% if secreto_index.size > 1 %}
+      <div class="secreto-section" tabindex="0">
+        <div class="secreto-title">SECRETO</div>
+        <div class="secreto-content">
+          {{ secreto_index[1] | markdownify }}
+        </div>
+      </div>
+    {% endif %}
   </main>
 
   <footer onclick="location.href='{{ site.baseurl }}/'">
