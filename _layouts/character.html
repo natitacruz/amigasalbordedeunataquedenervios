@@ -214,10 +214,11 @@
     {% if page.secreto %}
       <div class="char-section" tabindex="0">
         <h1>Secreto</h1>
-        <div class="char-content"></div>
-        <p>
-          <span class="highlight">{{ page.secreto | markdownify }}</span>
-      </div>
+        <div class="char-content">
+          <div class="highlight">
+            {{ page.secreto | markdownify }}
+          </div>
+        </div>
       </div>
     {% endif %}
   </main>
