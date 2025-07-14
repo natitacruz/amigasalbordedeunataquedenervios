@@ -7,7 +7,7 @@ actor: Clara Hernández
 image: /assets/portraits/clara.png
 frase: Perdularia, que eres una perdularia, que lo pierdes todo.
 color: "#761212"
-icons: muerta
+icons: carcel
 ---
 
 # HISTORIA

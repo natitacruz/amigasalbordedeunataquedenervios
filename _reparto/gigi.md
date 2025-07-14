@@ -7,6 +7,7 @@ actor: Angela Montejano
 image: /assets/portraits/gigi.png
 frase: Qué pico tiene la Pepa.
 color: "#EDCC4F"
+icons: carcel
 ---
 
 # HISTORIA
