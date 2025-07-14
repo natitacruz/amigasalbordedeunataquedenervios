@@ -151,6 +151,38 @@
       color: #222;
       filter: none;
     }
+    .footer-return {
+      width: 100%;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0 1rem 0;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+      box-sizing: border-box;
+    }
+    .footer-return:hover {
+      background: #ffe6f0;
+    }
+    .return-svg {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .return-svg svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      color: #b30059;
+      transition: color 0.2s;
+    }
+    .footer-return:hover .return-svg svg {
+      color: #ffb3b3;
+    }
   </style>
 </head>
 <body>
@@ -215,14 +247,14 @@
     {% endif %}
   </main>
 
-  <footer onclick="location.href='{{ site.baseurl }}/'">
+  <footer class="footer-return" onclick="location.href='{{ site.baseurl }}/'">
   <div class="return-svg">
     <!-- SVG pegado aquí -->
     <?xml version="1.0" standalone="no"?>
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-             width="800.000000pt" height="130.000000pt" viewBox="0 0 800.000000 130.000000"
+             width="400" height="65" viewBox="0 0 800.000000 130.000000"
              preserveAspectRatio="xMidYMid meet">
 
             <g transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
