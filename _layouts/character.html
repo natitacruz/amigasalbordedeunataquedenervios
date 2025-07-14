@@ -158,37 +158,45 @@
       border: 2px solid #222;
       filter: none;
     }
-    .footer-return {
-      width: 100%;
-      background: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 0 1rem 0;
+    footer {
+      background-color: {{ page.color }};
+      background-size: 150% auto;
+      background-position: center -70px;
+      -webkit-mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
+      mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 120% auto;
+      mask-size: 120% auto;
+      -webkit-mask-position: center -3vh;
+      mask-position: center -3vh;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
       cursor: pointer;
-      transition: background 0.2s;
-      border: none;
-      box-sizing: border-box;
     }
-    .footer-return:hover {
-      background: #ffe6f0;
-    }
-    .return-svg {
-      width: 100%;
-      max-width: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .return-svg svg {
-      width: 100%;
+    footer svg {
+      width: 160px;
+      max-width: 80%;
       height: auto;
-      display: block;
-      color: #b30059;
-      transition: color 0.2s;
+      display: inline-block;
+      transition: fill 0.4s ease, color 0.4s ease;
+      color: black;
+      fill: currentColor;
+      filter: drop-shadow(0 0 0 transparent);
     }
-    .footer-return:hover .return-svg svg {
-      color: #ffb3b3;
+    footer:hover svg {
+      color: white;
+      filter: drop-shadow(2px 2px 0 black);
+    }
+    @media (max-width: 768px) {
+      footer {
+        background-position: center 0px;
+        -webkit-mask-position: center 0vh;
+        mask-position: center 0vh;
+      }
     }
   </style>
 </head>
@@ -254,10 +262,9 @@
     {% endif %}
   </main>
 
-  <footer class="footer-return" onclick="location.href='{{ site.baseurl }}/'">
-  <div class="return-svg">
-    <!-- SVG pegado aquí -->
-    <?xml version="1.0" standalone="no"?>
+  <footer onclick="location.href='{{ site.baseurl }}/'">
+    <svg>
+      <?xml version="1.0" standalone="no"?>
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -320,10 +327,8 @@
             192 -2 0 149 c0 123 -3 152 -16 165 -20 21 -40 20 -59 -1z"/>
             </g>
             </svg>
-
     </svg>
-  </div>
-</footer>
+  </footer>
 
 </body>
   <script>
