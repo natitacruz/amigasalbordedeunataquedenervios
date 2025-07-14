@@ -111,44 +111,6 @@
     .historia-content {
       color: #222;
     }
-    .secreto-section {
-      background: none;
-      color: inherit;
-      border: none;
-      border-radius: 8px;
-      padding: 1.2rem 1.5rem;
-      margin: 2.5rem 0;
-      position: relative;
-      cursor: pointer;
-      transition: color 0.3s, background 0.3s, border 0.3s;
-      user-select: none;
-    }
-    .secreto-highlight {
-      background: #000;
-      color: #fff;
-      border-radius: 8px;
-      padding: 0.2em 0.6em;
-      display: inline-block;
-      filter: blur(0.15em);
-      transition: color 0.3s, background 0.3s, filter 0.3s;
-      cursor: pointer;
-    }
-    .secreto-section.revealed {
-      background: none;
-      color: inherit;
-      border: none;
-      user-select: text;
-    }
-    .secreto-section.revealed h1 {
-      color: #222;
-      text-shadow: none;
-    }
-    .secreto-section.revealed .secreto-highlight {
-      background: #fff;
-      color: #222;
-      border: 2px solid #222;
-      filter: none;
-    }
     footer {
       background-color: {{ page.color }};
       background-size: 150% auto;
@@ -188,6 +150,12 @@
         -webkit-mask-position: center 0vh;
         mask-position: center 0vh;
       }
+    }
+    .highlight {
+      background-color: yellow;
+      color: #222;
+      border-radius: 6px;
+      padding: 0.1em 0.4em;
     }
   </style>
 </head>
@@ -246,9 +214,9 @@
     {% if page.secreto %}
       <div class="secreto-section" tabindex="0">
         <h1>Secreto</h1>
-        <div>
+        <p>
           <span class="secreto-highlight">{{ page.secreto | markdownify }}</span>
-        </div>
+        </p>
       </div>
     {% endif %}
   </main>
