@@ -94,21 +94,21 @@
       overflow: hidden;
       position: relative;
     }
-    .historia-section {
+    .char-section {
       background: #fff8fc;
       border-radius: 8px;
       padding: 1.2rem 1.5rem;
       margin: 2.5rem 0;
       position: relative;
     }
-    .historia-section h1 {
+    .char-section h1 {
       font-size: 2rem;
       font-weight: bold;
       letter-spacing: 2px;
       margin-bottom: 1rem;
       color: #b30059;
     }
-    .historia-content {
+    .char-content {
       color: #222;
     }
     footer {
@@ -205,18 +205,20 @@
   </header>
 
   <main>
-    <div class="historia-section">
+    <div class="char-section">
       <h1>Historia</h1>
-      <div class="historia-content">
+      <div class="char-content">
         {{ page.bio | markdownify }}
       </div>
     </div>
     {% if page.secreto %}
-      <div class="secreto-section" tabindex="0">
+      <div class="char-section" tabindex="0">
         <h1>Secreto</h1>
+        <div class="char-content"></div>
         <p>
           <span class="secreto-highlight">{{ page.secreto | markdownify }}</span>
         </p>
+      </div>
       </div>
     {% endif %}
   </main>
