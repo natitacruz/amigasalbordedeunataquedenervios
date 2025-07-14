@@ -152,7 +152,7 @@
       }
     }
     .highlight {
-      background-color: red;
+      background-color: #222;
       border-radius: 6px;
       padding: 0.1em 0.4em;
       transition: background-color 0.2s;
@@ -211,12 +211,15 @@
       <h1>Historia</h1>
       <div class="char-content">
         {{ page.bio | markdownify }}
+
+      <h1>Secreto</h1>
+      {% assign paragraphs = page.secreto | split: '\n\n' %}
+      {% for para in paragraphs %}
+        <p><span class="highlight">{{ para }}</span></p>
+      {% endfor %}
       </div>
     </div>
-    {% assign paragraphs = page.secreto | split: '\n\n' %}
-    {% for para in paragraphs %}
-      <p><span class="highlight">{{ para }}</span></p>
-    {% endfor %}
+    
 
   </main>
 
