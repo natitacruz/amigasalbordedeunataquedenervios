@@ -1,0 +1,627 @@
+# Game Setting
+La acción transcurre en Madrid, durante la fiesta de cumpleaños de Natita Cruz. Todos los personajes están reunidos en su piso, una noche llena de secretos, traiciones, alianzas y misterios. Cada invitado tiene su propia historia, objetivos ocultos y relaciones entrelazadas. El ambiente es festivo pero tenso: nada es lo que parece y cualquier revelación puede cambiar el destino de todos.
+
+# Character Context for Final Scene
+
+- name: Alba Verbena
+  title: La Confidente
+  actor: Alba Bernabé
+  bio: Amiga leal de corazón abierto, Alba siempre tiene tiempo para escuchar los dramas ajenos, aunque últimamente parece vivir una montaña rusa de emociones. Su mundo gira entre promesas, mudanzas inminentes y el deseo de encontrar al fin un hogar propio en la gran ciudad. Cuenta que no es fácil ser tan sensible cuando no todo el mundo ve lo mismo en un piso vacío. Siempre comenta que ella y Lena tienen algo importante pendiente con Natita, aunque nunca aclara de qué se trata.
+  secreto: 
+Os encanta el piso de Nati. Tanto, que ya habéis hablado con el propietario. Y si todo sale bien… Natita se va a la calle.
+
+Queréis empezar una nueva vida en Madrid. Juntas. Reformar, pintar de verde oliva, colgar plantas con macramé y organizar vuestros propios caféclub.
+El problema: el piso que os gusta es el de Natita Cruz.
+Y ya habéis iniciado conversaciones con el casero para comprarlo directamente. Él está dispuesto… si conseguís mover ficha rápido.
+A Nati no le habéis dicho nada. Seguís viniendo a sus fiestas, compartiendo stories y brindando como si nada.
+
+Objetivo:
+Nadie debe saber que estáis intentando comprar su piso a sus espaldas.
+Mecánica: Jugáis juntas. Si una es descubierta, la otra también cae.
+
+
+
+- name: Alvaro del Sur
+  title: El Inspector
+  actor: Alvaro del Ser
+  bio: Alvaro es el novio de Natita. No habla mucho, pero cuando lo hace, corta como cuchillo. Investiga la desaparición de un anillo de compromiso con un zafiro que pertenecía a la abuela de Natita pero se ve envuelto en el misterioso asesinato de su amada con el fatídico gazpacho. 
+  secreto: 
+
+- name: Ana de la Gilda 
+  title: La Testigo
+  actor: Ana Escalante
+  bio: Ana ha perdido la cabeza en un fervor religioso poco después de conocer unos testigos de Jehova en un bar de Malasaña. Pero ella va por libre, devota a su manera, responde a todo con una lógica propia y siempre tiene una frase sabia para el momento oportuno. En esta situaci'on hubiera venido muy bien su consejo pero se ha ido de retiro espiritual a Suances.
+  secreto: 
+
+- name: Annette Destino
+  title: La Visionaria
+  actor: Ana Yruela
+  bio: Ana vive entre recuerdos mezclados y presentimientos. Se dedica a la restauración de obras religiosas y es muy renombrada. Asegura a menudo que Natita le resulta extrañamente familiar, pero no se acuerda de qué. Hoy ha llegado a la fiesta en una nube, debe ser la resaca de la fiesta de ayer...
+  secreto: 
+
+Eres restauradora. Profesional. Precisa. O eso se suponía.Hace años, tú fuiste la verdadera autora del Ecce Homo de Borja.Fue un error monumental, pero supiste reaccionar rápido: echaste la culpa a una anciana local y te libraste del escarnio público. Desde entonces, has seguido trabajando… con más cuidado.O eso creías. Porque hace unas semanas, te encargaron una pequeña intervención sobre la Virgen de la Macarena en Sevilla. Una cosa menor, pero la historia se ha repetido y ahora los lugareños que son más exagerados que nada andan con las antorchas por la calle… Nadie puede saberlo, y cuídate mucho de los sevillanos en esta fiesta.
+
+
+
+- name: Anita la Fantastica
+  title: La Reina
+  actor: Ana Fernandez 
+  bio: Carismática y risueña, Anita es la líder natural de cualquier grupo. Colecciona anécdotas, gafas de sol y planes para el futuro. Tiene una habilidad única para animar cualquier situación. Ama el riesgo disfrazado de juego y los retos donde otros ven sólo problemas. Nunca vuelve de una noche sin una historia nueva, y rara vez se mete sola en los líos: suele arrastrar con ella —sin querer o muy queriendo— a su inseparable Carlos Lampreave.
+  secreto: 
+Sois pareja. Sois cómplices. Y anoche os pasasteis tres pueblos.Lleváis tiempo sobreviviendo como podéis. Cuentas a cero, alquiler sin pagar, y muchas ideas brillantes que siempre terminan en desastre.Por eso, la noche anterior, os colasteis en casa de María Casado, la duquesa, convencidos de que tenía joyas, dinero o algo que robar. Un golpe rápido.Pero al abrir los cajones descubristeis la verdad: María no tiene un duro en su casa, qué curioso…Y ahora, si se entera de que fuisteis vosotros, lo poco que os queda —libertad incluida— se va por el desagüe.Objetivo:Nadie debe saber que estuvisteis en casa de María Casado anoche.Jugáis juntos. Si descubren a uno, el otro también pierde.
+
+
+- name: Javier Vértigo
+  title: El Modelo
+  actor: Javier Cáceres
+  bio: Javier Vértigo añora sus dias de modelo, bien es cierto que el tiempo parece que no pasa por el. Recorre la fiesta esperando que el destino le conceda otro brindis con el éxito. Aunque habla de moda y pasarelas, parece saberlo todo sobre los trasfondos familiares y los dramas ajenos, como si los hubiera visto desde la primera fila.
+  secreto: 
+Tú no ibas a perderte el cumpleaños de Natita. Aunque tuvieses que matar por ello. 
+
+Últimamente sufres migrañas. Pero no las normales. Las tuyas hacen que el mundo parezca un taladro. Y anoche… el mundo era la fiesta de Natita.
+
+Todo empezó durante la prefiesta de anoche. Natita te había prometido una noche tranquila, un brindis elegante. Pero llegaron Henar, Candela y Lander con sus altavoces y su "DJ set experimental", y la música —ruidosa, pretenciosa, inhumana— te llevó al límite
+
+Le pediste a Celia que trajera lorazepam del hospital donde trabaja, como había prometido. Pero se le olvidó hacerte el favor.
+
+Antes de que acabara la noche, tomaste prestado un cuchillo japonés que Manu había traído como regalo para Álvaro. Te dijo:
+
+"Dáselo tú si le ves, que yo me voy pronto."
+Cuando los DJs salieron por la puerta trasera, tú los seguiste. Sin testigos. Sin música. Y los asesinaste. A sangre fría. Hoy por fin tendrás tranquilidad.
+
+Objetivo:
+Nadie debe saber que tú mataste a los tres DJs.
+
+
+- name: Carlos Banderas
+  title: El Juergas
+  actor: Carlos Belda
+  bio: Siempre de buen humor, Carlos nunca falta a una fiesta ni a una confidencia. Conoce los entresijos de su grupo mejor que nadie y, si bien le encanta divertirse, también tiene facilidad para estar en el sitio justo cuando nada parece suceder. En la fiesta de anoche Carlos no se separó de Natita ni un segundo, quién sabe si sospechaba algo.
+  secreto: 
+
+Todo empezó en la previa de anoche, entre risas, copas y recuerdos de infancia.
+Alguien preguntó cuál era el mejor juguete del mundo.
+Tú ibas a decir “las manos pega-pega”, lo habías comentado días antes con Natita. Pero cuando le llegó el turno, ella lo dijo primero.
+La gente se rió. La aplaudieron.
+En tu turno te quedaste sin palabras y se volvieron a reír pero de ti.
+Ese fue el momento. Te juraste que era la última vez que Natita te dejaba como un tonto delante de todo el mundo.
+
+La oportunidad se presentó cuando viste un sobre misterioso en la cocina con tu nombre: “Carlos”.
+Tomaste un abrecartas de la cocina, Lo abriste. Dentro, lorazepam. Ibas murmurando tu venganza mientras lo removías con el gazpacho.
+
+Pero entonces, algo salió mal.
+Ana Yruela te vio.
+Estaba ahí. Quietina. Había escuchado todo.
+En un momento de agilidad mental —tienes muchos— reaccionaste. Tras un pequeño forcejeo, le diste de tu propia medicina.
+Ana cayó profundamente dormida.
+Natita, sin embargo, ya se iba a dormir, y se escapó tu oportunidad hasta hoy.
+En esta fiesta, al fin, repites tu modus operandi y te cargaste a Natita. Esta vez nadie se rió.
+Nunca más volverá a quitarte el protagonismo.
+
+Si alguien descubre este secreto el juego se acaba y pierdes.
+Tienes varias cosas pendientes... Ana Yruela parece estar recordando cosas de anoche, quizás deberías acabar lo que empezaste o buscar algún secreto que usar en su contra.
+Y de dónde salió ese misterioso sobre? Bueno no es asunto tuyo...
+
+- name: Carlos Lampreave
+  title: El Novato
+  actor: Carlos Gutierrez 
+  bio: Carlos es la pareja perfecta de Anita. Han encontrado una complicidad especialmente fuerte, que a veces le lleva por el mal camino. Nervioso a veces, valiente otras, Carlos nunca rechaza una misión inesperada. Prefiere actuar sin demasiadas preguntas...
+  secreto: 
+Sois pareja. Sois cómplices. Y anoche os pasasteis tres pueblos.Lleváis tiempo sobreviviendo como podéis. Cuentas a cero, alquiler sin pagar, y muchas ideas brillantes que siempre terminan en desastre.Por eso, la noche anterior, os colasteis en casa de María Casado, la duquesa, convencidos de que tenía joyas, dinero o algo que robar. Un golpe rápido.Pero al abrir los cajones descubristeis la verdad: María no tiene un duro en su casa, qué curioso…Y ahora, si se entera de que fuisteis vosotros, lo poco que os queda —libertad incluida— se va por el desagüe.Objetivo:Nadie debe saber que estuvisteis en casa de María Casado anoche.Jugáis juntos. Si descubren a uno, el otro también pierde.
+
+
+- name: Carlos Carmesí
+  title: El Revolucionario
+  actor: Carlos M
+  bio: Carlos Carmesi es un revolucionario de corazon. Lucha por sus ideas pero también se mete en demasiadas causas a la vez, como si necesitara el riesgo para sentirse vivo. Busca un lugar donde asentarse, aunque parece que siempre termine corriendo. 
+  secreto: 
+La revolución no se hace sólo con pancartas.
+
+Desde hace semanas, estás en busca y captura por organizar actividades subversivas (según tú, solo recitabas en la biblioteca con una bengala encendida).
+Te escondes entre fiestas, disfrazado de modernillo, y con una identidad falsa que cambia según el vino.
+
+Anoche, mientras hojeabas el Cookbook del Revolucionario leíste una receta buenísima:
+Te acercaste a Manu, el farmacéutico, y le pediste el lorazepam que te faltaba para una receta de bengalas.
+Pero el sobre nunca llegó.
+No sabes si Manu te ha vendido, si se rió de ti, o si simplemente es un cobarde del capital farmacéutico.
+
+Ahora andas paranoico. Y con razón.
+Si alguien descubre que estás siendo buscado por la poli, podría delatarte para salvar su propio culo.
+Y entonces, adiós revolución.
+Y adiós voleibol.
+
+
+
+- name: Carlotita Montiel
+  title: La Enfermera
+  actor: Carlota Cruz
+  bio: La experiencia le ha enseñado a Carlota a estar alerta. Siempre atenta a lo que se cuece en casa y en el hospital, rara vez le pasa algo por alto. Es la primera en detectar problemas… y en encontrar soluciones rápidas para los que quiere. Cuando sonríe, más vale no preguntarle toda la verdad. A simple vista parece compungida por su hermana Natita, pero quienes la conocen no se lo acaban de creer.
+  secreto: 
+
+El amor no espera. Y el anillo de compromiso tampoco.
+Queréis casaros antes que Nati y Álvaro. Por eso habéis robado el anillo familiar. Lo escondisteis bien… ¡en la comida de Poke! Pero Carmen y Enrique andan buscándolo como desesperados, ¡mucho cuidado!
+Instrucción: Que nadie descubra vuestro robo. Si alguien encuentra el anillo o os relaciona con el crimen, estaréis acabados.
+Mecánica: Si uno cae, el otro también.No lo compartas con nadie. Es tu única forma de salir viva, si lo descubren se acabó para ti. 
+
+
+
+- name: Carlota Granada
+  title: La Catalana
+  actor: Carlota G Serrano
+  bio: Energía sobrante y conversación afilada, Carlota viaja donde haga falta si sus afectos le preceden. Es la que nunca rechaza un favor, aunque tenga que tapar algún que otro desliz ajeno por el camino. “Cúbreme esta vez y yo te cubro siempre”, suele decir, y nadie sabe cuánto es literal. 
+  secreto: 
+Tú no querías meterte en nada raro. Pero Roberto te pidió ayuda.
+
+Estáis juntos desde hace un tiempo. Lo suficiente para saber que Roberto tiene tendencia a meterse en líos, pero esta vez ha cruzado una línea:
+ha secuestrado con unos “amigos” a Victoria Federica para ganar algo de dinero.
+
+No te dio muchos detalles, solo que necesitaba una coartada en el club de hípica, y que tú eras la única que podía hacerse pasar por Victoria Federica sin levantar sospechas.
+Dudaste.
+Pero al final accediste.
+Primero, porque te lo pidió él.
+Y segundo, porque —seamos sinceras— te encantan los caballos.
+
+La cosa salió bien, nadie sospechó. Pero ahora ya es tarde: eres cómplice.
+Roberto no actuó solo, pero no te ha querido decir con quién.
+Y si esa gente llega a saber lo que sabes… podrías convertirte en un problema.
+Y los problemas, en este tipo de situaciones, se resuelven rápido.
+Objetivo:
+
+Nadie debe descubrir que te hiciste pasar por Victoria Federica en la hípica.
+Vigila a Roberto y a sus silencios. Si descubres quién más está implicado, tal vez puedas protegerte…
+o negociar tu salida.
+
+No tenéis ningún secreto. Y eso, en esta fiesta, es una ventaja.
+
+
+- name: Carmen Montiel
+  title: La Madre
+  actor: Carmen Cruz
+  bio: Madre de Natita firme, combativa y protectora, Carmen lleva los galones de la familia con naturalidad. No permite que se la tome por tonta y lucha hasta el final por lo que considera justo, aunque eso implique meterse en algún que otro entuerto. 
+  secreto: 
+Nadie puede sacar nada contra vosotros.
+No tenéis nada que esconder, ni de qué avergonzaros. Y justo por eso, sois los únicos con libertad para moveros, preguntar, observar...
+Pero no por ello lo tenéis más fácil: El anillo de compromiso de la familia ha desaparecido ¿Será un complot contra Natita? Nadie sabe quién lo robó, ni dónde está. Vuestra misión es encontrarlo a toda costa.
+Hay rumores, pistas sueltas… y sospechosos por todas partes.
+
+Objetivo:
+
+Descubrir quién ha robado el anillo.
+Y más importante: averiguar dónde está ahora.
+Si lográis encontrarlo antes de que acabe la fiesta, ganáis
+
+- name: Celia Relámpago
+  title: La Moderna
+  actor: Celia Ruiz
+  bio: Enfermera de día, actriz frustrada de noche. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos. Sin embargo su mayor exito es ser la protagonista haciendo de natita en el documental biografico sobre la vida de natita que manuel godard esta planificando. a natita no le sento esto nada bien....
+  secreto: 
+Tú no eres actriz. Tú eres el papel.
+
+Llevas tres años luchando por ser mocatriz.
+Modelo. Cantante. Actriz. Todo.
+Has hecho castings, has llorado en baños públicos, has fingido acentos de Murcia, de “tomatico”, todo sin éxito.
+
+Hasta que te llegó el papel de tu vida: interpretar a Natita Cruz en un documental biográfico que está rodando Manuel B.
+Por fin, te hiciste actriz.
+Pero te lo has tomado demasiado en serio.
+Te crees ella. Quieres MÁS. Debes hacerte cantante. Debes ser Natita.
+
+Pero había un problema:
+Ella también seguía existiendo.
+
+Y eso no puede ser. Dos Natitas es demasiado para este mundo.
+
+Ayer, Cáceres te pidió que le trajeras lorazepam desde el hospital para una migraña terrible.
+Fuiste profesional… hasta que tuviste las pastillas en la mano.
+Y entonces viste la oportunidad.
+Guardaste el blister para ti.
+Hoy, ejecutaste tu plan: drogar a Natita discretamente. Ya no te hará sombra. Ya no quitará titulares.
+
+Pero aún falta algo: ser modelo.
+Y en esta fiesta hay más modelos.
+Más obstáculos.
+Más papeles que robar.
+Solo queda un problema técnico: se te ha acabado el lorazepam.
+Puede que consigas más.
+O puede que toque improvisar con algo más… directo.
+
+Objetivo:
+
+Nadie debe descubrir que asesinaste a Natita con lorazepam. Tú eres la asesina, no confíes en nadie.
+
+Hay varias armas dispersas en esta fiesta. Si logras hacerte con una y eliminar a un modelo más, ganas la partida. Te coronas como mocatriz total.
+
+
+
+- name: Ceskary
+  title: La Alternativa
+  actor: Ceskary
+  bio: Ceskary es fotografa y vive en Paris. Alterna entre sus escapadas a París y los reencuentros en los que siempre aparece como si nada hubiera cambiado. Se dice que captura más secretos con su cámara de los que después revela, aunque nunca se sabe cuál de todos expondrá al fin en sus exposiciones bohemias. Su maleta lleva postales y recuerdos de medio mundo.
+  secreto: 
+
+- name: Claridad Maura 
+  title: La Musa 
+  actor: Clara Hernández 
+  bio: El arte de dirigir personas, ésa es la verdadera vocación de Clara. Organiza desde la sombra y parece anticiparlo todo, como si llevara la fiesta acotada en un cuaderno invisible. Cuando ocurre algo importante, muchos buscan en su agenda las pistas necesarias para entender la velada. Esta noche, nadie está seguro de si Clara actúa por amor, o por algo más oscuro. 
+  secreto: 
+
+La envidia te sienta como el carmín: fuerte, rojo, escandaloso.
+
+Todo el mundo sabe que anoche hubo dos fiestas.
+La de Natita, y la tuya.
+Tú organizaste la tuya en paralelo, a la misma hora, con mejores copas y menos drama.
+Querías sabotearla. Robarle invitados. Dejarle claro que no es la única que puede montar algo con glamour y lista de Spotify. Además, editas su Wikipedia cuando te aburres, y no precisamente para bien.
+Y lo lograste. Muchos se pasaron por la tuya, y algunos ni siquiera llegaron a la de ella.
+
+Pero luego… ocurrieron cosas.
+Y aún más, en la fiesta de hoy Natita está muerta.
+Y aunque jamás quisiste que le pasara nada malo, hay gente que empieza a mirarte raro.
+Y tú solo querías que no brillara tanto. No esto.
+
+Objetivo:
+
+Que nadie descubra que fuiste tú quien sabotea a Natita alterando su página de Wikipedia.
+Pero cuidado, si la gente te señala como culpable, aunque no lo seas… puede que acabes pagando tú.
+
+
+
+- name: Dani de la Palma 
+  title: El Cerebrito
+  actor: Daniel Fernández 
+  bio: Nada escapa al radar de Dani, siempre armado con una teoría nueva o una sospecha pendiente. Docente en la vida y detective en tiempo libre, le fascinan los pequeños detalles y no puede evitar escrutar las motivaciones ajenas, sobre todo cuando presiente una historia oculta tras cada pareja de baile o cada brindis. Natita es la clave de algún gran enigma que aún no ha logrado descifrar.
+  secreto: 
+Tú no estás aquí por cortesía. Estás aquí por contrato.
+
+No eres un simple invitado.
+Eres espía.
+Has sido contratado por un hombre misterioso que se hace llamar Caracazador, nadie sabe bien quién es, pero paga bien.
+Tu misión era clara:
+spoilear el próximo disco de Natita.
+Quieren conocer el título, los temas, la estética, incluso los nombres de los colaboradores antes de que ella lo anuncie.
+Y tú estás aquí para descubrirlo todo.
+
+Tienes buen ojo, buena memoria y cero escrúpulos.
+Pero lo más importante es pasar desapercibido.
+Si alguien aquí descubre quién te envió —o peor, por qué—, te vas directo a la cárcel. Por suerte ser tan cotilla trae consigo una serie de ventajas ahora que la fiesta ha dado un giro a lo trágico.
+
+Ventaja:
+
+Recibirás más pistas que otros jugadores.
+
+Objetivo: Evita que descubran por qué estás realmente en esta fiesta
+
+
+
+- name: Enrique Montiel
+  title: El Padre
+  actor: Enrique González
+  bio: Enrique, padre de Natita, tiene una inteligencia práctica difícilmente superable. Recientemente descubrió la desaparicion del anillo familiar y ya se ha puesto manos a la obra para localizarlo. Aunque detesta los sustos, nunca duda en entrar en acción cuando las cosas se ponen feas. 
+  secreto: 
+Nadie puede sacar nada contra vosotros.
+No tenéis nada que esconder, ni de qué avergonzaros. Y justo por eso, sois los únicos con libertad para moveros, preguntar, observar...
+Pero no por ello lo tenéis más fácil: El anillo de compromiso de la familia ha desaparecido ¿Será un complot contra Natita? Nadie sabe quién lo robó, ni dónde está. Vuestra misión es encontrarlo a toda costa.
+Hay rumores, pistas sueltas… y sospechosos por todas partes.
+
+Objetivo:
+
+Descubrir quién ha robado el anillo.
+Y más importante: averiguar dónde está ahora.
+Si lográis encontrarlo antes de que acabe la fiesta, ganáis
+
+- name: Estrella Travesía
+  title: La Jugona
+  actor: Esther Geijo
+  bio: De Benidorm al barrio, Esther nunca rechaza una apuesta ni el desafío de un enigma inesperado. Sabe usar cartas y miradas con la misma destreza, y le encanta encontrar la jugada inesperada mientras otros se distraen con las reglas del juego. Entre Natita y ella quedan cuentas pendientes pero no se sabe claro quién le debe a quién.
+  secreto: 
+El dominó no es un juego. Es poder. Y tú lo gestionas como una emperatriz de Lavapiés.
+
+Llevas años organizando partidas ilegales de dominó en el barrio.
+Gente que nadie ve, apuestas que nadie declara.
+Todo muy discreto. Muy controlado.
+Hasta hace una semana.
+
+En la última partida, se coló una anciana extraña. Nadie la conocía. Nadie sabía quién la había invitado.
+Tenía mirada de lince y una forma de mover las fichas que no encajaba.
+Demasiado lista. Demasiado callada.
+Y desde entonces, no puedes dormir tranquila.
+
+Sospechas que no era quien decía ser.
+Tal vez una policía. Una periodista. Una inspectora de Hacienda.
+Tal vez… esté aquí esta noche.
+
+Objetivo:
+
+Averigua quién era esa anciana infiltrada. Podría estar en esta fiesta, disfrazada o sin disimulo.
+Hazlo sin levantar sospechas sobre tu negocio de dominó clandestino.
+Si alguien te relaciona con las partidas ilegales, podrías tener problemas muy serios.
+
+
+
+- name: Guille Bandolero
+  title: El Inmortal
+  actor: Guille alias Willy 
+  bio: Guille es leyenda del barrio, conocido por gambetear entre la picaresca y la inocencia según le sople el viento. Su punto fuerte: hacer lo que sea para conseguir lo que necesita. En reuniones y fiestas, no duda en afirmar que las mejores historias siempre le pasan cuando Natita está cerca.
+  secreto: 
+Tú no quieres venganza, ni fama, ni justicia. Tú solo quieres la herencia de la vieja.
+Llevas meses detrás de Doña Remedios, una anciana aparentemente despistada… pero en realidad, una magnate inmobiliaria del centro de Madrid.
+Tiene diez pisos en alquiler. Entre ellos, el de Natita Cruz.
+Una fortuna construida a base de contratos en pesetas, vecinos sin escritura, y rentas antiguas reconvertidas en oro.
+No tiene herederos. Solo gatos.
+
+Todo iba bien. Estabas cerca de conseguir que firmara un testamento a tu favor.
+Pero para eso, necesitabas que estuviera bien tranquila y bien sedada.
+Le pediste lorazepam a Manu R., tu farmacéutico, pero el día de la cita con el notario la anciana se quedó dormida como un tronco. Como tardan una eternidad en reprogramarse estos trámites, te pusiste la peluca de doña Remedios, un abrigo de lana beige y su bolso lleno de chicles de eucalipto, y te plantaste tú mismo en la notaría.
+
+Pero entonces… algo en ti cambió.
+Algo se despertó.
+Y decidiste vivir un día en sus pantuflas.
+Una fantasía geriátrica. Un homenaje. Una imprudencia absoluta.
+
+Así que, para completar la experiencia, te fuiste a echar una partidita de dominó en Lavapiés, como haría cualquier señora que se precie.
+No contabas con que la partida la organizaba Esther, que recuerda cada ficha que cae, cada trago y cada rostro.
+Pero eufórico, no podías dejar de ganar al resto de jugadoras, ese día estabas en racha. Grave error.
+
+Ahora estás en esta fiesta, vestido de ti mismo, pero con el espectro de la abuela acechándote.
+Si Esther te reconoce como aquella anciana de voz de camionero, estás muerto.
+Social, legal y notarialmente.
+
+
+- name: Irene Fabulosa
+  title: La Bon Vivant
+  actor: Irene Zulaica
+  bio: Irene domina el arte de vestirse bien para cualquier ocasión, y nunca pierde la sonrisa mientras negocia el último detalle. Ama el lujo, las situaciones extremas y los grupos de amigos con historias difíciles de olvidar. Sabe abrirse paso en círculos donde muchos no pasan de la entrada. 
+  secreto: 
+Jorge, Rober, Nago y Irene habéis secuestrado a Victoria Federica.No fue por ideología, ni por venganza. Fue por una cosa más vieja que la corona: dinero. Tenéis a la Borbona escondida en un trastero climatizado de Valdemoro, bajo llave y con acceso a una máquina de vending. Pedís un rescate de 200.000 € en bitcoins (idea de Rober) y bonos de Zara (idea de Nagore).Nagore consiguió el lorazepam. No sabéis cómo, ni queréis saberlo. Se lo dio a Victoria en su bebida sin que ella lo notara.Roberto se deshizo del patinete eléctrico de V.F. para que nadie supiera que había desaparecido.Irene se hizo pasar por amiga de Victoria para acercarse a ella en la fiesta.Jorge escribió y envió el mensaje de rescate. También controla la cuenta donde debéis recibir el dinero.Pero quedó una prueba humeante en el lugar del secuestro... un piti.Objetivo conjunto:Nadie debe saber que habéis secuestrado a Victoria Federica.Podéis usar la información que tenéis sobre otros para negociar, distraer o desviar sospechas.Si uno solo de vosotros es desenmascarado, el rescate se cancela y todos perdéis. Cuidado con las parejas de los secuestradores de vuestro equipo, tenerlos vigilados...
+
+
+- name: Jorge Mermelada
+  title: El Inocente 
+  actor: Jorge Membrillo
+  bio: Sensible y torpe, como Bambi en un after. Se esconde tras una sonrisa enorme. Siempre está dispuesto a ayudar, aunque a veces se mete en líos sin saber muy bien cómo llegó hasta ahí. Confía demasiado en las buenas intenciones y se fía de todos, aunque no todos se fíen de él. Asegura que confía ciegamente en Natita, aunque a veces admite en voz baja que no sería tan raro desconfiar de ella también.
+  secreto: 
+Jorge, Rober, Nago y Irene habéis secuestrado a Victoria Federica.No fue por ideología, ni por venganza. Fue por una cosa más vieja que la corona: dinero. Tenéis a la Borbona escondida en un trastero climatizado de Valdemoro, bajo llave y con acceso a una máquina de vending. Pedís un rescate de 200.000 € en bitcoins (idea de Rober) y bonos de Zara (idea de Nagore).Nagore consiguió el lorazepam. No sabéis cómo, ni queréis saberlo. Se lo dio a Victoria en su bebida sin que ella lo notara.Roberto se deshizo del patinete eléctrico de V.F. para que nadie supiera que había desaparecido.Irene se hizo pasar por amiga de Victoria para acercarse a ella en la fiesta.Jorge escribió y envió el mensaje de rescate. También controla la cuenta donde debéis recibir el dinero.Pero quedó una prueba humeante en el lugar del secuestro... un piti.Objetivo conjunto:Nadie debe saber que habéis secuestrado a Victoria Federica.Podéis usar la información que tenéis sobre otros para negociar, distraer o desviar sospechas.Si uno solo de vosotros es desenmascarado, el rescate se cancela y todos perdéis. Cuidado con las parejas de los secuestradores de vuestro equipo, tenerlos vigilados...
+
+
+- name: Don Juanmanuel
+  title: El Bohemio
+  actor: Juanma Corpas 
+  bio: Escritor bohemio que vive en Vallekas con sueños de Netflix. Vive de su one hit only, su exito literario El Lince, aun conserva fans por todo el mundo que le idolatran. Cree que llevar boina es de lo más chic. Le encanta contar su proceso creativo aunque rara vez comparte sus verdaderas fuentes de inspiración. No es raro que afirme que algunos de sus personajes estén inspirados en Natita, aunque nunca confiese cuáles.
+  secreto: 
+
+Eres escritor. O al menos eso cree todo el mundo.
+
+Tu libro ha sido un exitazo.
+Lo llaman “una oda a lo salvaje, a lo ibérico, a lo indómito”.
+Su título… “El Lince Ibérico".
+Qué ironía: no escribiste ni una palabra.
+
+Lo escribió Mateo.
+Tu ghost writer. Tu verdadero talento con patas. Tras el exitazo empezó a rondarte, quizás en busca de reconocimiento.
+Temías que hablase.
+Así que quisiste tener un gesto.
+
+Sabes de su obsesión con los linces.
+Lo menciona en cada cena. Tiene un póster en casa. Le brillan los ojos cuando dice “autóctono” y habla de cómo la conservación del lince se basa en la conservación del conejo porque… bueno, qué importa coño.
+
+Y entonces se te ocurrió la genialidad:
+conseguiste uno. De verdad. Vivito y coleando.
+Tiraste de un favor de aquí, otro de allá… lo típico de un bohemio con contactos en Vallekas.
+Y le metiste el bicho en casa.
+“Para inspirarte más”, dijiste.
+Mateo ha callado y ahora podrías dar el chivatazo al Seprona para comprometerle a él.
+
+Objetivo:
+
+Que nadie descubra que no escribiste el libro.
+Tu conoces ya el secreto de Mateo, si alguno de los dos se va de la lengua el otro podría corresponder y hacerle caer con él.
+
+
+- name: Lena Clavel
+  title: La Bailarina
+  actor: Lena Calvo
+  bio: Exbailarina de cabaret en Pigalle. Amante de la poesía, recita a Prévert como otros fuman. Vivió con Natita en París pero ahora ha vuelto a Torrelodones y añora las luces de la gran ciudad. 
+  secreto: 
+Os encanta el piso de Nati. Tanto, que ya habéis hablado con el propietario. Y si todo sale bien… Natita se va a la calle.
+
+Queréis empezar una nueva vida en Madrid. Juntas. Reformar, pintar de verde oliva, colgar plantas con macramé y organizar vuestros propios caféclub.
+El problema: el piso que os gusta es el de Natita Cruz.
+Y ya habéis iniciado conversaciones con el casero para comprarlo directamente. Él está dispuesto… si conseguís mover ficha rápido.
+A Nati no le habéis dicho nada. Seguís viniendo a sus fiestas, compartiendo stories y brindando como si nada.
+
+Objetivo:
+Nadie debe saber que estáis intentando comprar su piso a sus espaldas.
+Mecánica: Jugáis juntas. Si una es descubierta, la otra también cae.
+
+
+
+- name: Lucia Miró 
+  title: La Flamenca 
+  actor: Lucia Monsalvete 
+  bio: Lucía marca el ritmo de las reuniones, poniendo arte y gracia en todo lo que toca. Siempre encuentra el lado luminoso y suele enterarse de las cosas un poco antes que los demás, aunque no siempre cuente todo lo que sabe. Le gusta repetir que “con Natita nunca sabes por dónde va a salir”. Hace unos años se metió a monja con su hermana Marta pero enseguida las dos se dieron cuenta de que eso no era lo suyo, aunque ese pasado aun las persigue en esta velada.
+  secreto: 
+Vuestra vocación no era la fe. Era la papelería.Lo vuestro siempre fue ser secretarias:el clac-clac del teclado, el clic del boli bic, la mirada asesina por encima de las gafas de pasta gordas…Nadie manda más que una secretaria que lo sabe todo y lo apunta en su agenda de anillas.No siempre fuisteis funcionarias con manicura discreta y sello personalizado.Hace años llevabais hábito. Y os llamaban Sor Marta y Sor Lucía.Os metisteis a monjas por la tranquilidad de sus oficinas de la calle Añastro.Durasteis lo justo para ver que aquello no era lo vuestro:mucho rezo, poca fotocopia.Eso sí, mientras estuvisteis dentro lle­vabais los archivos como nadie.Y entre bautizos, donaciones y nacimientos…hubo alguna que otra traspapelación a vuestro gusto. El subidón del poder se sentía como cuando le decís a un despistao con la declaración de la renta que le falta el modelo A.4.Una tramitación en concreto se os quedó atravesada:dos gemelos: Javier Cáceres y María Casado.El problema:Cáceres lloraba como si tiviese el pulmón de Pavarotti Así que decidisteis separarlos.A ella la mandasteis con buena familia.A él… bueno, lo que se pudo.Fue feo. Pero también era lunes.Años después…¡ambos están aquí!Y vosotras también.Con gafas de pasta, moño bajo y una libreta en el bolso “por si acaso”.Pero por dentro… sabéis que si alguien descubre vuestro pasado, os quitan la placa de empleadas del mes.Objetivo:Que nadie descubra vuestra participación en la separación.Jugáis juntas: si una cae, la otra también.Vigilad a Cáceres y María. Si se enteran de su vínculo… el pecado será público.
+
+
+- name: Manuel Godard
+  title: El Director
+  actor: Manuel Bernal 
+  bio: Manuel es un director implacable juzgando obras ajenas, pero pocas veces deja ver lo que piensa de verdad sobre las personas. Firme y exigente, admira a quien toma la iniciativa y prefiere rodearse de talentos dispares antes que de aduladores. Esta realizando una biograia formato documental de natita cruz.
+  secreto: 
+Siempre dijiste que Natita tenía algo.
+Carisma, misterio, una luz que solo se ve en los focos.
+Por eso decidiste hacer un documental sobre su vida.
+Un biopic emocional, visual… y, tras su repentina muerte, con un tirón espectacular.
+Para ti, esto es oro. Para el mundo, tragedia. Para tu productora: premios y merchandising.
+
+Pero hay un detalle que lo complica todo:
+en el casting para interpretar a Natita… no elegiste a Natita.
+(Elección bastante obvia, por otra parte.)
+
+Elegiste a Celia.
+Tu novia. Y tormenta personal en tres actos.
+
+¿Por qué?
+Celia lleva tres años obsesionada con ser mocatriz (modelo, cantante, actriz…) y lo está intentando todo.
+
+El problema:
+ahora Celia cree que es Natita.
+Y tú… no sabes cómo bajarla de ese escenario.
+
+Objetivo:
+
+Que nadie descubra que enchufaste a tu novia en el papel protagonista. Especialmente no Celia.
+
+
+- name: Manuel Sardá
+  title: El Farmacéutico
+  actor: Manuel Romero
+  bio: Conoce los remedios para casi cualquier mal, pero prefiere no hablar mucho de sí mismo. Discreto pero risueño, Manuel navega a menudo entre divanes y secretos familiares, aunque en apariencia su vida esté bajo control farmacológico. No suele hablar mucho de su pasado, pero quien le conoce bien, sabe que nunca olvida lo que compartió con Natita esa noche en la azotea en la que se prometieron amor eterno. Ha llegado a la fiesta con un cuchillo japonés, quien sabe si para cortar el pastel o saldar cuentas con alguien.
+  secreto: Tú y Natita os casasteis en una fiesta. Con unos natillos.
+Una boda improvisada, entre gin-tonics mal servidos, purpurina flotando en el aire y testigos que pensaban que era parte de la performance.
+
+Pero tú no.
+Tú viste una oportunidad.
+Sabías que casarte con Natita podía darte portada…
+pero divorciarte podía darte un pastizal.
+Así que, en cuanto firmaste los papeles,
+contrataste a un abogado que hace las gestiones “por detrás”
+y trasladaste tu dinero a una cuenta en Andorra.
+
+Desde entonces, finges ser un tieso.
+Vas al bar con suelto, miras las cartas por el lado derecho, y cuando pagas algo dices “madre mía cómo está todo, ¿eh?”
+
+Objetivo:
+
+Que nadie descubra que eres rico o, te tocara pagar lo que debes y hacer algún añito entre rejas.
+
+- name: María Soltera 
+  title: La Duquesa
+  actor: María Casado 
+  bio: Dueña de una elegancia natural, María siempre encuentra la manera de estar en el centro sin decir demasiado. Así como presume de título nobiliario, suele ser bastante discreta. A veces deja caer en voz baja que Natita debería cuidar mejor de sus posesiones, aunque la razón nunca queda muy clara.
+  secreto: Eres duquesa… o lo intentas.
+
+Vienes de buena familia, de las que soñaban con muchos hijos, un mono y un castillo.
+Y durante un tiempo lo tuvisteis casi todo: los hijos no, pero sí un un castillo con un fresco de tu cara y un mono que mordía las cortinillas.
+Hasta que la herencia se fue esfumando entre recuerdos, deudas y algún que otro síndrome de guardar hasta las armaduras del S. XVI en una nave de La Moraleja.
+
+Cuando llegó el momento de heredar el título nobiliario,
+no pudiste pagar los trámites.
+Así que hiciste lo que toda buena aristócrata en apuros haría: lo falsificaste.
+Un Word bien maquetado, dos sellos prestados y voilà.
+
+Desde entonces vives del cuento y de las apariencias.
+Pero anoche, alguien entró en tu casa.
+Revolvió todo.
+¿Querían tus joyas?¿Tu perdida reliquia familiar?
+
+Ni idea.
+Solo sabes una cosa: si descubren que tu ducado es de pega, se te acaba lo poco que te queda de esos días.
+
+Objetivo:
+
+Descubre quién entró en tu casa y qué buscaba. Quizás así puedas negociar y proteger tu secreto.
+Y sobre todo: que nadie descubra que tu ducado es más falso que un bolso de mercadillo de Luis Vuitón.
+
+- name: Marta Miró
+  title: La Estratega
+  actor: Marta Monsalvete
+  bio: Marta da la impresión de anticiparse a todo. Siempre tiene un comentario agudo para cada situación y prefiere mantener la cabeza fría cuando los demás pierden el control. Sabe quién se sienta con quién antes incluso de que los demás elijan silla. Suele bromear con que Natita es la única persona que podría ponerle en un aprieto… y aún así salir airosa. Hace unos años se metió a monja con su hermana Lucía pero enseguida las dos se dieron cuenta de que eso no era lo suyo, aunque ese pasado aun las persigue en esta velada. 
+  secreto: 
+Vuestra vocación no era la fe. Era la papelería.Lo vuestro siempre fue ser secretarias:el clac-clac del teclado, el clic del boli bic, la mirada asesina por encima de las gafas de pasta gordas…Nadie manda más que una secretaria que lo sabe todo y lo apunta en su agenda de anillas.No siempre fuisteis funcionarias con manicura discreta y sello personalizado.Hace años llevabais hábito. Y os llamaban Sor Marta y Sor Lucía.Os metisteis a monjas por la tranquilidad de sus oficinas de la calle Añastro.Durasteis lo justo para ver que aquello no era lo vuestro:mucho rezo, poca fotocopia.Eso sí, mientras estuvisteis dentro lle­vabais los archivos como nadie.Y entre bautizos, donaciones y nacimientos…hubo alguna que otra traspapelación a vuestro gusto. El subidón del poder se sentía como cuando le decís a un despistao con la declaración de la renta que le falta el modelo A.4.Una tramitación en concreto se os quedó atravesada:dos gemelos: Javier Cáceres y María Casado.El problema:Cáceres lloraba como si tiviese el pulmón de Pavarotti Así que decidisteis separarlos.A ella la mandasteis con buena familia.A él… bueno, lo que se pudo.Fue feo. Pero también era lunes.Años después…¡ambos están aquí!Y vosotras también.Con gafas de pasta, moño bajo y una libreta en el bolso “por si acaso”.Pero por dentro… sabéis que si alguien descubre vuestro pasado, os quitan la placa de empleadas del mes.Objetivo:Que nadie descubra vuestra participación en la separación.Jugáis juntas: si una cae, la otra también.Vigilad a Cáceres y María. Si se enteran de su vínculo… el pecado será público.
+
+
+- name: Marta Verdú
+  title: La Amiga 
+  actor: Marta Puchol
+  bio: Modelo de profesión, optimista incorregible y chispeante, Marta convierte cualquier tertulia en una anécdota. Acompaña en las buenas, sostiene en las malas y siempre tiene algún as en la manga para salir de un apuro, aunque a veces elija dar un paso atrás antes de dar dos hacia delante. 
+  secreto: 
+El amor te nubla el juicio. Pero el lorazepam, directamente, te lo borra.Estás liada con Nagore. Una pasión secreta, intensa y desordenada. Harías cualquier cosa por ella. Y lo hiciste.Hace unos días, te pidió un favor: conseguir lorazepam. Dijo que era para “una situación delicada”, y tú no preguntaste. Pero anoche la viste nerviosa, paranoica, tramando algo… Cuando Natita se desploma en la fiesta empiezas a temer lo peor.Objetivo:Asegúrate de que nadie descubra que tú conseguiste el lorazepam.Vigila a Nagore: si ha hecho daño a alguien, tú eres cómplice, podría echarte las culpas.Si descubres quién fue el asesino y aún estás a tiempo… tal vez puedas evitar el desastre. ¿O ya es tarde?
+
+
+
+- name: Mateo Abril
+  title: El Filósofo
+  actor: Mateo Vidal
+  bio: Filósofo amante de las letras, amable pero dificilísimo de descifrar, Mateo genera confianza pero siempre deja la puerta abierta a una interpretación alternativa. Le entusiasman los objetos exóticos y animales raros, los acertijos intelectuales y los retos imposibles de explicar a la primera. Es gracias a Natita por quien por fin se animó a escribir, su gran sueño. Pero las malas lenguas afirman que ahora que se ha frustrado esa ambición le guarda recor por ello.
+  secreto: 
+Juanma te pidió ayuda para escribir una novela. Aceptaste ser su ghost writer porque confiaste en él… y porque pensaste que así podrías abrirte camino. El problema es que el libro ha sido un éxito brutal, y Juanma no ha dicho ni una palabra sobre ti.Te cuesta verle dar entrevistas, firmar ejemplares y repetir ideas que ni entiende. Sobre todo porque el libro habla de algo que te obsesiona: el lince ibérico.Hace poco, en una conversación medio en broma, le dijiste que querías ver uno. Y te lo consiguió. No sabes cómo. Pero ahora tienes un lince en casa, escondido y para el colmo se ha comido tu nuevo sofá.Eso es ilegal, y él lo sabe. Si tú le destapas como un fraude, él puede devolvértela.Tu secreto es el lince. Si alguien lo descubre, pierdes automáticamente.Puedes proteger a Juanma… o exponerlo como impostor.Pero cuidado: si él habla, tú también estás acabado. Puedes usar lo que sabes de Juanma como defensa… o como venganza.
+
+- name: Nagore Valdés
+  title: La Soñadora
+  actor: Nagore Moreno
+  bio: Nagore nunca deja de buscar sentido a lo que le rodea, aunque a veces su mente vaga demasiado. Nadie duda que sueñe despierta y que termina metida en peripecias poco convencionales. Acostumbra a ver la posibilidad de una gran historia en cualquier enredo. Su círculo sabe que ella sigue esperando que Natita cumpla una antigua promesa de hacer juntas “algo grande”.
+  secreto: 
+Jorge, Rober, Nago y Irene habéis secuestrado a Victoria Federica.No fue por ideología, ni por venganza. Fue por una cosa más vieja que la corona: dinero. Tenéis a la Borbona escondida en un trastero climatizado de Valdemoro, bajo llave y con acceso a una máquina de vending. Pedís un rescate de 200.000 € en bitcoins (idea de Rober) y bonos de Zara (idea de Nagore).Nagore consiguió el lorazepam. No sabéis cómo, ni queréis saberlo. Se lo dio a Victoria en su bebida sin que ella lo notara.Roberto se deshizo del patinete eléctrico de V.F. para que nadie supiera que había desaparecido.Irene se hizo pasar por amiga de Victoria para acercarse a ella en la fiesta.Jorge escribió y envió el mensaje de rescate. También controla la cuenta donde debéis recibir el dinero.Pero quedó una prueba humeante en el lugar del secuestro... un piti.Objetivo conjunto:Nadie debe saber que habéis secuestrado a Victoria Federica.Podéis usar la información que tenéis sobre otros para negociar, distraer o desviar sospechas.Si uno solo de vosotros es desenmascarado, el rescate se cancela y todos perdéis. Cuidado con las parejas de los secuestradores de vuestro equipo, tenerlos vigilados...
+
+
+- name: Nala
+  title: La Princesa destronada
+  actor: Nala
+  bio: Nala es literalmente un perro, ella no ha podido ser... probablemente. Es una glotona y acaba con su comida y la de los demás en un segundo.
+  secreto: 
+
+- name: Natita Montiel
+  title: La Anfitriona
+  actor: Natalia Cruz
+  bio: Carismática, empática y algo caótica, Natita organiza fiestas como quien diseña recuerdos para toda la vida. Sabe combinar a los amigos más improbables, aunque a veces la fiesta se le vaya de las manos. Todos quieren saber cuál será su próximo movimiento. 
+  secreto: 
+
+- name: Pablo Anaya
+  title: El Implacable 
+  actor: Pablo Guti
+  bio: Emocional y lleno de buenas intenciones, Pablo llega a la fiesta de Natita de la mano de su pareja, Carlota Montiel. No suele moverse por interés, pero se deja llevar por los planes de los que más quiere. El amor es su mejor motivo… y a veces su peor defecto.
+  secreto: 
+
+El amor no espera. Y el anillo de compromiso tampoco.
+Queréis casaros antes que Nati y Álvaro. Por eso habéis robado el anillo familiar. Lo escondisteis bien… ¡en la comida de Poke! Pero Carmen y Enrique andan buscándolo como desesperados, ¡mucho cuidado!
+Instrucción: Que nadie descubra vuestro robo. Si alguien encuentra el anillo o os relaciona con el crimen, estaréis acabados.
+Mecánica: Si uno cae, el otro también.No lo compartas con nadie. Es tu única forma de salir viva, si lo descubren se acabó para ti. 
+
+
+
+- name: Poker
+  title: El Perro cobarde
+  actor: Poke
+  bio: Poke es literalmente un perro, él no ha podido ser el asesino. Es un poco miedica, quizás con buenos motivos...
+  secreto: 
+
+- name: Rafal Tisú 
+  title: El Activista
+  actor: Rafal
+  bio: Animalista empedernido. Tiene tres tortugas que han sido bendecidas por un chamán. Está convencido de que en la fiesta hay gato encerrado. Es muy leal y amigo de sus amigos.
+  secreto: 
+
+- name: Roberto Dueñas
+  title: El Documentalista
+  actor: Roberto Borrega
+  bio: Cuenta historias y las observa con lupa. Roberto ve más de lo que muestra y sabe cómo sacar jugo a cualquier momento aparentemente banal. Siempre le intrigan las motivaciones secretas… y le encanta registrar todo bajo el pretexto de “documentar un buen recuerdo”. Es famoso por asegurar que tiene tomas inéditas de Natita, aunque nunca enseña ni un minuto.
+  secreto: 
+Jorge, Rober, Nago y Irene habéis secuestrado a Victoria Federica.No fue por ideología, ni por venganza. Fue por una cosa más vieja que la corona: dinero. Tenéis a la Borbona escondida en un trastero climatizado de Valdemoro, bajo llave y con acceso a una máquina de vending. Pedís un rescate de 200.000 € en bitcoins (idea de Rober) y bonos de Zara (idea de Nagore).Nagore consiguió el lorazepam. No sabéis cómo, ni queréis saberlo. Se lo dio a Victoria en su bebida sin que ella lo notara.Roberto se deshizo del patinete eléctrico de V.F. para que nadie supiera que había desaparecido.Irene se hizo pasar por amiga de Victoria para acercarse a ella en la fiesta.Jorge escribió y envió el mensaje de rescate. También controla la cuenta donde debéis recibir el dinero.Pero quedó una prueba humeante en el lugar del secuestro... un piti.Objetivo conjunto:Nadie debe saber que habéis secuestrado a Victoria Federica.Podéis usar la información que tenéis sobre otros para negociar, distraer o desviar sospechas.Si uno solo de vosotros es desenmascarado, el rescate se cancela y todos perdéis. Cuidado con las parejas de los secuestradores de vuestro equipo, tenerlos vigilados...
+
+
+- name: Gigi
+  title: La Celestina
+  actor: Angela Montejano
+  bio: Gigi llega a la fiesta con ganas de revolver corazones y sembrar el caos más romántico. Viene en modo cupido travieso: dispuesta a liar a la gente... y quizás a enamorarse un poco también. Su punto débil son las canciones de Natita, son tan románticas que las escucha una y otra vez, quizás demasiado...
+  secreto: 
+Has seguido cada paso de Natita Cruz. Cada post. Cada story. Cada localización que olvidó borrar.Desde hace más de un año, usas un perfil falso en redes para seguirla: primero por curiosidad, luego por admiración, y ahora por algo más difícil de explicar. Te sabes sus letras, sus outfits reciclados, sus fiestas privadas, sus likes a las 3 de la madrugada.Eres su fan número uno. Pero también su sombra digital. Nadie debe relacionarte con ese perfil o perderás toda tu credibilidad.
+
+
+
+- name: Candela Valverde
+  title: La Vedette
+  actor: Candela Sastre
+  bio: Candela irradia luz y sabe lo que es quedarse fuera de foco. Sin embargo, cuando la vida le da la espalda, se las ingenia para volver a protagonizar la escena. Hoy iba a ser una de las DJ de la fiesta sin embargo está misteriosamente desaparecida junto con el resto...
+  secreto: 
+
+- name: Henar Pico
+  title: La Desaparecida
+  actor: Henar Vico
+  bio: Henar iba a pinchar en la fiesta pero está sorprendentemente desaparecida. Brillante, inquieta y con tendencia al drama, Henar nunca deja indiferente a nadie. Su misteriosa ausencia en la fiesta ha multiplicado los rumores y conjeturas.
+  secreto: 
+
+- name: Lander Lucero
+  title: El Disc-jockey​
+  actor: Lander
+  bio: Lander disfruta mezclando temazos y emociones a partes iguales. Siempre va acompañado de su círculo más fiel y nunca olvida si una fiesta terminó con bronca. Deja que la música hable por él en los momentos delicados, y no nunca repite la misma canción . Hoy iba a ser una de los DJ de la fiesta sin embargo está misteriosamente desaparecida junto con el resto...
+  secreto: 
