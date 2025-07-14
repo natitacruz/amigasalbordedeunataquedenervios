@@ -11,17 +11,29 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 for md_file in OUTPUT_DIR.glob("*.md"):
     md_file.unlink()
 
-# Clean function from clean_csv_secreto.py
+# Improved clean function
 
 def clean_text(text):
     if not text:
         return text
     # Replace Unicode line/paragraph separators with \n
     text = re.sub(r'[\u2028\u2029\u0085]', '\n', text)
-    # Replace multiple consecutive newlines with just two (markdown paragraph)
+    # Remove weird invisible characters (except Spanish letters)
+    text = re.sub(r'[\u200B-\u200D\uFEFF]', '', text)
+    # Ensure two line breaks between paragraphs
     text = re.sub(r'\n{2,}', '\n\n', text)
-    # Optionally, remove other invisible characters (not recommended for Spanish)
+    # Ensure a space after full stops if missing (but not for abbreviations or numbers)
+    text = re.sub(r'(?<=[a-zA-Z0-9])\.(?=[A-ZÁÉÍÓÚÑ])', '. ', text)
+    # Remove extra spaces at line start/end
+    text = '\n'.join(line.strip() for line in text.splitlines())
+    # Remove trailing/leading spaces and blank lines
+    text = text.strip()
     return text
+
+def yaml_multiline(key, value):
+    # Indent all lines by 2 spaces
+    indented = '\n'.join('  ' + line if line else '' for line in value.splitlines())
+    return f"{key}: |\n{indented}"
 
 # Campos esperados en el CSV y su orden en el front-matter
 yaml_fields = [
@@ -46,6 +58,15 @@ def generate_frontmatter(row: dict) -> str:
         value = fn(row, slug)
         if value is None or value == "":
             continue
+        # Special handling for multi-line secreto
+        if key == "secreto" and isinstance(value, str):
+            value = clean_text(value)
+            if "\n" in value:
+                lines.append(yaml_multiline(key, value))
+                continue
+        # Clean all other string values
+        if isinstance(value, str):
+            value = clean_text(value)
         # Aseguramos que los strings van entre comillas si contienen ':' o comienzan con #
         if isinstance(value, str) and (":" in value or value.startswith("#")):
             value = f'"{value}"'

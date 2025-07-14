@@ -1,7 +1,7 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/anae/
-name: Ana de la Gilda 
+name: Ana de la Gilda
 title: La Testigo
 actor: Ana Escalante
 image: /assets/portraits/anae.png

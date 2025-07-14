@@ -1,7 +1,7 @@
 ---
 layout: character
 permalink: /amigasalbordedeunataquedenervios/reparto/rafal/
-name: Rafal Tisú 
+name: Rafal Tisú
 title: El Activista
 actor: Rafal
 image: /assets/portraits/rafal.png
