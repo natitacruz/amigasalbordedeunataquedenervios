@@ -13,6 +13,7 @@
 
   <link rel="preload" href="{{ site.baseurl }}/assets/img/portadanati.png" as="image" fetchpriority="high">
   <link rel="preload" href="{{ site.baseurl }}/assets/img/placeholder.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 >
   <!-- Pega aquí tu <style> -->
 </head>
@@ -455,6 +456,34 @@ body.image-loaded .poster-section::before {
   opacity: 1;
 }
 
+.character-icons {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  gap: 0.3em;
+  z-index: 2;
+  pointer-events: none; /* icons don't block hover/click */
+  font-size: 1.5em; /* scales with .character size */
+  transition: font-size 0.3s;
+}
+
+.character:hover .character-icons {
+  font-size: 2em; /* icons scale up on hover if you want */
+}
+
+.character-icons .fa-skull {
+  color: #b71c1c;
+  text-shadow: 0 0 4px #fff;
+}
+.character-icons .fa-crown {
+  color: gold;
+  text-shadow: 0 0 4px #fff;
+}
+.character-icons .fa-bars {
+  color: #333;
+  text-shadow: 0 0 4px #fff;
+}
 </style>
 <script>
   window.addEventListener('load', () => {
@@ -508,7 +537,7 @@ body.image-loaded .poster-section::before {
     </div>
   <div class="script-box">
     <div class="script-header">ESCENA 1</div>
-    <p>ESCENA 1 – INTERIOR. SALÓN DE NATITA. NOCHE
+    <p>ESCENA 1 – INTERIOR. SALÓN DE NATITA. MEDIODÍA.
 Suena un vinilo antiguo. Conversaciones cruzadas, miradas contenidas. Natita ríe, alza su copa, y toma una cucharada del gazpacho. Apenas unos segundos después, se tambalea y cae al suelo. Se hace el silencio entre los asistentes. De fondo sigue sonando "Piensa en mi".
 
 <p>INSTRUCCIONES DEL JUEGO
@@ -517,18 +546,37 @@ Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesin
     <div class="production-info">
       <h3>🎬 Notas de Producción</h3>
       <ul>
-        <li><strong>Lugar:</strong> Calle de Fuencarral 15, 5º Izquierda, Centro de Madrid, 28004 Madrid, España.
-        <li><strong>Hora:</strong> 16:00</li>
+        <li><strong>Lugar:</strong> Calle de Fuencarral, Centro de Madrid, 28004 Madrid, España.
+        <li><strong>Día:</strong> 12 de julio, 2025</li>
         <li><strong>Tema:</strong> Todo en clave Almodóvar</li>
         <li><strong>Dress Code:</strong> Inspirate con la bio de tu personaje en los <a href="#creditos">créditos</a>. Habrá premios al mejor vestuario.</li>
       </ul>
     </div>
   </div>
+
+
+<div class="script-box">
+  <div class="script-header">ESCENA FINAL</div>
+  <p>ESCENA 1 – EXTERIOR. TERRAZA DE NATITA. NOCHE
+Suena un vinilo antiguo. Conversaciones cruzadas, miradas contenidas. Natita ríe, alza su copa, y toma una cucharada del gazpacho. Apenas unos segundos después, se tambalea y cae al suelo. Se hace el silencio entre los asistentes. De fondo sigue sonando "Piensa en mi".
+
+<p>INSTRUCCIONES DEL JUEGO
 </section>
 
 <section class="character-grid" id="creditos">
   {% for personaje in site.reparto %}
     <a href="{{ site.baseurl }}{{ personaje.url }}" class="character">
+      <div class="character-icons">
+        {% if personaje.icons contains "skull" %}
+          <i class="fas fa-skull"></i>
+        {% endif %}
+        {% if personaje.icons contains "crown" %}
+          <i class="fas fa-crown"></i>
+        {% endif %}
+        {% if personaje.icons contains "bars" %}
+          <i class="fas fa-bars"></i>
+        {% endif %}
+      </div>
       <img src="{{ site.baseurl }}{{ personaje.image }}" loading="lazy" alt="{{ personaje.name }}" data-placeholder="{{ site.baseurl }}/assets/img/placeholder.png">
       <div class="character-name">{{ personaje.name }}</div>
     </a>

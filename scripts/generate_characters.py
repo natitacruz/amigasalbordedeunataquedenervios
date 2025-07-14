@@ -48,9 +48,14 @@ def process_csv(csv_path: str):
             md_path = OUTPUT_DIR / f"{slug}.md"
 
             frontmatter = generate_frontmatter(row)
-            body = (
-                row.get("bio", "")
-            )
+            body = ""
+            # Add HISTORIA header and bio
+            if row.get("bio", "").strip():
+                body += "\n# HISTORIA\n\n" + row.get("bio", "") + "\n"
+            # Add SECRETO header and secreto if present
+            secreto = row.get("secreto", "").strip()
+            if secreto:
+                body += "\n# SECRETO\n\n" + secreto + "\n"
 
             with md_path.open("w", encoding="utf-8") as f:
                 f.write(frontmatter + body)
