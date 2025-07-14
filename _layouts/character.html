@@ -123,15 +123,6 @@
       transition: color 0.3s, background 0.3s, border 0.3s;
       user-select: none;
     }
-    .secreto-section h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-      color: #000;
-      text-shadow: 0 0 2px #fff, 0 0 8px #fff;
-      transition: color 0.3s;
-    }
     .secreto-section .secreto-content {
       background: #000;
       color: #fff;
@@ -254,7 +245,7 @@
     </div>
     {% if page.secreto %}
       <div class="secreto-section" tabindex="0">
-        <h1>SECRETO</h1>
+        <h1>Secreto</h1>
         <div class="secreto-content">
           {{ page.secreto | markdownify }}
         </div>
