@@ -247,7 +247,8 @@ body.image-loaded .poster-section::before {
 }
 
 .script-box-final {
-  max-width: none;
+  max-width: unset; /* override .script-box default */
+  justify-self: stretch; /* force to span full width of grid cell */
   grid-column: 1 / -1;
   grid-row: 2;
   width: 100%;
