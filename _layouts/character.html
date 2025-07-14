@@ -200,11 +200,8 @@
         <a class="nav-arrow next" href="{{ site.baseurl }}{{ next_item.url }}" title="Siguiente personaje">
           <i class="fas fa-chevron-right"></i>
         </a>
-    {% if page.name == "#SECRETO" %}
-      <h1 class="secreto-title">{{ page.name }}</h1>
-    {% else %}
+
       <h1>{{ page.name }}</h1>
-    {% endif %}
     <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
     <blockquote>“{{ page.frase }}”</blockquote>
   </header>
@@ -220,9 +217,7 @@
       <div class="char-section" tabindex="0">
         <h1>Secreto</h1>
         <div class="char-content">
-          <div class="highlight">
-            {{ page.secreto | markdownify }}
-          </div>
+          <span class="highlight">{{ page.secreto | markdownify }}</span>
         </div>
       </div>
     {% endif %}
