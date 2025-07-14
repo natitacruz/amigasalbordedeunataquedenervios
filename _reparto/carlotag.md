@@ -37,5 +37,4 @@ Nadie debe descubrir que te hiciste pasar por Victoria Federica en la hípica.
 Vigila a Roberto y a sus silencios. Si descubres quién más está implicado, tal vez puedas protegerte…
 o negociar tu salida.
 
-
 No tenéis ningún secreto. Y eso, en esta fiesta, es una ventaja.

@@ -31,7 +31,6 @@ Tu novia. Y tormenta personal en tres actos.
 ¿Por qué?
 Celia lleva tres años obsesionada con ser mocatriz (modelo, cantante, actriz…) y lo está intentando todo.
 
-
 El problema:
 ahora Celia cree que es Natita.
 Y tú… no sabes cómo bajarla de ese escenario.

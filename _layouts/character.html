@@ -41,7 +41,7 @@ header {
 
 .nav-arrow:hover {
   transform: translateY(-50%) scale(1.2);
-  color: #ffeb3b; /* or crimson or any color you like on hover */
+  color: #ffb3b3;
 }
 
 .nav-arrow.prev {
@@ -77,9 +77,8 @@ header:hover .dot {
   margin-bottom: 1rem;
 }
 
-    h1, h2, h3 {
-      color: {{ page.color }};
-      text-shadow: 1px 1px 2px #000, 0 0 2px #000;
+    h1 {
+      margin-bottom: 0.5rem;
     }
 
     blockquote {
@@ -111,6 +110,7 @@ header:hover .dot {
 
     h3 {
       font-size: 1.6rem;
+      color: {{ page.color }};
       border-left: 6px solid {{ page.color }};
       padding-left: 1rem;
       margin-bottom: 1rem;
