@@ -77,8 +77,9 @@ header:hover .dot {
   margin-bottom: 1rem;
 }
 
-    h1 {
-      margin-bottom: 0.5rem;
+    h1, h2, h3 {
+      color: {{ page.color }};
+      text-shadow: 1px 1px 2px #000, 0 0 2px #000;
     }
 
     blockquote {
@@ -110,7 +111,6 @@ header:hover .dot {
 
     h3 {
       font-size: 1.6rem;
-      color: {{ page.color }};
       border-left: 6px solid {{ page.color }};
       padding-left: 1rem;
       margin-bottom: 1rem;
@@ -255,7 +255,11 @@ footer:hover svg {
         <a class="nav-arrow next" href="{{ site.baseurl }}{{ next_item.url }}" title="Siguiente personaje">
           <i class="fas fa-chevron-right"></i>
         </a>
-    <h1>{{ page.name }}</h1>
+    {% if page.name == "#SECRETO" %}
+      <h1 class="secreto-title">{{ page.name }}</h1>
+    {% else %}
+      <h1>{{ page.name }}</h1>
+    {% endif %}
     <h2>{{ page.title }} — interpretada por {{ page.actor }}</h2>
     <blockquote>“{{ page.frase }}”</blockquote>
   </header>

@@ -332,7 +332,7 @@ body.image-loaded .poster-section::before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 3;
   position: relative;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .script-box .script-header {
@@ -610,13 +610,13 @@ Suena un vinilo antiguo. Conversaciones cruzadas, miradas contenidas. Natita rí
   {% for personaje in site.reparto %}
     <a href="{{ site.baseurl }}{{ personaje.url }}" class="character">
       <div class="character-icons">
-        {% if personaje.icons contains "skull" %}
+        {% if personaje.icons contains "muerto" or personaje.icons contains "muerta" %}
           <i class="fas fa-skull"></i>
         {% endif %}
-        {% if personaje.icons contains "crown" %}
+        {% if personaje.icons contains "corona" %}
           <i class="fas fa-crown"></i>
         {% endif %}
-        {% if personaje.icons contains "bars" %}
+        {% if personaje.icons contains "carcel" %}
           <i class="fas fa-bars"></i>
         {% endif %}
       </div>
