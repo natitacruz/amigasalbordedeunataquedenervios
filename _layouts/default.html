@@ -375,7 +375,19 @@ body.image-loaded .poster-section::before {
   color: crimson;
   text-decoration: underline;
 }
-
+.yellow-banner {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  background-color: yellow;
+  color: black;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+  z-index: 3;
+}
 /* RESPONSIVE para móviles */
 @media (max-width: 768px) {
   .hero-content-section {
@@ -578,6 +590,9 @@ body.image-loaded .poster-section::before {
         <li><strong>Dress Code:</strong> Inspirate con la bio de tu personaje en los <a href="#creditos">créditos</a>. Habrá premios al mejor vestuario.</li>
       </ul>
     </div>
+  </div>
+  <div class="yellow-banner">
+    ¡Prepárate para la noche más inolvidable de todas!
   </div>
   </section>
   <div class="script-box script-box-final">
