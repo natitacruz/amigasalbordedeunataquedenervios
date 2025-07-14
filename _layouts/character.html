@@ -217,7 +217,10 @@
       <div class="char-section" tabindex="0">
         <h1>Secreto</h1>
         <div class="char-content">
-          <span class="highlight">{{ page.secreto | markdownify }}</span>
+          {% assign paragraphs = page.secreto | split: '\n\n' %}
+          {% for para in paragraphs %}
+            <p><span class="highlight">{{ para | markdownify | strip_newlines }}</span></p>
+          {% endfor %}
         </div>
       </div>
     {% endif %}
