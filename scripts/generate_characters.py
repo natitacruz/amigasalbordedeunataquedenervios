@@ -20,10 +20,11 @@ yaml_fields = [
     ("image", lambda row, slug: f"/assets/portraits/{slug}.png"),
     ("frase", lambda row, slug: row.get("frase", "")),
     ("color", lambda row, slug: row.get("color", "")),
+    ("bio", lambda row, slug: row.get("bio", "")),
+    ("secreto", lambda row, slug: row.get("secreto", "")),
     # Add icons field from 'final' column if present
     ("icons", lambda row, slug: ",".join(row.get("final", "").split()) if row.get("final", "").strip() else None)
 ]
-
 
 def generate_frontmatter(row: dict) -> str:
     slug = row.get("file")
@@ -39,7 +40,6 @@ def generate_frontmatter(row: dict) -> str:
     lines.append("---\n")
     return "\n".join(lines)
 
-
 def process_csv(csv_path: str):
     with open(csv_path, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -52,19 +52,10 @@ def process_csv(csv_path: str):
             md_path = OUTPUT_DIR / f"{slug}.md"
 
             frontmatter = generate_frontmatter(row)
-            body = ""
-            # Add HISTORIA header and bio
-            if row.get("bio", "").strip():
-                body += "\n# HISTORIA\n\n" + row.get("bio", "") + "\n"
-            # Add SECRETO header and secreto if present
-            secreto = row.get("secreto", "").strip()
-            if secreto:
-                body += "\n# SECRETO\n\n" + secreto + "\n"
-
+            # No body, all main content in front matter
             with md_path.open("w", encoding="utf-8") as f:
-                f.write(frontmatter + body)
+                f.write(frontmatter)
             print(f"Generated {md_path}")
-
 
 if __name__ == "__main__":
     process_csv(CSV_PATH) 

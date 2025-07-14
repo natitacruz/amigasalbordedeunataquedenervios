@@ -7,8 +7,5 @@ actor: Poke
 image: /assets/portraits/poke.png
 frase: Guau
 color: "#BA5923"
+bio: Poke es literalmente un perro, él no ha podido ser el asesino. Es un poco miedica, quizás con buenos motivos...
 ---
-
-# HISTORIA
-
-Poke es literalmente un perro, él no ha podido ser el asesino. Es un poco miedica, quizás con buenos motivos...

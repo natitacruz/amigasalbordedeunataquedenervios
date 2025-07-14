@@ -7,15 +7,8 @@ actor: Carlota G Serrano
 image: /assets/portraits/carlotag.png
 frase: Soy fans, así, en plural.
 color: "#6C9DA0"
-icons: carcel
----
-
-# HISTORIA
-
-Energía sobrante y conversación afilada, Carlota viaja donde haga falta si sus afectos le preceden. Es la que nunca rechaza un favor, aunque tenga que tapar algún que otro desliz ajeno por el camino. “Cúbreme esta vez y yo te cubro siempre”, suele decir, y nadie sabe cuánto es literal. 
-
-# SECRETO
-
+bio: Energía sobrante y conversación afilada, Carlota viaja donde haga falta si sus afectos le preceden. Es la que nunca rechaza un favor, aunque tenga que tapar algún que otro desliz ajeno por el camino. “Cúbreme esta vez y yo te cubro siempre”, suele decir, y nadie sabe cuánto es literal. 
+secreto: "
 Tú no querías meterte en nada raro. Pero Roberto te pidió ayuda.
 
 Estáis juntos desde hace un tiempo. Lo suficiente para saber que Roberto tiene tendencia a meterse en líos, pero esta vez ha cruzado una línea:
@@ -38,3 +31,6 @@ Vigila a Roberto y a sus silencios. Si descubres quién más está implicado, ta
 o negociar tu salida.
 
 No tenéis ningún secreto. Y eso, en esta fiesta, es una ventaja.
+"
+icons: carcel
+---

@@ -7,15 +7,8 @@ actor: Celia Ruiz
 image: /assets/portraits/celia.png
 frase: En mi situación me interesa más trabajar que ser moderna.
 color: "#EDCC4F"
-icons: corona
----
-
-# HISTORIA
-
-Enfermera de día, actriz frustrada de noche. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos. Sin embargo su mayor exito es ser la protagonista haciendo de natita en el documental biografico sobre la vida de natita que manuel godard esta planificando. a natita no le sento esto nada bien....
-
-# SECRETO
-
+bio: Enfermera de día, actriz frustrada de noche. Ha participado en tres cortos experimentales y un documental sobre quesos manchegos. Sin embargo su mayor exito es ser la protagonista haciendo de natita en el documental biografico sobre la vida de natita que manuel godard esta planificando. a natita no le sento esto nada bien....
+secreto: "
 Tú no eres actriz. Tú eres el papel.
 
 Llevas tres años luchando por ser mocatriz.
@@ -51,3 +44,7 @@ Objetivo:
 Nadie debe descubrir que asesinaste a Natita con lorazepam. Tú eres la asesina, no confíes en nadie.
 
 Hay varias armas dispersas en esta fiesta. Si logras hacerte con una y eliminar a un modelo más, ganas la partida. Te coronas como mocatriz total.
+
+"
+icons: corona
+---

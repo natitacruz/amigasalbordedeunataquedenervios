@@ -7,14 +7,8 @@ actor: Carlos Belda
 image: /assets/portraits/carlosb.png
 frase: Me lo estaba figurando, me lo estaba figurando. (Imaginé)
 color: "#BA5923"
-icons: corona
----
-
-# HISTORIA
-
-Siempre de buen humor, Carlos nunca falta a una fiesta ni a una confidencia. Conoce los entresijos de su grupo mejor que nadie y, si bien le encanta divertirse, también tiene facilidad para estar en el sitio justo cuando nada parece suceder. En la fiesta de anoche Carlos no se separó de Natita ni un segundo, quién sabe si sospechaba algo.
-
-# SECRETO
+bio: Siempre de buen humor, Carlos nunca falta a una fiesta ni a una confidencia. Conoce los entresijos de su grupo mejor que nadie y, si bien le encanta divertirse, también tiene facilidad para estar en el sitio justo cuando nada parece suceder. En la fiesta de anoche Carlos no se separó de Natita ni un segundo, quién sabe si sospechaba algo.
+secreto: "
 
 Todo empezó en la previa de anoche, entre risas, copas y recuerdos de infancia.
 Alguien preguntó cuál era el mejor juguete del mundo.
@@ -37,4 +31,6 @@ Nunca más volverá a quitarte el protagonismo.
 
 Si alguien descubre este secreto el juego se acaba y pierdes.
 Tienes varias cosas pendientes... Ana Yruela parece estar recordando cosas de anoche, quizás deberías acabar lo que empezaste o buscar algún secreto que usar en su contra.
-Y de dónde salió ese misterioso sobre? Bueno no es asunto tuyo...
+Y de dónde salió ese misterioso sobre? Bueno no es asunto tuyo..."
+icons: corona
+---

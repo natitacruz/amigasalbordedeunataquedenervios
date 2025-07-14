@@ -17,70 +17,60 @@
       background-color: #fff0f5;
       color: #222;
     }
-header {
-  position: relative;
-  overflow: hidden;
-  background-color: {{ page.color }};
-  padding: 3rem 2rem;
-  color: white;
-  text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  transition: background-color 0.5s ease-in-out;
-}
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2rem;
+      color: white;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      transition: background-color 0.5s ease-in-out;
+    }
     .nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  padding: 0.3rem;
-  z-index: 10;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.nav-arrow:hover {
-  transform: translateY(-50%) scale(1.2);
-  color: #ffb3b3;
-}
-
-.nav-arrow.prev {
-  left: 1rem;
-}
-
-.nav-arrow.next {
-  right: 1rem;
-}
-
-.dot {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  opacity: 1;
-  pointer-events: none;
-  z-index: -1;
-}
-
-header:hover .dot {
-  opacity: 0.6;
-  filter: blur(1px);  /* Efecto difuminado */
-}
-
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: white;
+      text-decoration: none;
+      padding: 0.3rem;
+      z-index: 10;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .nav-arrow:hover {
+      transform: translateY(-50%) scale(1.2);
+      color: #ffb3b3;
+    }
+    .nav-arrow.prev {
+      left: 1rem;
+    }
+    .nav-arrow.next {
+      right: 1rem;
+    }
+    .dot {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 1;
+      pointer-events: none;
+      z-index: -1;
+    }
+    header:hover .dot {
+      opacity: 0.6;
+      filter: blur(1px);
+    }
     header img {
-  object-position: 50% 20%; 
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid white;
-  box-shadow: 0 0 20px 8px {{ page.color }};
-  margin-bottom: 1rem;
-}
-
+      object-position: 50% 20%;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      margin-bottom: 1rem;
+    }
     h1 {
       margin-bottom: 0.5rem;
     }
-
     blockquote {
       font-family: 'Bangers', cursive;
       font-size: 1.6rem;
@@ -93,90 +83,34 @@ header:hover .dot {
       letter-spacing: 1px;
       text-shadow: 2px 2px #00000030;
     }
-
     main {
-  max-width: 750px;
-  margin: 3rem auto;
-  padding: 4rem 1.5rem;
-  background: white;
-  border-radius: 0; /* Quitamos esquinas redondeadas */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-  /* Clip diagonal inferior, similar al header pero invertido */
-  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-  overflow: hidden;
-  position: relative;
-}
-
-    h3 {
-      font-size: 1.6rem;
-      color: {{ page.color }};
-      border-left: 6px solid {{ page.color }};
-      padding-left: 1rem;
+      max-width: 750px;
+      margin: 3rem auto;
+      padding: 4rem 1.5rem;
+      background: white;
+      border-radius: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+      overflow: hidden;
+      position: relative;
+    }
+    .historia-section {
+      background: #fff8fc;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+    .historia-section h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
       margin-bottom: 1rem;
+      color: #b30059;
     }
-footer {
-  background-color: {{ page.color }};
-  background-size: 150% auto;  /* agranda el fondo horizontalmente */
-  background-position: center -70px; /* mueve el fondo ligeramente hacia arriba */
-
-  -webkit-mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
-  mask-image: url('{{ site.baseurl }}/assets/torn-footer.png');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 120% auto;
-  mask-size: 120% auto;
-  -webkit-mask-position: center -3vh;
-  mask-position: center -3vh;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-
-footer svg {
-  width: 160px;
-  max-width: 80%;
-  height: auto;
-  display: inline-block;
-  transition: fill 0.4s ease, color 0.4s ease;
-  color: black; /* default fill color via currentColor */
-  fill: currentColor;
-  filter: drop-shadow(0 0 0 transparent);
-}
-
-footer:hover svg {
-  color: white; /* only SVG changes color on footer hover */
-  filter: drop-shadow(2px 2px 0 black);
-}
-
-    @media (max-width: 768px) {
-  footer {
-    background-position: center 0px;
-    -webkit-mask-position: center 0vh;
-    mask-position: center 0vh;
-  }
-}
-
-
-    @keyframes revealFromBottom {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0px);
-        opacity: 1;
-      }
+    .historia-content {
+      color: #222;
     }
-
-    body {
-      animation: revealFromBottom 0.6s ease-out;
-    }
-    /* SECRETO section styling */
     .secreto-section {
       background: #000;
       color: #000;
@@ -189,7 +123,7 @@ footer:hover svg {
       transition: color 0.3s, background 0.3s, border 0.3s;
       user-select: none;
     }
-    .secreto-section .secreto-title {
+    .secreto-section h1 {
       font-size: 2rem;
       font-weight: bold;
       letter-spacing: 2px;
@@ -209,7 +143,7 @@ footer:hover svg {
       border: 2px solid #222;
       user-select: text;
     }
-    .secreto-section.revealed .secreto-title {
+    .secreto-section.revealed h1 {
       color: #222;
       text-shadow: none;
     }
@@ -220,7 +154,7 @@ footer:hover svg {
   </style>
 </head>
 <body>
-  <header>
+  <header style="background-color: {{ page.color }};">
     {% assign current_index = nil %}
     {% for item in site.reparto %}
       {% if item.url == page.url %}
@@ -244,7 +178,7 @@ footer:hover svg {
       {% assign next_item = site.reparto[next_index] %}
     {% endif %}
     
-    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
+    <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}" style="box-shadow: 0 0 20px 8px {{ page.color }};">
     
     <div class="dots">
     </div>
@@ -265,13 +199,17 @@ footer:hover svg {
   </header>
 
   <main>
-    {% assign secreto_index = content | split: '# SECRETO' %}
-    {{ secreto_index[0] | markdownify }}
-    {% if secreto_index.size > 1 %}
+    <div class="historia-section">
+      <h1>Historia</h1>
+      <div class="historia-content">
+        {{ page.bio | markdownify }}
+      </div>
+    </div>
+    {% if page.secreto %}
       <div class="secreto-section" tabindex="0">
-        <div class="secreto-title">SECRETO</div>
+        <h1>SECRETO</h1>
         <div class="secreto-content">
-          {{ secreto_index[1] | markdownify }}
+          {{ page.secreto | markdownify }}
         </div>
       </div>
     {% endif %}

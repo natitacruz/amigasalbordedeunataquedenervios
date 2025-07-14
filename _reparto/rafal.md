@@ -7,8 +7,5 @@ actor: Rafal
 image: /assets/portraits/rafal.png
 frase: Me vais a tocar el fandango, tú y tu tía
 color: "#EDCC4F"
+bio: Animalista empedernido. Tiene tres tortugas que han sido bendecidas por un chamán. Está convencido de que en la fiesta hay gato encerrado. Es muy leal y amigo de sus amigos.
 ---
-
-# HISTORIA
-
-Animalista empedernido. Tiene tres tortugas que han sido bendecidas por un chamán. Está convencido de que en la fiesta hay gato encerrado. Es muy leal y amigo de sus amigos.

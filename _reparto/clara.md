@@ -7,14 +7,8 @@ actor: Clara Hernández
 image: /assets/portraits/clara.png
 frase: Perdularia, que eres una perdularia, que lo pierdes todo.
 color: "#761212"
-icons: carcel
----
-
-# HISTORIA
-
-El arte de dirigir personas, ésa es la verdadera vocación de Clara. Organiza desde la sombra y parece anticiparlo todo, como si llevara la fiesta acotada en un cuaderno invisible. Cuando ocurre algo importante, muchos buscan en su agenda las pistas necesarias para entender la velada. Esta noche, nadie está seguro de si Clara actúa por amor, o por algo más oscuro. 
-
-# SECRETO
+bio: El arte de dirigir personas, ésa es la verdadera vocación de Clara. Organiza desde la sombra y parece anticiparlo todo, como si llevara la fiesta acotada en un cuaderno invisible. Cuando ocurre algo importante, muchos buscan en su agenda las pistas necesarias para entender la velada. Esta noche, nadie está seguro de si Clara actúa por amor, o por algo más oscuro. 
+secreto: "
 
 La envidia te sienta como el carmín: fuerte, rojo, escandaloso.
 
@@ -33,3 +27,7 @@ Objetivo:
 
 Que nadie descubra que fuiste tú quien sabotea a Natita alterando su página de Wikipedia.
 Pero cuidado, si la gente te señala como culpable, aunque no lo seas… puede que acabes pagando tú.
+
+"
+icons: carcel
+---

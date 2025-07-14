@@ -7,14 +7,8 @@ actor: Carlos M
 image: /assets/portraits/carlosm.png
 frase: Yo lo que quiero es una casa. Y esto no es una casa casa
 color: "#761212"
----
-
-# HISTORIA
-
-Carlos Carmesi es un revolucionario de corazon. Lucha por sus ideas pero también se mete en demasiadas causas a la vez, como si necesitara el riesgo para sentirse vivo. Busca un lugar donde asentarse, aunque parece que siempre termine corriendo. 
-
-# SECRETO
-
+bio: Carlos Carmesi es un revolucionario de corazon. Lucha por sus ideas pero también se mete en demasiadas causas a la vez, como si necesitara el riesgo para sentirse vivo. Busca un lugar donde asentarse, aunque parece que siempre termine corriendo. 
+secreto: "
 La revolución no se hace sólo con pancartas.
 
 Desde hace semanas, estás en busca y captura por organizar actividades subversivas (según tú, solo recitabas en la biblioteca con una bengala encendida).
@@ -29,3 +23,6 @@ Ahora andas paranoico. Y con razón.
 Si alguien descubre que estás siendo buscado por la poli, podría delatarte para salvar su propio culo.
 Y entonces, adiós revolución.
 Y adiós voleibol.
+
+"
+---

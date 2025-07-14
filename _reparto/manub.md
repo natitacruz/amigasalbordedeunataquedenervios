@@ -7,14 +7,8 @@ actor: Manuel Bernal
 image: /assets/portraits/manub.png
 frase: Como actriz eres estupenda pero como persona estás muy equivocada
 color: "#BA2362"
----
-
-# HISTORIA
-
-Manuel es un director implacable juzgando obras ajenas, pero pocas veces deja ver lo que piensa de verdad sobre las personas. Firme y exigente, admira a quien toma la iniciativa y prefiere rodearse de talentos dispares antes que de aduladores. Esta realizando una biograia formato documental de natita cruz.
-
-# SECRETO
-
+bio: Manuel es un director implacable juzgando obras ajenas, pero pocas veces deja ver lo que piensa de verdad sobre las personas. Firme y exigente, admira a quien toma la iniciativa y prefiere rodearse de talentos dispares antes que de aduladores. Esta realizando una biograia formato documental de natita cruz.
+secreto: "
 Siempre dijiste que Natita tenía algo.
 Carisma, misterio, una luz que solo se ve en los focos.
 Por eso decidiste hacer un documental sobre su vida.
@@ -38,3 +32,5 @@ Y tú… no sabes cómo bajarla de ese escenario.
 Objetivo:
 
 Que nadie descubra que enchufaste a tu novia en el papel protagonista. Especialmente no Celia.
+"
+---

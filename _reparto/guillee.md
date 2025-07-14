@@ -7,14 +7,8 @@ actor: Guille alias Willy
 image: /assets/portraits/guillee.png
 frase: Que estáis locas, como no pisáis la calle os pensáis que en la calle pasan cosas.
 color: "#BA5923"
----
-
-# HISTORIA
-
-Guille es leyenda del barrio, conocido por gambetear entre la picaresca y la inocencia según le sople el viento. Su punto fuerte: hacer lo que sea para conseguir lo que necesita. En reuniones y fiestas, no duda en afirmar que las mejores historias siempre le pasan cuando Natita está cerca.
-
-# SECRETO
-
+bio: "Guille es leyenda del barrio, conocido por gambetear entre la picaresca y la inocencia según le sople el viento. Su punto fuerte: hacer lo que sea para conseguir lo que necesita. En reuniones y fiestas, no duda en afirmar que las mejores historias siempre le pasan cuando Natita está cerca."
+secreto: 
 Tú no quieres venganza, ni fama, ni justicia. Tú solo quieres la herencia de la vieja.
 Llevas meses detrás de Doña Remedios, una anciana aparentemente despistada… pero en realidad, una magnate inmobiliaria del centro de Madrid.
 Tiene diez pisos en alquiler. Entre ellos, el de Natita Cruz.
@@ -37,3 +31,5 @@ Pero eufórico, no podías dejar de ganar al resto de jugadoras, ese día estaba
 Ahora estás en esta fiesta, vestido de ti mismo, pero con el espectro de la abuela acechándote.
 Si Esther te reconoce como aquella anciana de voz de camionero, estás muerto.
 Social, legal y notarialmente.
+
+---

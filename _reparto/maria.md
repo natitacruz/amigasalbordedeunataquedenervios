@@ -7,15 +7,8 @@ actor: María Casado
 image: /assets/portraits/maria.png
 frase: Excepto beber, qué difícil se me resulta todo.
 color: "#761212"
----
-
-# HISTORIA
-
-Dueña de una elegancia natural, María siempre encuentra la manera de estar en el centro sin decir demasiado. Así como presume de título nobiliario, suele ser bastante discreta. A veces deja caer en voz baja que Natita debería cuidar mejor de sus posesiones, aunque la razón nunca queda muy clara.
-
-# SECRETO
-
-Eres duquesa… o lo intentas.
+bio: Dueña de una elegancia natural, María siempre encuentra la manera de estar en el centro sin decir demasiado. Así como presume de título nobiliario, suele ser bastante discreta. A veces deja caer en voz baja que Natita debería cuidar mejor de sus posesiones, aunque la razón nunca queda muy clara.
+secreto: "Eres duquesa… o lo intentas.
 
 Vienes de buena familia, de las que soñaban con muchos hijos, un mono y un castillo.
 Y durante un tiempo lo tuvisteis casi todo: los hijos no, pero sí un un castillo con un fresco de tu cara y un mono que mordía las cortinillas.
@@ -37,4 +30,5 @@ Solo sabes una cosa: si descubren que tu ducado es de pega, se te acaba lo poco 
 Objetivo:
 
 Descubre quién entró en tu casa y qué buscaba. Quizás así puedas negociar y proteger tu secreto.
-Y sobre todo: que nadie descubra que tu ducado es más falso que un bolso de mercadillo de Luis Vuitón.
+Y sobre todo: que nadie descubra que tu ducado es más falso que un bolso de mercadillo de Luis Vuitón."
+---
