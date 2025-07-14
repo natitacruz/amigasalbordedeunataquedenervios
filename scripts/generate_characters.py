@@ -19,7 +19,9 @@ yaml_fields = [
     ("actor", lambda row, slug: row.get("actor", "")),
     ("image", lambda row, slug: f"/assets/portraits/{slug}.png"),
     ("frase", lambda row, slug: row.get("frase", "")),
-    ("color", lambda row, slug: row.get("color", ""))
+    ("color", lambda row, slug: row.get("color", "")),
+    # Add icons field from 'final' column if present
+    ("icons", lambda row, slug: ",".join(row.get("final", "").split()) if row.get("final", "").strip() else None)
 ]
 
 
@@ -28,6 +30,8 @@ def generate_frontmatter(row: dict) -> str:
     lines = ["---"]
     for key, fn in yaml_fields:
         value = fn(row, slug)
+        if value is None or value == "":
+            continue
         # Aseguramos que los strings van entre comillas si contienen ':' o comienzan con #
         if isinstance(value, str) and (":" in value or value.startswith("#")):
             value = f'"{value}"'

@@ -222,12 +222,35 @@ body.image-loaded .poster-section::before {
     /* ################## HERO ######################### */
 .hero-content-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 2rem;
   align-items: start;
-  gap: 2rem;
-  padding: 4rem 2rem;
   position: relative;
-  z-index: 3; /* Por encima del blur */
+  z-index: 3;
+}
+
+.gazpacho-hero {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.script-box {
+  max-width: 450px;
+}
+
+.hero-content-section .script-box:not(.script-box-final) {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.script-box-final {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+  margin-top: 2rem;
 }
 
 /* GAZPACHO */
@@ -356,9 +379,8 @@ body.image-loaded .poster-section::before {
     flex-direction: column;
     align-items: center;
   }
-.gazpacho-hero,
-  .script-box {
-    align-self: center !important;
+.gazpacho-hero, .script-box {
+    justify-self: unset;
     margin-top: 0 !important;
     max-width: 450px;
   }
@@ -555,12 +577,33 @@ Cada invitado guarda un secreto. Uno de esos secretos es la identidad del asesin
   </div>
 
 
-<div class="script-box">
+<div class="script-box script-box-final">
   <div class="script-header">ESCENA FINAL</div>
   <p>ESCENA 1 – EXTERIOR. TERRAZA DE NATITA. NOCHE
 Suena un vinilo antiguo. Conversaciones cruzadas, miradas contenidas. Natita ríe, alza su copa, y toma una cucharada del gazpacho. Apenas unos segundos después, se tambalea y cae al suelo. Se hace el silencio entre los asistentes. De fondo sigue sonando "Piensa en mi".
 
-<p>INSTRUCCIONES DEL JUEGO
+<div class="production-info">
+  <h3>🎬 Premios</h3>
+  <ul>
+    <li><strong>Mejor Vestuario:</strong> María Casado 
+    <li><strong>Mejor Vestuario (hombre):</strong> Mateo Vidal
+
+    <li><strong>Mejor Actriz revelación:</strong> Marta Monsalvete y Lucía Monsalvete</li>
+    <li><strong>Mejor Actor revelación:</strong> Carlos M.</li>
+
+    <li><strong>Mejor Actriz protagonista:</strong> Celia Ruiz</li>
+    <li><strong>Mejor Actor protagonista:</strong> Carlos Belda</li>
+
+    <li><strong>Mejor Actriz de reparto:</strong> Natita</li>
+    <li><strong>Mejor Actor de reparto:</strong> Juanma Corpas</li>
+
+    <li><strong>Mejor Guionista:</strong> Daniel Fernández</li>
+    <li><strong>Mejor Fotografía:</strong> Lena Calvo</li>
+    <li><strong>Mejor Sonido:</strong> Natita Cruz</li>
+    <li><strong>Mejor Montaje:</strong> Rosa Soro</li>
+    <li><strong>Mejor Dirección Técnica:</strong> Álvaro del Ser</li>
+  </ul>
+</div>
 </section>
 
 <section class="character-grid" id="creditos">
