@@ -32,4 +32,5 @@ secreto: |
 
   Descubre quién entró en tu casa y qué buscaba. Quizás así puedas negociar y proteger tu secreto.
   Y sobre todo: que nadie descubra que tu ducado es más falso que un bolso de mercadillo de Luis Vuitón.
+icons: corona
 ---
