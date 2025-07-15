@@ -46,4 +46,5 @@ secreto: |
   Que nadie descubra vuestra participación en la separación.
   Jugáis juntas: si una cae, la otra también.
   Vigilad a Cáceres y María. Si se enteran de su vínculo… el pecado será público.
+icons: corona
 ---
